@@ -18,6 +18,7 @@ MediaStream::MediaStream(StreamType type, wxString codecName, wxString codecTag)
 	this->sampleRate = 0;
 	this->aspectRatio = 0;
 	this->fps = 0;
+	this->timeBase = 0;
 }
 
 /** Return the stream format string */
