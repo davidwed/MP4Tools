@@ -1,0 +1,57 @@
+# locales/Makefile
+# based on the locale makefile from wxWindows 2.2.9
+# This is the makefile for generating the message catalog file and
+# building lang.mo files from the translated lang.po catalogs.
+
+PROGNAME=mp4tools
+LINGUAS=de es pt pt_BR ru
+
+prefix=@prefix@
+datarootdir=@datarootdir@
+DATADIR=@datadir@
+INSTALL=@INSTALL@
+
+# the programs we use (TODO: use configure to detect them)
+MSGFMT=msgfmt -v
+MSGMERGE=msgmerge
+XGETTEXT=xgettext
+XARGS=xargs
+# common xgettext args: C++ syntax, use the specified macro names as markers
+XGETTEXT_ARGS=-C -k_ -kwxTRANSLATE -kwxPLURAL:1,2
+
+
+all: allmo
+
+# merge all existing message catalogs with POT file
+allpo: $(LINGUAS:%=%_po)
+
+# compile .po to .mo
+allmo: $(LINGUAS:%=%/$(PROGNAME).mo)
+
+pot:
+	$(XGETTEXT) $(XGETTEXT_ARGS) -o $(PROGNAME).pot -D .. `cd .. && find . -name '*.cpp'`
+
+%_po : $(PROGNAME).pot
+	msgmerge --width=110 --update $*.po $<
+
+%/$(PROGNAME).mo: %.po
+	@test -d $* || mkdir $*
+	$(MSGFMT) -o $@ $<
+
+install: allmo
+	linguas='$(LINGUAS)'; for lang in $$linguas ; do \
+	   $(INSTALL) -d $(DESTDIR)$(DATADIR)/locale/$$lang/LC_MESSAGES ; \
+	   $(INSTALL) -m 644 $$lang/$(PROGNAME).mo \
+		$(DESTDIR)$(DATADIR)/locale/$$lang/LC_MESSAGES/$(PROGNAME).mo ; \
+	done
+
+uninstall:
+	linguas='$(LINGUAS)'; for lang in $$linguas ; do \
+	   rm -f $(DESTDIR)$(DATADIR)/locale/$$lang/LC_MESSAGES/$(PROGNAME).mo ; \
+	done
+
+clean:
+	-linguas='$(LINGUAS)'; for lang in $$linguas ; do rm -rf $$lang ; done
+
+distclean: clean
+	rm -f Makefile

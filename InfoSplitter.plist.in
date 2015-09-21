@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.mp4joiner.MP4Splitter</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>MP4Splitter</string>
+	<key>CFBundleIconFile</key>
+	<string>MP4Splitter.icns</string>
+	<key>CFBundleName</key>
+	<string>MP4Splitter</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>@VERSION@</string>
+	<key>CFBundleShortVersionString</key>
+	<string>@VERSION@</string>
+	<key>CFBundleGetInfoString</key>
+	<string>MP4Tools / MP4Splitter version @VERSION@, (c) 2015 Alex Th&#252;ring</string>
+	<key>CFBundleLongVersionString</key>
+	<string>@VERSION@, (c) 2012 Alex Th&#252;ring</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright 2015 Alex Th&#252;ring</string>
+	<key>LSRequiresCarbon</key>
+	<true/>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+</dict>
+</plist>

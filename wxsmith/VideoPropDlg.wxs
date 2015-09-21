@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="VideoPropDlg">
+		<title>Cut video</title>
+		<centered>1</centered>
+		<size>750,500</size>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+		<object class="wxBoxSizer" variable="mainSizer" member="no">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="hSizer" member="no">
+					<object class="sizeritem">
+						<object class="wxBoxSizer" variable="mediaSizer" member="no">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<object class="Custom" name="ID_CUSTOM1" subclass="MediaCtrlFF" variable="m_mediaCtrl" member="yes">
+									<creating_code>$(THIS) = new $(CLASS)($(PARENT), $(ID), wxT(&quot;&quot;), $(POS),$(SIZE), 0, wxDefaultValidator, $(NAME));&#x0A;$(THIS)-&gt;SetMinSize(wxSize(300, 200));&#x0A;$(THIS)-&gt;SetWindowStyle(wxBORDER__NONE);</creating_code>
+									<style></style>
+									<minsize>100,100</minsize>
+								</object>
+								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>4</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxSlider" name="ID_SLIDER" variable="m_slider" member="yes" />
+								<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>2</border>
+							</object>
+							<object class="sizeritem">
+								<object class="wxBoxSizer" variable="timeSizer" member="no">
+									<object class="sizeritem">
+										<object class="wxStaticText" name="wxID_ANY" variable="staticText1" member="no">
+											<label>Time:</label>
+										</object>
+										<flag>wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>4</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxTextCtrl" name="ID_TIME_CTRL" variable="m_timeCtrl" member="yes">
+											<handler function="OnChangeTime" entry="EVT_TEXT" />
+										</object>
+										<flag>wxLEFT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>2</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxSpinButton" name="ID_TIME_SPINB" variable="m_timeSpinBt" member="yes">
+											<max>100</max>
+											<minsize>16,12</minsize>
+											<handler function="OnTimeSpin" entry="EVT_SPIN" />
+										</object>
+										<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxSpinButton" name="ID_FRAME_SPINBT" variable="m_frameSpinBt" member="yes">
+											<min>-9999</min>
+											<max>9999</max>
+											<minsize>16,12</minsize>
+											<style>wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP</style>
+											<handler function="OnFrameSpin" entry="EVT_SPIN_UP" />
+											<handler function="OnFrameSpinDown" entry="EVT_SPIN_DOWN" />
+										</object>
+										<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxStaticText" name="wxID_ANY" variable="startLabel" member="no">
+											<label>Start:</label>
+										</object>
+										<flag>wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>8</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="m_startCtrl" member="yes" />
+										<flag>wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>2</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxSpinButton" name="ID_SPINBUTTON1" variable="m_startSpin" member="yes">
+											<min>-9999</min>
+											<max>9999</max>
+											<minsize>16,12</minsize>
+											<style>wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP</style>
+											<handler function="OnStartSpin" entry="EVT_SPIN_UP" />
+											<handler function="OnStartSpinDown" entry="EVT_SPIN_DOWN" />
+										</object>
+										<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxSpinButton" name="ID_SPINBUTTON2" variable="m_startFrameSpin" member="yes">
+											<min>-9999</min>
+											<max>9999</max>
+											<minsize>16,12</minsize>
+											<style>wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP</style>
+											<handler function="OnStartFrameSpin" entry="EVT_SPIN_UP" />
+											<handler function="OnStartFrameSpinDown" entry="EVT_SPIN_DOWN" />
+										</object>
+										<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxBitmapButton" name="START_BT_ID" variable="m_startBt" member="yes">
+											<bitmap stock_id="wxART_CUT" stock_client="wxART_MENU" />
+											<default>1</default>
+											<tooltip>Cut beginning</tooltip>
+											<handler function="OnStartBt" entry="EVT_BUTTON" />
+										</object>
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>2</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxStaticText" name="wxID_ANY" variable="endLabel" member="no">
+											<label>End:</label>
+										</object>
+										<flag>wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxTextCtrl" name="ID_TEXTCTRL3" variable="m_endCtrl" member="yes" />
+										<flag>wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>2</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxSpinButton" name="ID_SPINBUTTON3" variable="m_endSpin" member="yes">
+											<min>-9999</min>
+											<max>9999</max>
+											<minsize>16,12</minsize>
+											<style>wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP</style>
+											<handler function="OnEndSpin" entry="EVT_SPIN_UP" />
+											<handler function="OnEndSpinDown" entry="EVT_SPIN_DOWN" />
+										</object>
+										<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									</object>
+									<object class="sizeritem">
+										<object class="wxSpinButton" name="ID_SPINBUTTON4" variable="m_endFrameSpin" member="yes">
+											<min>-9999</min>
+											<max>9999</max>
+											<minsize>16,12</minsize>
+											<style>wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP</style>
+											<handler function="OnEndFrameSpin" entry="EVT_SPIN_UP" />
+											<handler function="OnEndFrameSpinDown" entry="EVT_SPIN_DOWN" />
+										</object>
+										<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									</object>
+									<object class="sizeritem">
+										<object class="wxBitmapButton" name="ID_RESET_TIME_BT" variable="m_endBt" member="yes">
+											<bitmap stock_id="wxART_CUT" stock_client="wxART_MENU" />
+											<default>1</default>
+											<tooltip>Cut ending</tooltip>
+											<handler function="OnEndBt" entry="EVT_BUTTON" />
+										</object>
+										<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>2</border>
+									</object>
+								</object>
+								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+						</object>
+						<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStdDialogButtonSizer" variable="stdDialogButtonSizer" member="no">
+					<object class="button">
+						<object class="wxButton" name="wxID_OK">
+							<label></label>
+						</object>
+					</object>
+					<object class="button">
+						<object class="wxButton" name="wxID_CANCEL">
+							<label></label>
+						</object>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>4</border>
+			</object>
+		</object>
+	</object>
+</wxsmith>

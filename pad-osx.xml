@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XML_DIZ_INFO>
+	<MASTER_PAD_VERSION_INFO>
+		<MASTER_PAD_VERSION>3.10</MASTER_PAD_VERSION>
+	</MASTER_PAD_VERSION_INFO>
+	<Company_Info>
+		<Company_Name>Alex Th&#252;ring</Company_Name>
+		<Address_1 />
+		<Address_2 />
+		<City_Town>Frankfurt am Main</City_Town>
+		<State_Province />
+		<Zip_Postal_Code>65933</Zip_Postal_Code>
+		<Country>Germany</Country>
+		<Company_WebSite_URL>http://www.mp4joiner.org</Company_WebSite_URL>
+		<Contact_Info>
+			<Author_First_Name>Alex</Author_First_Name>
+			<Author_Last_Name>Th&#252;ring</Author_Last_Name>
+			<Author_Email>alex@thuering.biz</Author_Email>
+			<Contact_First_Name>Alex</Contact_First_Name>
+			<Contact_Last_Name>Th&#252;ring</Contact_Last_Name>
+			<Contact_Email>alex@thuering.biz</Contact_Email>
+		</Contact_Info>
+		<Support_Info>
+			<Sales_Email />
+			<Support_Email />
+			<General_Email />
+			<Sales_Phone />
+			<Support_Phone />
+			<General_Phone />
+			<Fax_Phone />
+		</Support_Info>
+	</Company_Info>
+	<Program_Info>
+		<Program_Name>Free MP4 Joiner for Mac</Program_Name>
+		<Program_Version>2.0</Program_Version>
+		<Program_Release_Month>03</Program_Release_Month>
+		<Program_Release_Day>04</Program_Release_Day>
+		<Program_Release_Year>2013</Program_Release_Year>
+		<Program_Cost_Dollars />
+		<Program_Cost_Other_Code />
+		<Program_Cost_Other />
+		<Program_Type>Freeware</Program_Type>
+		<Program_Release_Status>New Release</Program_Release_Status>
+		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
+		<Program_OS_Support>Mac OS X</Program_OS_Support>
+		<Program_Language>English,German,Russian</Program_Language>
+		<Program_Change_Info />
+		<Program_Specific_Category>Utilities</Program_Specific_Category>
+		<Program_Category_Class>Audio &amp; Multimedia::Video Tools</Program_Category_Class>
+		<Program_Categories>Video editor</Program_Categories>
+		<Program_System_Requirements />
+		<Includes_JAVA_VM>N</Includes_JAVA_VM>
+		<Includes_VB_Runtime>N</Includes_VB_Runtime>
+		<Includes_DirectX>N</Includes_DirectX>
+		<File_Info>
+			<Filename_Versioned>MP4Tools-3.1</Filename_Versioned>
+			<Filename_Previous />
+			<Filename_Generic>MP4Tools</Filename_Generic>
+			<Filename_Long />
+			<File_Size_Bytes>5695082</File_Size_Bytes>
+			<File_Size_K>5556</File_Size_K>
+			<File_Size_MB>5</File_Size_MB>
+		</File_Info>
+		<Expire_Info>
+			<Has_Expire_Info>N</Has_Expire_Info>
+			<Expire_Count />
+			<Expire_Based_On />
+			<Expire_Other_Info />
+			<Expire_Month />
+			<Expire_Day />
+			<Expire_Year />
+		</Expire_Info>
+	</Program_Info>
+	<Program_Descriptions>
+		<English>
+			<Keywords>mp4 joiner, mp4 merger, video joiner, video merger, video, join, merge, MPEG, MPEG-4, MP4, H.264</Keywords>
+			<Char_Desc_45>Free tools to join and split MP4 files</Char_Desc_45>
+			<Char_Desc_80>MP4Tools is a collection of simple free tools to join and split MP4 files.</Char_Desc_80>
+			<Char_Desc_250>MP4Tools is a collection of simple free tools to join and split MP4 files without reencoding and without quality loss. It is Open Source Software and is completely free.</Char_Desc_250>
+			<Char_Desc_450>MP4Tools is a collection of simple free tools to join and split MP4 files without reencoding and without quality loss. It is Open Source Software and is completely free.</Char_Desc_450>
+			<Char_Desc_2000>MP4Tools is a collection of simple free tools to manipulate MP4 files without reencoding and without quality loss. It contains following applications: MP4Joiner is a free application to join multiple MP4 files into one and MP4Splitter to split a MP4 file in multiple files. It is Open Source Software and is completely free.</Char_Desc_2000>
+		</English>
+		<German>
+			<Keywords>mp4 joiner, mp4 merger, mp4 zusammenfügen, video joiner, video merger, video, join, merge, MPEG, MPEG-4, MP4, H.264</Keywords>
+			<Char_Desc_45>Kostenlose Tool zum Zusammenfügen MP4 Dateien</Char_Desc_45>
+			<Char_Desc_80>Sammlung der kostenlosen Werkzeuge zum Zusammenfügen und Aufteilen der MP4-Dateien</Char_Desc_80>
+			<Char_Desc_250>MP4Tools ist eine Sammlung der einfachen kostenlosen Werkzeuge zum Zusammenfügen und Aufteilen der MP4-Dateien ohne Rekodierung und Qualitätsverlust.</Char_Desc_250>
+			<Char_Desc_450>MP4Tools ist eine Sammlung der einfachen kostenlosen Werkzeuge zum Zusammenfügen und Aufteilen der MP4-Dateien ohne Rekodierung und Qualitätsverlust.</Char_Desc_450>
+			<Char_Desc_2000>MP4Tools ist eine Sammlung der einfachen kostenlosen Werkzeuge zum Manipulieren von MP4-Dateien ohne Rekodierung und Qualitätsverlust. Sie beinhaltet folgende Applikationen: MP4Joiner ist eine kostenlose Applikation zum Zusammenfügen mehrerer MP4 Dateien in eine und MP4Splittter zum Aufteilen der MP4-Dateien. Es ist eine Open Source Software und ist völlig kostenlos.</Char_Desc_2000>
+		</German>
+	</Program_Descriptions>
+	<Web_Info>
+		<Application_URLs>
+			<Application_Info_URL>http://www.mp4joiner.org</Application_Info_URL>
+			<Application_Order_URL />
+			<Application_Screenshot_URL>http://www.mp4joiner.org/images/screenshots/mainwin_en.jpg</Application_Screenshot_URL>
+			<Application_Icon_URL>http://www.mp4joiner.org/images/mp4joiner.png</Application_Icon_URL>
+			<Application_XML_File_URL>http://www.mp4joiner.org/pad-osx.xml</Application_XML_File_URL>
+		</Application_URLs>
+		<Download_URLs>
+			<Primary_Download_URL>http://sourceforge.net/projects/mp4joiner/files/MP4Tools/3.1/MP4Tools-3.1-MacOSX.dmg</Primary_Download_URL>
+			<Secondary_Download_URL />
+			<Additional_Download_URL_1 />
+			<Additional_Download_URL_2 />
+		</Download_URLs>
+	</Web_Info>
+	<Permissions>
+		<Distribution_Permissions />
+		<EULA />
+	</Permissions>
+</XML_DIZ_INFO>

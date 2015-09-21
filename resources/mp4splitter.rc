@@ -1,0 +1,2 @@
+#include <wx/msw/wx.rc>
+mp4splitter				ICON                    "resources/mp4splitter.ico"

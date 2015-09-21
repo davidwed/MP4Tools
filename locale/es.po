@@ -1,0 +1,296 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MP4Joiner 2.1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-29 23:13+0200\n"
+"PO-Revision-Date: 2013-11-10 14:34-0500\n"
+"Last-Translator: Claudio Garcia Solca <claudioggs at gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: Spanish - Español\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: src/MainWin.cpp:53 src/SplitterWin.cpp:379
+msgid "Successful"
+msgstr "Unión Exitosa"
+
+#: src/MainWin.cpp:113 src/MainWin.cpp:332
+msgid "MP4 Joiner"
+msgstr "MP4 Joiner"
+
+#: src/MainWin.cpp:144
+msgid "Add Video"
+msgstr "Agregar Video"
+
+#: src/MainWin.cpp:145
+msgid "Add video file"
+msgstr "Agregar un archivo de video"
+
+#: src/MainWin.cpp:147 src/MainWin.cpp:154
+msgid "Remove"
+msgstr "Quitar"
+
+#: src/MainWin.cpp:148 src/MainWin.cpp:155
+msgid "Remove selected video"
+msgstr "Qutar el video seleccionado"
+
+#: src/MainWin.cpp:150
+msgid "&Remove selected"
+msgstr "&Qutar el video seleccionado"
+
+#: src/MainWin.cpp:151
+#, fuzzy
+msgid "Remove a&ll"
+msgstr "Quitar"
+
+#: src/MainWin.cpp:157
+msgid "Join"
+msgstr "Unir"
+
+#: src/MainWin.cpp:158
+msgid "Select output file and start join"
+msgstr "Seleccionar el archivo de salida y comenzar la unión"
+
+#: src/MainWin.cpp:162
+msgid "Language"
+msgstr "Idioma"
+
+#: src/MainWin.cpp:163
+msgid "Select language"
+msgstr "Seleccione el idioma"
+
+#: src/MainWin.cpp:164
+msgid "About"
+msgstr "Acerca"
+
+#: src/MainWin.cpp:165
+msgid "About the program"
+msgstr "Acerca del programa"
+
+#: src/MainWin.cpp:214
+msgid "Total duration"
+msgstr "Duración total"
+
+#: src/MainWin.cpp:221
+msgid "total size"
+msgstr "Tamaño total"
+
+#: src/MainWin.cpp:223 src/MediaListBox.cpp:98
+msgid "GB"
+msgstr "GB"
+
+#: src/MainWin.cpp:225 src/MediaListBox.cpp:100
+msgid "MB"
+msgstr "MB"
+
+#: src/MainWin.cpp:230 src/SplitterWin.cpp:227
+msgid "Choose a file"
+msgstr "Elija un archivo"
+
+#: src/MainWin.cpp:231 src/MainWin.cpp:310 src/SplitterWin.cpp:228
+msgid "MP4 Files"
+msgstr "Archivos MP4"
+
+#: src/MainWin.cpp:232 src/MainWin.cpp:311 src/SplitterWin.cpp:229
+msgid "All Files"
+msgstr "Todos los Archivos"
+
+#: src/MainWin.cpp:309
+msgid "Choose a file to save"
+msgstr "Elija el archivo de salida"
+
+#: src/MainWin.cpp:309
+msgid "Output.mp4"
+msgstr "Salida.MP4"
+
+#: src/MainWin.cpp:332
+msgid "Joning the files"
+msgstr "Unindo archivos"
+
+#: src/MainWin.cpp:345
+#, c-format
+msgid "Reencode video from file %s"
+msgstr "Recodificando video del archivo %s"
+
+#: src/MainWin.cpp:347
+#, c-format
+msgid "Reencode audio from file %s"
+msgstr "Recodificando audio del archivo %s"
+
+#: src/MainWin.cpp:349
+#, fuzzy, c-format
+msgid "Cut video from file %s"
+msgstr "Recodificando video del archivo %s"
+
+#: src/MainWin.cpp:457
+msgid "Language change will not take effect until MP4Joiner is restarted"
+msgstr "El cambio de idioma no tendrá efecto hasta que reinicie MP4Joiner"
+
+#: src/MainWin.cpp:471
+msgid "Simple tool to join multiple MP4 files into one."
+msgstr "Herramienta sencilla para unir multiples archivos MP4 en uno solo"
+
+#: src/MainWin.cpp:488 src/SplitterWin.cpp:295
+msgid "&Remove"
+msgstr "&Quitar"
+
+#: src/MainWin.cpp:489
+msgid "&Cut video..."
+msgstr ""
+
+#: src/MainWin.cpp:491
+msgid "&Sort"
+msgstr ""
+
+#: src/MediaListBox.cpp:83 src/SplitterWin.cpp:166
+msgid "Duration"
+msgstr "Duración"
+
+#: src/MediaListBox.cpp:95
+msgid "Size"
+msgstr "Tamaño"
+
+#: src/MediaListBox.cpp:102
+msgid "KB"
+msgstr "KB"
+
+#: src/MediaListBox.cpp:112
+msgid "Video:"
+msgstr "Video:"
+
+#: src/MediaListBox.cpp:117
+msgid "Audio:"
+msgstr "Audio:"
+
+#: src/MediaListBox.cpp:122
+msgid "Subtitle:"
+msgstr "Subtítulo:"
+
+#: src/MediaStream.cpp:54
+msgid "mono"
+msgstr "mono"
+
+#: src/MediaStream.cpp:56
+msgid "stereo"
+msgstr "estereo"
+
+#: src/MediaStream.cpp:60
+#, c-format
+msgid "%d channels"
+msgstr "%d canales"
+
+#: src/MediaStream.cpp:63
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: src/MediaStream.cpp:65
+#, c-format
+msgid "%d kbit/s"
+msgstr "%d kbit/s"
+
+#: src/ProgramProcess.cpp:28
+msgid "Failed"
+msgstr "Fallo"
+
+#: src/ProgramProcess.cpp:73
+#, c-format
+msgid "Execution of '%s' failed."
+msgstr "Fallo la ejecución de '%s'"
+
+#: src/SplitterWin.cpp:72 src/SplitterWin.cpp:323
+msgid "MP4 Splitter"
+msgstr "MP4 Splitter"
+
+#: src/SplitterWin.cpp:84 src/VideoPropDlg.cpp:74
+msgid "Time:"
+msgstr ""
+
+#: src/SplitterWin.cpp:96
+msgid "Add split point"
+msgstr ""
+
+#: src/SplitterWin.cpp:102
+#, fuzzy
+msgid "Open Video"
+msgstr "Agregar Video"
+
+#: src/SplitterWin.cpp:110
+msgid "Split points:"
+msgstr ""
+
+#: src/SplitterWin.cpp:116
+msgid "Start splitting"
+msgstr ""
+
+#: src/SplitterWin.cpp:164
+msgid "Start"
+msgstr ""
+
+#: src/SplitterWin.cpp:165
+msgid "End"
+msgstr ""
+
+#: src/SplitterWin.cpp:296
+#, fuzzy
+msgid "Remove &all"
+msgstr "Quitar"
+
+#: src/SplitterWin.cpp:302
+msgid "Choose a output directory"
+msgstr ""
+
+#: src/SplitterWin.cpp:323
+#, fuzzy
+msgid "Splitting the file"
+msgstr "Unindo archivos"
+
+#: src/SplitterWin.cpp:341
+#, c-format
+msgid "File '%s' already exist. Do you want to overwrite it?"
+msgstr ""
+
+#: src/SplitterWin.cpp:342
+#, fuzzy
+msgid "Confirmation"
+msgstr "Duración"
+
+#: src/SplitterWin.cpp:351
+#, c-format
+msgid "Writting %s"
+msgstr ""
+
+#: src/SplitterWin.cpp:396
+msgid "Language change will not take effect until MP4Splitter is restarted"
+msgstr "El cambio de idioma no tendrá efecto hasta que reinicie MP4Splitter"
+
+#: src/SplitterWin.cpp:410
+#, fuzzy
+msgid "Simple tool to split a MP4 file."
+msgstr "Herramienta sencilla para unir multiples archivos MP4 en uno solo"
+
+#: src/VideoPropDlg.cpp:62
+msgid "Cut video"
+msgstr ""
+
+#: src/VideoPropDlg.cpp:86
+msgid "Start:"
+msgstr ""
+
+#: src/VideoPropDlg.cpp:100
+msgid "Cut beginning"
+msgstr ""
+
+#: src/VideoPropDlg.cpp:102
+msgid "End:"
+msgstr ""
+
+#: src/VideoPropDlg.cpp:116
+msgid "Cut ending"
+msgstr ""
+
+#: src/VideoPropDlg.cpp:279 src/VideoPropDlg.cpp:284
+msgid "Invalid time"
+msgstr ""

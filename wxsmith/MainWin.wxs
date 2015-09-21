@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="MainWin">
+		<title>MP4 Joiner</title>
+		<centered>1</centered>
+		<focused>1</focused>
+		<bg>wxSYS_COLOUR_BTNFACE</bg>
+		<parent_arg>0</parent_arg>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+			<object class="sizeritem">
+				<object class="wxListBox" name="ID_MEDIA_LISTBOX" subclass="MediaListBox" variable="mediaListBox" member="yes">
+					<default>-1</default>
+					<pos>328,48</pos>
+					<size>300,400</size>
+					<handler function="OnMediaSelect" entry="EVT_LISTBOX" />
+					<handler function="OnProperties" entry="EVT_LISTBOX_DCLICK" />
+				</object>
+				<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>4</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON1" variable="upButton" member="yes">
+							<bitmap code="wxBITMAP_FROM_MEMORY(up)" />
+							<style>wxBU_AUTODRAW|wxTAB_TRAVERSAL</style>
+							<handler function="OnUpBt" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxBOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>2</border>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON2" variable="downButton" member="yes">
+							<bitmap code="wxBITMAP_FROM_MEMORY(down)" />
+							<style>wxBU_AUTODRAW|wxSTATIC_BORDER</style>
+							<handler function="OnDownBt" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+					</object>
+				</object>
+				<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>2</border>
+			</object>
+		</object>
+		<object class="wxToolBar" name="ID_TOOLBAR" variable="toolbar" member="yes">
+			<margins>16,16</margins>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR" variable="statusBar" member="yes">
+			<fields>1</fields>
+			<widths>-10</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
+</wxsmith>

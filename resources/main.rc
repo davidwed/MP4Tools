@@ -1,0 +1,2 @@
+#include <wx/msw/wx.rc>
+mp4joiner				ICON                    "resources/mp4joiner.ico"

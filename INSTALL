@@ -1,0 +1,8 @@
+Compilation dependencies of MP4Joiner:
+    wxGTK >= 2.9.1 (http://www.wxwidgets.org/downloads/)
+    MP4Box (http://gpac.wp.mines-telecom.fr/)
+
+To build MP4Joiner type
+	./configure && make
+To install DVDStyler type
+	make install

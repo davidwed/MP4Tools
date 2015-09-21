@@ -1,0 +1,52 @@
+Version 3.1 <2015-07-12>
+------------------------
+
+  * MP4Joiner: added support of audio files
+
+Version 3.0 <2015-07-05>
+------------------------
+
+  * Initial revision of MP4Splitter
+  * MP4Joiner: added possibility to cut video
+  * MP4Joiner: added reencoding of video if video formats are different
+  * MP4Joiner: added Brazilian Portuguese translation (thanks to Marcel Testa)
+
+Version 2.2 <2015-03-16>
+------------------------
+
+  * added possibility to order and sort files
+
+Version 2.1.2 <2013-11-11>
+--------------------------
+
+  * added Spain translation (thanks to Claudio Garcia Solca)
+
+Version 2.1.1 <2013-09-15>
+------------------------
+
+  * changed ffmpeg back to version 1.2
+
+Version 2.1 <2013-08-06>
+------------------------
+
+  * added loading of video images
+  * updated ffmpeg to version 2.0
+  * added Portuguese translation (thanks to João Frade)
+
+Version 2.0 <2013-03-04>
+------------------------
+
+  * added reencoding of audio streams if codecs or count of channels are different
+  * added support of drag & drop
+
+Version 1.0 <2012-07-15>
+------------------------
+
+  * added German and Russian translations
+  * added displayig of total size
+  * fixed some bugs
+
+Version 1.0 beta 1 <2012-07-11>
+-------------------------------
+
+  * initial revision
