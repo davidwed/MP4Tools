@@ -487,11 +487,11 @@ wxString FixEmail(const wxString& str) {
 
 void MainWin::OnAboutBt(wxCommandEvent& event) {
 	wxAboutDialogInfo info;
-	info.SetName("MP4Joiner / MP4Tools");
+	info.SetName("MP4Joiner (MP4Tools)");
 	info.SetVersion(APP_VERSION);
 	info.SetDescription(_("Simple tool to join multiple MP4 files into one."));
-	info.SetCopyright(FixEmail(wxString("(C) 2015 Alex Thüring <alex at thuering.biz>", wxConvISO8859_1)));
-	info.SetWebSite("http://www.mp4joiner.org");
+	info.SetCopyright(APP_COPYRIGHT);
+	info.SetWebSite(APP_COMPANYWEB);
 #ifdef __WXMSW__
 	info.SetIcon(wxICON(mp4joiner));
 #else

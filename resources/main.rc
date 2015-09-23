@@ -1,2 +1,29 @@
 #include <wx/msw/wx.rc>
-mp4joiner				ICON                    "resources/mp4joiner.ico"
+#include "../src/Version.h"
+
+mp4joiner		ICON                    "resources/mp4joiner.ico"
+
+VS_VERSION_INFO VERSIONINFO
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName",        APP_COMPANYNAME "\0"
+            VALUE "ProductName",        APP_NAME1 "\0"
+            VALUE "ProductVersion",     APP_VERSION "\0"
+            VALUE "FileDescription",    APP_DESCRIPTION1 "\0"
+            VALUE "FileVersion",        APP_VERSION "\0"
+            VALUE "InternalName",       APP_NAME1 "\0"
+            VALUE "OriginalFilename",   APP_FILENAME1 "\0"
+            VALUE "LegalCopyright",     APP_COPYRIGHT "\0"
+            VALUE "LegalTrademarks1",   APP_TRADEMARKS "\0"
+            VALUE "LegalTrademarks2",   APP_TRADEMARKS "\0"
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252, 0x0407, 1252, 0x0419, 1251, 0x0816, 1252, 0x040A, 1252
+    END
+END
