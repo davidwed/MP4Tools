@@ -27,6 +27,7 @@
 #include "../resources/mp4joiner.png.h"
 #include "../resources/add.png.h"
 #include "../resources/remove.png.h"
+#include "../resources/trash.png.h"
 #include "../resources/run.png.h"
 #include "../resources/preferences.png.h"
 #include "../resources/info.png.h"
@@ -149,12 +150,18 @@ MainWin::MainWin() {
 			_("Remove selected video"), wxT(""));
 	wxMenu* delMenu = new wxMenu;
 	delMenu->Append(REMOVE_FILE_ID, _("&Remove selected"));
-	delMenu->Append(REMOVE_ALL_ID, _("Remove a&ll"));
+	wxMenuItem* mitem =  new wxMenuItem(delMenu, REMOVE_ALL_ID, _("Remove a&ll"));
+	mitem->SetBitmap(wxBitmap(wxIMAGE_FROM_MEMORY(trash).Rescale(16, 16)));
+	delMenu->Append(mitem);
 	toolbar->SetDropdownMenu(REMOVE_FILE_ID, delMenu);
 #else
 	toolbar->AddTool(REMOVE_FILE_ID,  _("Remove"), wxBITMAP_FROM_MEMORY(remove), wxNullBitmap, wxITEM_NORMAL,
 			_("Remove selected video"), wxT(""));
 #endif
+#ifdef __WXMAC__
+	toolbar->AddTool(REMOVE_ALL_ID,  _("Remove all"), wxBITMAP_FROM_MEMORY(trash), wxNullBitmap, wxITEM_NORMAL,
+				_("Remove all videos"), wxT(""));
+#endif 
 	toolbar->AddTool(RUN_ID,  _("Join"), wxBITMAP_FROM_MEMORY(run), wxNullBitmap, wxITEM_NORMAL,
 			_("Select output file and start join"), wxT(""));
 #if wxCHECK_VERSION(2, 9, 0)
@@ -202,6 +209,7 @@ MainWin::~MainWin() {
 
 void MainWin::UpdateToolBar() {
 	toolbar->EnableTool(REMOVE_FILE_ID, mediaListBox->GetSelection() >= 0);
+	toolbar->EnableTool(REMOVE_ALL_ID, mediaListBox->GetItemCount() > 0);
 	toolbar->EnableTool(RUN_ID, files.size() > 1);
 	upButton->Enable(mediaListBox->GetSelection() > 0);
 	downButton->Enable(mediaListBox->GetSelection() >= 0 && mediaListBox->GetSelection() < (int) files.size() - 1);

@@ -39,6 +39,13 @@ inline wxBitmap wxGetBitmapFromMemory(const unsigned char *data, int length) {
    return wxBitmap(wxImage(is, wxBITMAP_TYPE_ANY, -1), -1);
 }
 
+#define wxIMAGE_FROM_MEMORY(name) wxGetImageFromMemory(name##_png, sizeof(name##_png))
+
+inline wxImage wxGetImageFromMemory(const unsigned char *data, int length) {
+   wxMemoryInputStream is(data, length);
+   return wxImage(is, wxBITMAP_TYPE_ANY, -1);
+}
+
 #define wxICON_FROM_MEMORY(name) wxGetIconFromMemory(name##_png, sizeof(name##_png))
 
 inline wxIcon wxGetIconFromMemory(const unsigned char *data, int length) {
