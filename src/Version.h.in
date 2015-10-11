@@ -8,7 +8,7 @@
 #define APP_DESCRIPTION2	"Simple tool to split a MP4 file."
 #define APP_FILENAME2		"MP4Splitter.exe"
 
-#define APP_COMPANYNAME		"Thüring IT-Consulting"
+#define APP_COMPANYNAME		"ThÃ¼ring IT-Consulting"
 #define APP_COMPANYWEB		"http://www.mp4joiner.org"
-#define APP_COPYRIGHT		"Copyright © 2012-2015 Alex Thüring"
+#define APP_COPYRIGHT		"Copyright Â© 2012-2015 Alex ThÃ¼ring"
 #define APP_TRADEMARKS		"All Rights Reserved"

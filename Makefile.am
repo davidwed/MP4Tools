@@ -61,15 +61,15 @@ libs: MP4Joiner.libs MP4Splitter.libs
 		ln -s libwx_osx_cocoau_core-3.0.dylib libwx_osx_cocoau_core-3.0.0.2.0.dylib &&\
 		ln -s libwx_osx_cocoau_html-3.0.dylib libwx_osx_cocoau_html-3.0.0.2.0.dylib &&\
 		ln -s libwx_osx_cocoau_qa-3.0.dylib libwx_osx_cocoau_qa-3.0.0.2.0.dylib &&\
-		ln -s libwx_osx_cocoau_webview-3.0.dylib libwx_osx_cocoau_webview-3.0.0.2.0.dylib &&\
 		ln -s libwx_osx_cocoau_xrc-3.0.dylib libwx_osx_cocoau_xrc-3.0.0.2.0.dylib)
 
 dmg:
 	rm -f MP4Tools.dmg MP4Tools-@VERSION@-MacOSX.dmg
+	hdiutil eject /dev/disk1 || echo
 	hdiutil create -megabytes 120 -layout NONE MP4Tools.dmg
 	hdid -nomount MP4Tools.dmg
-	newfs_hfs -v MP4Tools /dev/disk2
-	hdiutil eject /dev/disk2
+	newfs_hfs -v MP4Tools /dev/disk1
+	hdiutil eject /dev/disk1
 	hdid MP4Tools.dmg
 	rsync -rlv --exclude "CVS" --exclude "Makefile*" --exclude ".*" MP4Joiner.app /Volumes/MP4Tools/
 	rsync -rlv --exclude "CVS" --exclude "Makefile*" --exclude ".*" MP4Splitter.app /Volumes/MP4Tools/

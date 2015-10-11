@@ -4,3 +4,14 @@
 /README.txt
 /*.layout
 /*.bz2
+/MP4Tools-*.dmg
+/cfg.sh
+/aclocal.m4
+/compile
+/config.*
+/configure
+/*.plist
+/Makefile.in
+/.DS_Store
+/*.app
+/autom4te.cache

@@ -5,3 +5,8 @@
 /*.exe
 /*.txt
 /Version.h
+/.deps
+/Makefile
+/Makefile.in
+/mp4joiner
+/mp4splitter
