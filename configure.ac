@@ -63,7 +63,7 @@ AC_CHECK_HEADER([libavformat/avformat.h],[],[AC_MSG_ERROR([*** missing libav (ww
 
 dnl check for wxSVG
 PKG_CHECK_MODULES(wxSVG, [libwxsvg >= 1.1.13], [LIBS="$LIBS $wxSVG_LIBS"], [AC_MSG_ERROR([*** missing wxSVG library >= 1.1.13 ***])])
-AC_MSG_CHECKING([for wxSVG library with LIBAV support])
+AC_MSG_CHECKING([for wxSVG library with ffmpeg/libav support])
 WXSVGLIBAV=no
 AC_TRY_LINK(
     [#include <wxSVG/mediadec_ffmpeg.h>],
@@ -72,7 +72,7 @@ AC_TRY_LINK(
 AC_MSG_RESULT([$WXSVGLIBAV])
 if test "x$WXSVGLIBAV" = x"no"; then
   AC_MSG_ERROR([
-    MP4Joiner requires the wxSVG library with LIBAV support.
+    MP4Joiner requires the wxSVG library with ffmpeg/libav support.
 ])
 fi
 
