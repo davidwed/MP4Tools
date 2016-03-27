@@ -20,8 +20,10 @@ InfoBeforeFile=Info.rtf
 [Languages]
 Name: "de"; MessagesFile: "compiler:Languages\German.isl"
 Name: "en"; MessagesFile: "compiler:Default.isl"
-Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
+Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"   
+Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
 Name: "pt"; MessagesFile: "compiler:Languages\Portuguese.isl"
+Name: "pt_BR"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
 
 [Tasks]
@@ -35,7 +37,8 @@ Source: "..\COPYING"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\ChangeLog"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "..\locale\de\*"; DestDir: "{app}\locale\de"; Flags: ignoreversion
-Source: "..\locale\es\*"; DestDir: "{app}\locale\es"; Flags: ignoreversion
+Source: "..\locale\es\*"; DestDir: "{app}\locale\es"; Flags: ignoreversion  
+Source: "..\locale\fr\*"; DestDir: "{app}\locale\es"; Flags: ignoreversion
 Source: "..\locale\pt\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
 Source: "..\locale\pt_BR\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
 Source: "..\locale\ru\*"; DestDir: "{app}\locale\ru"; Flags: ignoreversion
