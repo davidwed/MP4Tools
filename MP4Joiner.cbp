@@ -75,17 +75,21 @@
 		<Unit filename="src/MediaFile.h" />
 		<Unit filename="src/MediaListBox.cpp" />
 		<Unit filename="src/MediaListBox.h" />
+		<Unit filename="src/OptionsDlg.cpp" />
+		<Unit filename="src/OptionsDlg.h" />
 		<Unit filename="src/mp4joiner.cpp" />
 		<Unit filename="src/utils.cpp" />
 		<Unit filename="src/utils.h" />
+		<Unit filename="wxsmith/OptionsDlg.wxs" />
 		<Extensions>
 			<code_completion />
 			<debugger />
 			<wxsmith version="1">
-				<gui name="wxWidgets" src="src\mp4joiner.cpp" main="MainWin" init_handlers="necessary" language="CPP" />
+				<gui name="wxWidgets" src="src/mp4joiner.cpp" main="MainWin" init_handlers="necessary" language="CPP" />
 				<resources>
-					<wxFrame wxs="wxsmith/MainWin.wxs" src="src\MainWin.cpp" hdr="src\MainWin.h" fwddecl="0" i18n="1" name="MainWin" language="CPP" />
-					<wxFrame wxs="wxsmith/VideoPropDlg.wxs" src="src\VideoPropDlg.cpp" hdr="src\VideoPropDlg.h" fwddecl="0" i18n="1" name="VideoPropDlg" language="CPP" />
+					<wxFrame wxs="wxsmith/MainWin.wxs" src="src/MainWin.cpp" hdr="src/MainWin.h" fwddecl="0" i18n="1" name="MainWin" language="CPP" />
+					<wxDialog wxs="wxsmith/VideoPropDlg.wxs" src="src/VideoPropDlg.cpp" hdr="src/VideoPropDlg.h" fwddecl="0" i18n="1" name="VideoPropDlg" language="CPP" />
+					<wxDialog wxs="wxsmith/OptionsDlg.wxs" src="src/OptionsDlg.cpp" hdr="src/OptionsDlg.h" fwddecl="0" i18n="1" name="OptionsDlg" language="CPP" />
 				</resources>
 			</wxsmith>
 			<envvars />
