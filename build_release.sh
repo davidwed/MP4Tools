@@ -1,4 +1,4 @@
-MODULE=MP4Tools-3.2
+MODULE=MP4Tools-3.3
 CODE_DIR=mp4joiner-git
 
 rm -rf $CODE_DIR
