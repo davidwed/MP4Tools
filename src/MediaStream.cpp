@@ -80,8 +80,8 @@ bool MediaStream::IsCompatibleTo(const MediaStream* mediaStream) const {
 	case stVIDEO:
 		return GetCodecName() == mediaStream->GetCodecName()
 				&& GetVideoSize() == mediaStream->GetVideoSize()
-				&& lround(GetFps()*10) == lround(mediaStream->GetFps()*10)
-				&& lround(GetTimebase()*10) == lround(mediaStream->GetTimebase()*10)
+				&& lround(GetFps()) == lround(mediaStream->GetFps())
+				// && lround(GetTimebase()) == lround(mediaStream->GetTimebase())
 				&& lround(GetAspectRatio()*10) == lround(mediaStream->GetAspectRatio()*10);
 	case stAUDIO:
 		return GetCodecName() == mediaStream->GetCodecName()

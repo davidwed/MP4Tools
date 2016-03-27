@@ -13,7 +13,7 @@
 #include <wx/config.h>
 #include <wx/filename.h>
 
-const wxString DEF_LANGUAGE_CODE= wxT("");
+const wxString DEF_LANGUAGE_CODE= wxT("EN");
 #define DEF_LAST_ADD_DIR wxGetHomeDir()
 
 #define CONFIG_PROP(name, cfgName, defValue)\
