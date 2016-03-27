@@ -1,9 +1,12 @@
                   ----------
-                   MP4Joiner
+                   MP4Tools
                   ----------
- About
--------
-MP4Joiner is a simple tool to join multiple MP4 files into one.
-It is Free Software distributed under the GNU General Public License (GPL).
+About
+-----
+
+MP4Tools is a collection of cross-platform free tools to manipulate MP4 files.
+It contains following applications:
+ - MP4Joiner allow join multiple MP4 files into one
+ - MP4Splitter allow split a MP4 file in multiple files
 
 See http://www.mp4joiner.org for more information

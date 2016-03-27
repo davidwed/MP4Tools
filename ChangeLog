@@ -1,7 +1,7 @@
 Version 3.3 <2016-03-27>
 ------------------------
 
-  * added options to force reencoding
+  * MP4Joiner: added options to force reencoding
   * updated ffmpeg to version 3.0
   * added French translation (thanks to Cocoa Pod)
 
