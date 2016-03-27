@@ -2,194 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MP4Joiner 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-29 23:13+0200\n"
+"POT-Creation-Date: 2016-03-27 15:32+0200\n"
 "PO-Revision-Date: 2013-07-07 15:35-0000\n"
 "Last-Translator: João Frade // 100Nome <100nome.portugal at gmail.com>\n"
 "Language-Team: 100Nome Portugal <100nome.portugal at gmail.com>\n"
+"Language: Português\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: Português\n"
 "X-Generator: Poedit 1.5.7\n"
-
-#: src/MainWin.cpp:53 src/SplitterWin.cpp:379
-msgid "Successful"
-msgstr "Com êxito"
-
-#: src/MainWin.cpp:113 src/MainWin.cpp:332
-msgid "MP4 Joiner"
-msgstr "MP4 Joiner"
-
-#: src/MainWin.cpp:144
-msgid "Add Video"
-msgstr "Adicionar Vídeo"
-
-#: src/MainWin.cpp:145
-msgid "Add video file"
-msgstr "Adicionar ficheiro de vídeo"
-
-#: src/MainWin.cpp:147 src/MainWin.cpp:154
-msgid "Remove"
-msgstr "Remover"
-
-#: src/MainWin.cpp:148 src/MainWin.cpp:155
-msgid "Remove selected video"
-msgstr "Remover vídeo selecionado"
-
-#: src/MainWin.cpp:150
-msgid "&Remove selected"
-msgstr "&Remover vídeo selecionado"
-
-#: src/MainWin.cpp:151
-#, fuzzy
-msgid "Remove a&ll"
-msgstr "Remover"
-
-#: src/MainWin.cpp:157
-msgid "Join"
-msgstr "Unir"
-
-#: src/MainWin.cpp:158
-msgid "Select output file and start join"
-msgstr "Selecionar ficheiro de saída e começar a unir"
-
-#: src/MainWin.cpp:162
-msgid "Language"
-msgstr "Idioma"
-
-#: src/MainWin.cpp:163
-msgid "Select language"
-msgstr "Selecionar idioma"
-
-#: src/MainWin.cpp:164
-msgid "About"
-msgstr "Acerca de"
-
-#: src/MainWin.cpp:165
-msgid "About the program"
-msgstr "Acerca do programa"
-
-#: src/MainWin.cpp:214
-msgid "Total duration"
-msgstr "Duração total"
-
-#: src/MainWin.cpp:221
-msgid "total size"
-msgstr "tamanho total"
-
-#: src/MainWin.cpp:223 src/MediaListBox.cpp:98
-msgid "GB"
-msgstr "GB"
-
-#: src/MainWin.cpp:225 src/MediaListBox.cpp:100
-msgid "MB"
-msgstr "MB"
-
-#: src/MainWin.cpp:230 src/SplitterWin.cpp:227
-msgid "Choose a file"
-msgstr "Selecionar um ficheiro"
-
-#: src/MainWin.cpp:231 src/MainWin.cpp:310 src/SplitterWin.cpp:228
-msgid "MP4 Files"
-msgstr "Ficheiros MP4"
-
-#: src/MainWin.cpp:232 src/MainWin.cpp:311 src/SplitterWin.cpp:229
-msgid "All Files"
-msgstr "Todos os ficheiros"
-
-#: src/MainWin.cpp:309
-msgid "Choose a file to save"
-msgstr "Selecionar um ficheiro para guardar"
-
-#: src/MainWin.cpp:309
-msgid "Output.mp4"
-msgstr "Final.mp4"
-
-#: src/MainWin.cpp:332
-msgid "Joning the files"
-msgstr "A unir os ficheiros"
-
-#: src/MainWin.cpp:345
-#, c-format
-msgid "Reencode video from file %s"
-msgstr "Recodificar vídeo a partir do ficheiro %s"
-
-#: src/MainWin.cpp:347
-#, c-format
-msgid "Reencode audio from file %s"
-msgstr "Recodificar áudio a partir do ficheiro %s"
-
-#: src/MainWin.cpp:349
-#, fuzzy, c-format
-msgid "Cut video from file %s"
-msgstr "Recodificar vídeo a partir do ficheiro %s"
-
-#: src/MainWin.cpp:457
-msgid "Language change will not take effect until MP4Joiner is restarted"
-msgstr "Para que a mudança de idioma surta efeito, o MP4Joiner terá que ser reiniciado"
-
-#: src/MainWin.cpp:471
-msgid "Simple tool to join multiple MP4 files into one."
-msgstr "Ferramenta simples para unir vários ficheiros MP4 em apenas um."
-
-#: src/MainWin.cpp:488 src/SplitterWin.cpp:295
-msgid "&Remove"
-msgstr "&Remover"
-
-#: src/MainWin.cpp:489
-msgid "&Cut video..."
-msgstr ""
-
-#: src/MainWin.cpp:491
-msgid "&Sort"
-msgstr ""
-
-#: src/MediaListBox.cpp:83 src/SplitterWin.cpp:166
-msgid "Duration"
-msgstr "Duração"
-
-#: src/MediaListBox.cpp:95
-msgid "Size"
-msgstr "Tamanho"
-
-#: src/MediaListBox.cpp:102
-msgid "KB"
-msgstr "KB"
-
-#: src/MediaListBox.cpp:112
-msgid "Video:"
-msgstr "Vídeo:"
-
-#: src/MediaListBox.cpp:117
-msgid "Audio:"
-msgstr "Áudio:"
-
-#: src/MediaListBox.cpp:122
-msgid "Subtitle:"
-msgstr "Legendas:"
-
-#: src/MediaStream.cpp:54
-msgid "mono"
-msgstr "mono"
-
-#: src/MediaStream.cpp:56
-msgid "stereo"
-msgstr "stereo"
-
-#: src/MediaStream.cpp:60
-#, c-format
-msgid "%d channels"
-msgstr "%d canais"
-
-#: src/MediaStream.cpp:63
-#, c-format
-msgid "%d Hz"
-msgstr "%d Hz"
-
-#: src/MediaStream.cpp:65
-#, c-format
-msgid "%d kbit/s"
-msgstr "%d kbit/s"
 
 #: src/ProgramProcess.cpp:28
 msgid "Failed"
@@ -233,6 +54,26 @@ msgstr ""
 msgid "End"
 msgstr ""
 
+#: src/SplitterWin.cpp:166 src/MediaListBox.cpp:83
+msgid "Duration"
+msgstr "Duração"
+
+#: src/SplitterWin.cpp:227 src/MainWin.cpp:239
+msgid "Choose a file"
+msgstr "Selecionar um ficheiro"
+
+#: src/SplitterWin.cpp:228 src/MainWin.cpp:240 src/MainWin.cpp:320
+msgid "MP4 Files"
+msgstr "Ficheiros MP4"
+
+#: src/SplitterWin.cpp:229 src/MainWin.cpp:242 src/MainWin.cpp:321
+msgid "All Files"
+msgstr "Todos os ficheiros"
+
+#: src/SplitterWin.cpp:295 src/MainWin.cpp:508
+msgid "&Remove"
+msgstr "&Remover"
+
 #: src/SplitterWin.cpp:296
 #, fuzzy
 msgid "Remove &all"
@@ -262,6 +103,10 @@ msgstr "Duração"
 msgid "Writting %s"
 msgstr ""
 
+#: src/SplitterWin.cpp:379 src/MainWin.cpp:55
+msgid "Successful"
+msgstr "Com êxito"
+
 #: src/SplitterWin.cpp:396
 msgid "Language change will not take effect until MP4Splitter is restarted"
 msgstr "Para que a mudança de idioma surta efeito, o MP4Splitter terá que ser reiniciado"
@@ -270,6 +115,148 @@ msgstr "Para que a mudança de idioma surta efeito, o MP4Splitter terá que ser 
 #, fuzzy
 msgid "Simple tool to split a MP4 file."
 msgstr "Ferramenta simples para unir vários ficheiros MP4 em apenas um."
+
+#: src/MainWin.cpp:115 src/MainWin.cpp:344
+msgid "MP4 Joiner"
+msgstr "MP4 Joiner"
+
+#: src/MainWin.cpp:146
+msgid "Add Video"
+msgstr "Adicionar Vídeo"
+
+#: src/MainWin.cpp:147
+msgid "Add video file"
+msgstr "Adicionar ficheiro de vídeo"
+
+#: src/MainWin.cpp:149 src/MainWin.cpp:158
+msgid "Remove"
+msgstr "Remover"
+
+#: src/MainWin.cpp:150 src/MainWin.cpp:159
+msgid "Remove selected video"
+msgstr "Remover vídeo selecionado"
+
+#: src/MainWin.cpp:152
+msgid "&Remove selected"
+msgstr "&Remover vídeo selecionado"
+
+#: src/MainWin.cpp:153
+#, fuzzy
+msgid "Remove a&ll"
+msgstr "Remover"
+
+#: src/MainWin.cpp:162
+#, fuzzy
+msgid "Remove all"
+msgstr "Remover"
+
+#: src/MainWin.cpp:163
+#, fuzzy
+msgid "Remove all videos"
+msgstr "Remover vídeo selecionado"
+
+#: src/MainWin.cpp:165
+msgid "Join"
+msgstr "Unir"
+
+#: src/MainWin.cpp:166
+msgid "Select output file and start join"
+msgstr "Selecionar ficheiro de saída e começar a unir"
+
+#: src/MainWin.cpp:170 src/MainWin.cpp:171 src/OptionsDlg.cpp:39
+msgid "Options"
+msgstr ""
+
+#: src/MainWin.cpp:172
+msgid "About"
+msgstr "Acerca de"
+
+#: src/MainWin.cpp:173
+msgid "About the program"
+msgstr "Acerca do programa"
+
+#: src/MainWin.cpp:223
+msgid "Total duration"
+msgstr "Duração total"
+
+#: src/MainWin.cpp:230
+msgid "total size"
+msgstr "tamanho total"
+
+#: src/MainWin.cpp:232 src/MediaListBox.cpp:98
+msgid "GB"
+msgstr "GB"
+
+#: src/MainWin.cpp:234 src/MediaListBox.cpp:100
+msgid "MB"
+msgstr "MB"
+
+#: src/MainWin.cpp:241
+#, fuzzy
+msgid "AVI Files"
+msgstr "Todos os ficheiros"
+
+#: src/MainWin.cpp:319
+msgid "Choose a file to save"
+msgstr "Selecionar um ficheiro para guardar"
+
+#: src/MainWin.cpp:319
+msgid "Output.mp4"
+msgstr "Final.mp4"
+
+#: src/MainWin.cpp:344
+msgid "Joning the files"
+msgstr "A unir os ficheiros"
+
+#: src/MainWin.cpp:357
+#, c-format
+msgid "Reencode video from file %s"
+msgstr "Recodificar vídeo a partir do ficheiro %s"
+
+#: src/MainWin.cpp:359
+#, c-format
+msgid "Reencode audio from file %s"
+msgstr "Recodificar áudio a partir do ficheiro %s"
+
+#: src/MainWin.cpp:361
+#, fuzzy, c-format
+msgid "Cut video from file %s"
+msgstr "Recodificar vídeo a partir do ficheiro %s"
+
+#: src/MainWin.cpp:491
+msgid "Simple tool to join multiple MP4 files into one."
+msgstr "Ferramenta simples para unir vários ficheiros MP4 em apenas um."
+
+#: src/MainWin.cpp:509
+msgid "&Cut video..."
+msgstr ""
+
+#: src/MainWin.cpp:511
+msgid "&Sort"
+msgstr ""
+
+#: src/MediaStream.cpp:58
+msgid "mono"
+msgstr "mono"
+
+#: src/MediaStream.cpp:60
+msgid "stereo"
+msgstr "stereo"
+
+#: src/MediaStream.cpp:64
+#, c-format
+msgid "%d channels"
+msgstr "%d canais"
+
+#: src/MediaStream.cpp:67
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: src/MediaStream.cpp:69
+#, c-format
+msgid "%d kbit/s"
+msgstr "%d kbit/s"
 
 #: src/VideoPropDlg.cpp:62
 msgid "Cut video"
@@ -294,3 +281,44 @@ msgstr ""
 #: src/VideoPropDlg.cpp:279 src/VideoPropDlg.cpp:284
 msgid "Invalid time"
 msgstr ""
+
+#: src/MediaListBox.cpp:95
+msgid "Size"
+msgstr "Tamanho"
+
+#: src/MediaListBox.cpp:102
+msgid "KB"
+msgstr "KB"
+
+#: src/MediaListBox.cpp:112
+msgid "Video:"
+msgstr "Vídeo:"
+
+#: src/MediaListBox.cpp:117
+msgid "Audio:"
+msgstr "Áudio:"
+
+#: src/MediaListBox.cpp:122
+msgid "Subtitle:"
+msgstr "Legendas:"
+
+#: src/OptionsDlg.cpp:42
+#, fuzzy
+msgid "Language:"
+msgstr "Idioma"
+
+#: src/OptionsDlg.cpp:47
+#, fuzzy
+msgid "force reencode video"
+msgstr "Remover vídeo selecionado"
+
+#: src/OptionsDlg.cpp:51
+msgid "force reencode audio"
+msgstr ""
+
+#: src/OptionsDlg.cpp:85
+msgid "Language change will not take effect until MP4Joiner is restarted"
+msgstr "Para que a mudança de idioma surta efeito, o MP4Joiner terá que ser reiniciado"
+
+#~ msgid "Select language"
+#~ msgstr "Selecionar idioma"
