@@ -66,7 +66,9 @@ private:
 	void UpdateToolBar();
 
 	vector<MediaFile*> files;
-
+	bool forceReencodeAudio;
+	bool forceReencodeVideo;
+	
 	DECLARE_EVENT_TABLE()
 };
 

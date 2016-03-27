@@ -5,6 +5,7 @@
 // Copyright: (c) Alex Thuering
 // Licence:   GPL
 /////////////////////////////////////////////////////////////////////////////
+#include <src/OptionsDlg.h>
 #include "MainWin.h"
 
 //(*InternalHeaders(MainWin)
@@ -20,7 +21,6 @@
 #include <wx/aboutdlg.h>
 #include "VideoPropDlg.h"
 #include "AvConvProcess.h"
-#include "Languages.h"
 #include "Config.h"
 #include "Version.h"
 #include "utils.h"
@@ -107,7 +107,7 @@ BEGIN_EVENT_TABLE(MainWin,wxFrame)
 	//*)
 END_EVENT_TABLE()
 
-MainWin::MainWin() {
+MainWin::MainWin(): forceReencodeAudio(false), forceReencodeVideo(false) {
 	//(*Initialize(MainWin)
 	wxBoxSizer* BoxSizer2;
 	wxBoxSizer* BoxSizer1;
@@ -167,8 +167,8 @@ MainWin::MainWin() {
 #if wxCHECK_VERSION(2, 9, 0)
 	toolbar->AddStretchableSpace();
 #endif
-	toolbar->AddTool(SETTINGS_ID, _("Language"), wxBITMAP_FROM_MEMORY(preferences),
-			wxNullBitmap, wxITEM_NORMAL, _("Select language"), wxT(""));
+	toolbar->AddTool(SETTINGS_ID, _("Options"), wxBITMAP_FROM_MEMORY(preferences),
+			wxNullBitmap, wxITEM_NORMAL, _("Options"), wxT(""));
 	toolbar->AddTool(ABOUT_ID, _("About"),  wxBITMAP_FROM_MEMORY(info),
 			wxNullBitmap, wxITEM_NORMAL, _("About the program"), wxT(""));
 	toolbar->Realize();
@@ -330,8 +330,8 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 	MediaFile* mediaFile1 = files[0];
 	for (unsigned int idx = 0; idx < files.size(); idx++) {
 		MediaFile* mediaFile = files[idx];
-		mediaFile->SetReencodeAudio(!mediaFile->HasCompatibleAudioStreams(mediaFile1));
-		mediaFile->SetReencodeVideo(!mediaFile->HasCompatibleVideoStreams(mediaFile1));
+		mediaFile->SetReencodeAudio(!mediaFile->HasCompatibleAudioStreams(mediaFile1) || forceReencodeAudio);
+		mediaFile->SetReencodeVideo(!mediaFile->HasCompatibleVideoStreams(mediaFile1) || forceReencodeVideo);
 		if (!mediaFile->IsReencodeVideo() && !mediaFile->IsReencodeAudio() && !mediaFile->IsCutVideo())
 			continue;
 		tempFiles[idx] = wxFileName::CreateTempFileName(wxFileName::GetTempDir() + wxFILE_SEP_PATH)
@@ -410,10 +410,6 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 						break;
 					// set audio codec
 					wxString codec = mediaFile1->GetStreams()[streamIdx1]->GetCodecName();
-					if (codec == "aac") {
-						codec = "libfaac";
-//						cmd += " -strict -2";
-					}
 					cmd += wxString::Format(" -c:a:%d ", audioIdx) + codec;
 					cmd += wxString::Format(" -ac:a:%d %d", audioIdx, mediaFile1->GetStreams()[streamIdx1]->GetChannelNumber());
 					cmd += wxString::Format(" -ar:a:%d %d", audioIdx, mediaFile1->GetStreams()[streamIdx1]->GetSampleRate());
@@ -473,18 +469,13 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 }
 
 void MainWin::OnSettingsBt(wxCommandEvent& event) {
-	int langId = wxLANGUAGE_ENGLISH;
-	if (wxLocale::FindLanguageInfo(s_config.GetLanguageCode()))
-		langId = wxLocale::FindLanguageInfo(s_config.GetLanguageCode())->Language;
-	int lang = ChooseLanguage(langId);
-	if (lang == wxLANGUAGE_UNKNOWN)
-		return;
-	wxString languageCode = wxLocale::GetLanguageInfo(lang)->CanonicalName;
-	if (languageCode == s_config.GetLanguageCode())
-		return;
-	s_config.SetLanguageCode(languageCode);
-	wxMessageBox(_("Language change will not take effect until MP4Joiner is restarted"),
-			GetTitle(), wxOK|wxICON_INFORMATION, this);
+	OptionsDlg dlg(this);
+	dlg.SetForceReencodeAudio(forceReencodeAudio);
+	dlg.SetForceReencodeVideo(forceReencodeVideo);
+	if (dlg.ShowModal() == wxID_OK) {
+		forceReencodeAudio = dlg.IsForceReencodeAudio();
+		forceReencodeVideo = dlg.IsForceReencodeVideo();
+	}
 }
 
 wxString FixEmail(const wxString& str) {
