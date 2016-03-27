@@ -8,191 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 17:41+0200\n"
+"POT-Creation-Date: 2016-03-27 15:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: src/MainWin.cpp:53 src/SplitterWin.cpp:379
-msgid "Successful"
-msgstr ""
-
-#: src/MainWin.cpp:113 src/MainWin.cpp:332
-msgid "MP4 Joiner"
-msgstr ""
-
-#: src/MainWin.cpp:144
-msgid "Add Video"
-msgstr ""
-
-#: src/MainWin.cpp:145
-msgid "Add video file"
-msgstr ""
-
-#: src/MainWin.cpp:147 src/MainWin.cpp:154
-msgid "Remove"
-msgstr ""
-
-#: src/MainWin.cpp:148 src/MainWin.cpp:155
-msgid "Remove selected video"
-msgstr ""
-
-#: src/MainWin.cpp:150
-msgid "&Remove selected"
-msgstr ""
-
-#: src/MainWin.cpp:151
-msgid "Remove a&ll"
-msgstr ""
-
-#: src/MainWin.cpp:157
-msgid "Join"
-msgstr ""
-
-#: src/MainWin.cpp:158
-msgid "Select output file and start join"
-msgstr ""
-
-#: src/MainWin.cpp:162
-msgid "Language"
-msgstr ""
-
-#: src/MainWin.cpp:163
-msgid "Select language"
-msgstr ""
-
-#: src/MainWin.cpp:164
-msgid "About"
-msgstr ""
-
-#: src/MainWin.cpp:165
-msgid "About the program"
-msgstr ""
-
-#: src/MainWin.cpp:214
-msgid "Total duration"
-msgstr ""
-
-#: src/MainWin.cpp:221
-msgid "total size"
-msgstr ""
-
-#: src/MainWin.cpp:223 src/MediaListBox.cpp:98
-msgid "GB"
-msgstr ""
-
-#: src/MainWin.cpp:225 src/MediaListBox.cpp:100
-msgid "MB"
-msgstr ""
-
-#: src/MainWin.cpp:230 src/SplitterWin.cpp:227
-msgid "Choose a file"
-msgstr ""
-
-#: src/MainWin.cpp:231 src/MainWin.cpp:310 src/SplitterWin.cpp:228
-msgid "MP4 Files"
-msgstr ""
-
-#: src/MainWin.cpp:232 src/MainWin.cpp:311 src/SplitterWin.cpp:229
-msgid "All Files"
-msgstr ""
-
-#: src/MainWin.cpp:309
-msgid "Choose a file to save"
-msgstr ""
-
-#: src/MainWin.cpp:309
-msgid "Output.mp4"
-msgstr ""
-
-#: src/MainWin.cpp:332
-msgid "Joning the files"
-msgstr ""
-
-#: src/MainWin.cpp:345
-#, c-format
-msgid "Reencode video from file %s"
-msgstr ""
-
-#: src/MainWin.cpp:347
-#, c-format
-msgid "Reencode audio from file %s"
-msgstr ""
-
-#: src/MainWin.cpp:349
-#, c-format
-msgid "Cut video from file %s"
-msgstr ""
-
-#: src/MainWin.cpp:457
-msgid "Language change will not take effect until MP4Joiner is restarted"
-msgstr ""
-
-#: src/MainWin.cpp:471
-msgid "Simple tool to join multiple MP4 files into one."
-msgstr ""
-
-#: src/MainWin.cpp:488 src/SplitterWin.cpp:295
-msgid "&Remove"
-msgstr ""
-
-#: src/MainWin.cpp:489
-msgid "&Cut video..."
-msgstr ""
-
-#: src/MainWin.cpp:491
-msgid "&Sort"
-msgstr ""
-
-#: src/MediaListBox.cpp:83 src/SplitterWin.cpp:166
-msgid "Duration"
-msgstr ""
-
-#: src/MediaListBox.cpp:95
-msgid "Size"
-msgstr ""
-
-#: src/MediaListBox.cpp:102
-msgid "KB"
-msgstr ""
-
-#: src/MediaListBox.cpp:112
-msgid "Video:"
-msgstr ""
-
-#: src/MediaListBox.cpp:117
-msgid "Audio:"
-msgstr ""
-
-#: src/MediaListBox.cpp:122
-msgid "Subtitle:"
-msgstr ""
-
-#: src/MediaStream.cpp:54
-msgid "mono"
-msgstr ""
-
-#: src/MediaStream.cpp:56
-msgid "stereo"
-msgstr ""
-
-#: src/MediaStream.cpp:60
-#, c-format
-msgid "%d channels"
-msgstr ""
-
-#: src/MediaStream.cpp:63
-#, c-format
-msgid "%d Hz"
-msgstr ""
-
-#: src/MediaStream.cpp:65
-#, c-format
-msgid "%d kbit/s"
-msgstr ""
 
 #: src/ProgramProcess.cpp:28
 msgid "Failed"
@@ -235,6 +58,26 @@ msgstr ""
 msgid "End"
 msgstr ""
 
+#: src/SplitterWin.cpp:166 src/MediaListBox.cpp:83
+msgid "Duration"
+msgstr ""
+
+#: src/SplitterWin.cpp:227 src/MainWin.cpp:239
+msgid "Choose a file"
+msgstr ""
+
+#: src/SplitterWin.cpp:228 src/MainWin.cpp:240 src/MainWin.cpp:320
+msgid "MP4 Files"
+msgstr ""
+
+#: src/SplitterWin.cpp:229 src/MainWin.cpp:242 src/MainWin.cpp:321
+msgid "All Files"
+msgstr ""
+
+#: src/SplitterWin.cpp:295 src/MainWin.cpp:508
+msgid "&Remove"
+msgstr ""
+
 #: src/SplitterWin.cpp:296
 msgid "Remove &all"
 msgstr ""
@@ -261,12 +104,154 @@ msgstr ""
 msgid "Writting %s"
 msgstr ""
 
+#: src/SplitterWin.cpp:379 src/MainWin.cpp:55
+msgid "Successful"
+msgstr ""
+
 #: src/SplitterWin.cpp:396
 msgid "Language change will not take effect until MP4Splitter is restarted"
 msgstr ""
 
 #: src/SplitterWin.cpp:410
 msgid "Simple tool to split a MP4 file."
+msgstr ""
+
+#: src/MainWin.cpp:115 src/MainWin.cpp:344
+msgid "MP4 Joiner"
+msgstr ""
+
+#: src/MainWin.cpp:146
+msgid "Add Video"
+msgstr ""
+
+#: src/MainWin.cpp:147
+msgid "Add video file"
+msgstr ""
+
+#: src/MainWin.cpp:149 src/MainWin.cpp:158
+msgid "Remove"
+msgstr ""
+
+#: src/MainWin.cpp:150 src/MainWin.cpp:159
+msgid "Remove selected video"
+msgstr ""
+
+#: src/MainWin.cpp:152
+msgid "&Remove selected"
+msgstr ""
+
+#: src/MainWin.cpp:153
+msgid "Remove a&ll"
+msgstr ""
+
+#: src/MainWin.cpp:162
+msgid "Remove all"
+msgstr ""
+
+#: src/MainWin.cpp:163
+msgid "Remove all videos"
+msgstr ""
+
+#: src/MainWin.cpp:165
+msgid "Join"
+msgstr ""
+
+#: src/MainWin.cpp:166
+msgid "Select output file and start join"
+msgstr ""
+
+#: src/MainWin.cpp:170 src/MainWin.cpp:171 src/OptionsDlg.cpp:39
+msgid "Options"
+msgstr ""
+
+#: src/MainWin.cpp:172
+msgid "About"
+msgstr ""
+
+#: src/MainWin.cpp:173
+msgid "About the program"
+msgstr ""
+
+#: src/MainWin.cpp:223
+msgid "Total duration"
+msgstr ""
+
+#: src/MainWin.cpp:230
+msgid "total size"
+msgstr ""
+
+#: src/MainWin.cpp:232 src/MediaListBox.cpp:98
+msgid "GB"
+msgstr ""
+
+#: src/MainWin.cpp:234 src/MediaListBox.cpp:100
+msgid "MB"
+msgstr ""
+
+#: src/MainWin.cpp:241
+msgid "AVI Files"
+msgstr ""
+
+#: src/MainWin.cpp:319
+msgid "Choose a file to save"
+msgstr ""
+
+#: src/MainWin.cpp:319
+msgid "Output.mp4"
+msgstr ""
+
+#: src/MainWin.cpp:344
+msgid "Joning the files"
+msgstr ""
+
+#: src/MainWin.cpp:357
+#, c-format
+msgid "Reencode video from file %s"
+msgstr ""
+
+#: src/MainWin.cpp:359
+#, c-format
+msgid "Reencode audio from file %s"
+msgstr ""
+
+#: src/MainWin.cpp:361
+#, c-format
+msgid "Cut video from file %s"
+msgstr ""
+
+#: src/MainWin.cpp:491
+msgid "Simple tool to join multiple MP4 files into one."
+msgstr ""
+
+#: src/MainWin.cpp:509
+msgid "&Cut video..."
+msgstr ""
+
+#: src/MainWin.cpp:511
+msgid "&Sort"
+msgstr ""
+
+#: src/MediaStream.cpp:58
+msgid "mono"
+msgstr ""
+
+#: src/MediaStream.cpp:60
+msgid "stereo"
+msgstr ""
+
+#: src/MediaStream.cpp:64
+#, c-format
+msgid "%d channels"
+msgstr ""
+
+#: src/MediaStream.cpp:67
+#, c-format
+msgid "%d Hz"
+msgstr ""
+
+#: src/MediaStream.cpp:69
+#, c-format
+msgid "%d kbit/s"
 msgstr ""
 
 #: src/VideoPropDlg.cpp:62
@@ -291,4 +276,40 @@ msgstr ""
 
 #: src/VideoPropDlg.cpp:279 src/VideoPropDlg.cpp:284
 msgid "Invalid time"
+msgstr ""
+
+#: src/MediaListBox.cpp:95
+msgid "Size"
+msgstr ""
+
+#: src/MediaListBox.cpp:102
+msgid "KB"
+msgstr ""
+
+#: src/MediaListBox.cpp:112
+msgid "Video:"
+msgstr ""
+
+#: src/MediaListBox.cpp:117
+msgid "Audio:"
+msgstr ""
+
+#: src/MediaListBox.cpp:122
+msgid "Subtitle:"
+msgstr ""
+
+#: src/OptionsDlg.cpp:42
+msgid "Language:"
+msgstr ""
+
+#: src/OptionsDlg.cpp:47
+msgid "force reencode video"
+msgstr ""
+
+#: src/OptionsDlg.cpp:51
+msgid "force reencode audio"
+msgstr ""
+
+#: src/OptionsDlg.cpp:85
+msgid "Language change will not take effect until MP4Joiner is restarted"
 msgstr ""
