@@ -5,7 +5,6 @@
 // Copyright: (c) Alex Thuering
 // Licence:   GPL
 /////////////////////////////////////////////////////////////////////////////
-#include <src/OptionsDlg.h>
 #include "MainWin.h"
 
 //(*InternalHeaders(MainWin)
@@ -20,6 +19,7 @@
 #include <wx/artprov.h>
 #include <wx/aboutdlg.h>
 #include "VideoPropDlg.h"
+#include "OptionsDlg.h"
 #include "AvConvProcess.h"
 #include "Config.h"
 #include "Version.h"
