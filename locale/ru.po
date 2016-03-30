@@ -1,15 +1,10 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: MP4Tools 3.0\n"
+"Project-Id-Version: MP4Tools 3.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-27 15:32+0200\n"
 "PO-Revision-Date: 2016-03-27 15:41+0200\n"
-"Last-Translator: Alex Thüring <alex@thuering.biz>\n"
+"Last-Translator: Alex Thüring <alex at thuering.biz>\n"
 "Language-Team: alex AT thuering.biz\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"

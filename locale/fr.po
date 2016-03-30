@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MP4Tools 3.0\n"
+"Project-Id-Version: MP4Tools 3.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-27 15:32+0200\n"
-"PO-Revision-Date: 2016-03-20 15:45+0100\n"
+"PO-Revision-Date: 2016-03-29 13:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -65,7 +65,7 @@ msgstr "Choisir un ficher"
 
 #: src/SplitterWin.cpp:228 src/MainWin.cpp:240 src/MainWin.cpp:320
 msgid "MP4 Files"
-msgstr "Fichier MP4"
+msgstr "Fichiers MP4"
 
 #: src/SplitterWin.cpp:229 src/MainWin.cpp:242 src/MainWin.cpp:321
 msgid "All Files"
@@ -85,7 +85,7 @@ msgstr "Choisir le dossier destination"
 
 #: src/SplitterWin.cpp:323
 msgid "Splitting the file"
-msgstr "Couper le fichier"
+msgstr "Découpage du fichier"
 
 #: src/SplitterWin.cpp:341
 #, c-format
@@ -142,14 +142,12 @@ msgid "Remove a&ll"
 msgstr "Supprimer &tout"
 
 #: src/MainWin.cpp:162
-#, fuzzy
 msgid "Remove all"
-msgstr "Supprimer &tout"
+msgstr "Tout supprimer"
 
 #: src/MainWin.cpp:163
-#, fuzzy
 msgid "Remove all videos"
-msgstr "Supprimer la vidéo sélectionnée"
+msgstr "Supprimer toutes les vidéos"
 
 #: src/MainWin.cpp:165
 msgid "Join"
@@ -161,7 +159,7 @@ msgstr "Choisir le fichier de sortie et joindre"
 
 #: src/MainWin.cpp:170 src/MainWin.cpp:171 src/OptionsDlg.cpp:39
 msgid "Options"
-msgstr ""
+msgstr "Options"
 
 #: src/MainWin.cpp:172
 msgid "About"
@@ -188,9 +186,8 @@ msgid "MB"
 msgstr "MB"
 
 #: src/MainWin.cpp:241
-#, fuzzy
 msgid "AVI Files"
-msgstr "Tous les fichiers"
+msgstr "Fichiers AVI"
 
 #: src/MainWin.cpp:319
 msgid "Choose a file to save"
@@ -299,18 +296,16 @@ msgid "Subtitle:"
 msgstr "Sous-titre:"
 
 #: src/OptionsDlg.cpp:42
-#, fuzzy
 msgid "Language:"
-msgstr "Langue"
+msgstr "Langue:"
 
 #: src/OptionsDlg.cpp:47
-#, fuzzy
 msgid "force reencode video"
-msgstr "Supprimer la vidéo sélectionnée"
+msgstr "Ré-encoder la vidéo"
 
 #: src/OptionsDlg.cpp:51
 msgid "force reencode audio"
-msgstr ""
+msgstr "Ré-encoder l’audio"
 
 #: src/OptionsDlg.cpp:85
 msgid "Language change will not take effect until MP4Joiner is restarted"
