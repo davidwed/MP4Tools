@@ -48,6 +48,11 @@ bool MP4Joiner::OnInit() {
 	wxFileSystem::AddHandler(new wxZipFSHandler);
     wxInitAllImageHandlers();
     
+#if wxDEBUG_LEVEL > 0
+	wxDisableAsserts();
+#endif
+
+
     // locale
 	int lang = wxLANGUAGE_ENGLISH;
 	wxString languageCode = s_config.GetLanguageCode();

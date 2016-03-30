@@ -7,7 +7,7 @@
 // Licence:     GPL
 /////////////////////////////////////////////////////////////////////////////
 
-#include <src/OptionsDlg.h>
+#include "OptionsDlg.h"
 #include "Languages.h"
 #include "Config.h"
 
