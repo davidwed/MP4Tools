@@ -18,7 +18,7 @@
  */
 class AvConvProcess: public ProgramProcess {
 public:
-	AvConvProcess(wxProgressDialog* parent, int step, int subSteps, long totalFrames) : ProgramProcess(parent) {
+	AvConvProcess(ProgressDlg* parent, int step, int subSteps, long totalFrames) : ProgramProcess(parent) {
 		this->totalFrames = totalFrames;
 		this->step = step;
 		this->subSteps = subSteps;
@@ -30,7 +30,7 @@ public:
 				|| line.Find(wxT("packet too large, ignoring buffer limits")) >= 0
 				|| line.Find(wxT("Last message repeated 1 times")) >= 0)
 			return;
-		cerr << line << endl;
+		DoLogMessage(line);
     	if (line.StartsWith("Error") || line.StartsWith("Unknown")) {
 			wxLogError(line);
     	} else if (pattern.Matches(line)) {

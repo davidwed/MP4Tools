@@ -11,7 +11,7 @@
 
 #include <wx/wx.h>
 #include <wx/process.h>
-#include <wx/progdlg.h>
+#include "ProgressDlg.h"
 
 using namespace std;
 
@@ -21,7 +21,7 @@ using namespace std;
 class ProgramProcess: public wxProcess {
 public:
 	/** Constructor */
-	ProgramProcess(wxProgressDialog* parent);
+	ProgramProcess(ProgressDlg* parent);
 	
 	/** Notifies about process termination */
 	virtual void OnTerminate(int pid, int status);
@@ -37,12 +37,16 @@ public:
     
     /** Updates progress message */
     bool Update(const wxString& msg);
-    
     /** Updates progress value and message */
     bool Update(int value, const wxString& msg = wxEmptyString);
+    
+    /** Writes text to log */
+	void DoLog(const wxString& text);
+	/** Writes message to log */
+	void DoLogMessage(const wxString& message);
 
 private:
-	wxProgressDialog* progDlg;
+	ProgressDlg* progDlg;
 	bool terminated;
 	wxString lineOut;
 	wxString lineErr;

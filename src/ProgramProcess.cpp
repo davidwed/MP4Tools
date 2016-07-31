@@ -10,7 +10,7 @@
 #include <wx/txtstrm.h>
 
 /** Constructor */
-ProgramProcess::ProgramProcess(wxProgressDialog* parent) : wxProcess(parent) {
+ProgramProcess::ProgramProcess(ProgressDlg* parent) : wxProcess(parent) {
 	progDlg = parent;
 	terminated = false;
 	pid = 0;
@@ -93,7 +93,7 @@ bool ProgramProcess::Execute(const wxString& command) {
 /** Updates progress message */
 bool ProgramProcess::Update(const wxString& msg) {
 	if (msg.length())
-		cerr << msg << endl;
+		progDlg->DoLogMessage(msg);
 	return progDlg->Update(progDlg->GetValue(), msg);
 }
 
@@ -101,7 +101,15 @@ bool ProgramProcess::Update(const wxString& msg) {
 bool ProgramProcess::Update(int value, const wxString& msg) {
 	if (value == -1)
 		value = progDlg->GetRange();
-	if (msg.length())
-		cerr << msg << endl;
 	return progDlg->Update(value, msg);
+}
+
+/** Writes text to log */
+void ProgramProcess::DoLog(const wxString& text) {
+	progDlg->DoLog(text);
+}
+
+/** Writes message to log */
+void ProgramProcess::DoLogMessage(const wxString& message) {
+	progDlg->DoLogMessage(message);
 }

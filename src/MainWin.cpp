@@ -6,6 +6,7 @@
 // Licence:   GPL
 /////////////////////////////////////////////////////////////////////////////
 #include "MainWin.h"
+#include "ProgressDlg.h"
 
 //(*InternalHeaders(MainWin)
 #include <wx/bitmap.h>
@@ -42,7 +43,7 @@
  */
 class MP4Process: public ProgramProcess {
 public:
-	MP4Process(wxProgressDialog* parent, int step, int stepCount, vector<MediaFile*> mediaFiles):
+	MP4Process(ProgressDlg* parent, int step, int stepCount, vector<MediaFile*> mediaFiles):
 			ProgramProcess(parent), files(mediaFiles) {
 		this->step = step;
 		this->stepCount = stepCount;
@@ -58,7 +59,7 @@ public:
 	virtual void ProcessOutput(const wxString& line, bool errorStream) {
     	if (line.StartsWith("Error") || line.StartsWith("Unknown")
     			|| line.StartsWith("No suitable media tracks to cat")) {
-    		cerr << line << endl;
+    		DoLogMessage(line);
 			wxLogError(line);
 		} else if (line.StartsWith("Appending file") || line.StartsWith("IsoMedia import")
 				|| line.Find("video import") >= 0 || line.Find("audio import") >= 0 || line.Find("Audio import") >= 0) {
@@ -70,13 +71,14 @@ public:
 				step++;
 			Update(step*100, line.Index(':') > 0 ? line.BeforeLast(':') : line);
 		} else if (pattern.Matches(line)) {
-			cerr << line << endl;
+			DoLogMessage(line);
 			long percent = 0;
 			if (pattern.GetMatch(line, 1).ToLong(&percent)) {
 				Update(step*100 + percent);
 			}
-		} else
-			cerr << line << endl;
+		} else {
+			DoLogMessage(line);
+		}
     }
 
 private:
@@ -107,7 +109,7 @@ BEGIN_EVENT_TABLE(MainWin,wxFrame)
 	//*)
 END_EVENT_TABLE()
 
-MainWin::MainWin(): forceReencodeAudio(false), forceReencodeVideo(false) {
+MainWin::MainWin(): forceReencodeAudio(false), forceReencodeVideo(false), crf(DEF_CRF), preset(3) {
 	//(*Initialize(MainWin)
 	wxBoxSizer* BoxSizer2;
 	wxBoxSizer* BoxSizer1;
@@ -341,8 +343,7 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 	// show progress dialog
 	int streamCount = mediaFile1->GetStreams().size();
 	int stepCount = tempFiles.size()*10 + files.size()*(streamCount + 1) + 1;
-	wxProgressDialog progDlg(_("MP4 Joiner"), _("Joning the files"), stepCount*100, this,
-			wxPD_APP_MODAL | wxPD_CAN_ABORT | wxPD_ELAPSED_TIME | wxPD_ESTIMATED_TIME);
+	ProgressDlg progDlg(this, _("MP4 Joiner"), _("Joning the files"), stepCount*100, logFileName);
 	progDlg.Show();
 	int step = 0;
 
@@ -359,7 +360,8 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 			message = _("Reencode audio from file %s");
 		else if (mediaFile->IsCutVideo())
 			message = _("Cut video from file %s");
-			
+		
+		
 		progDlg.Update(step * 100, wxString::Format(message, mediaFile->GetFileName().c_str()));
 
 		// build avconv/ffmpeg command
@@ -374,6 +376,11 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 			MediaStream* video = mediaFile->GetVideoStream();
 			MediaStream* video1 = mediaFile1->GetVideoStream();
 			cmd += " -c:v " + video1->GetCodecName();
+			if (video1->GetCodecName().StartsWith("h264")) {
+				const char* presetStr[] = { "veryslow", "slower", "slow", "medium", "fast", "faster", "veryfast",
+						"superfast", "ultrafast" };
+				cmd += wxString::Format(" -profile:v baseline -level 3.0 -crf %d -preset %s", crf, presetStr[preset]);
+			}
 			if (mediaFile1->GetFormatName() == "avi" && video1->GetCodecTag().length())
 				cmd += " -vtag " + video1->GetCodecTag().Upper();
 			if (video->GetVideoSize() != video1->GetVideoSize()
@@ -437,15 +444,16 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 		
 		// output file
 		cmd += " \"" + tempFileName + '"';
-		cerr << cmd << endl;
+		progDlg.DoLogMessage(cmd);
 
 		// execute avconv/ffmpeg
-		AvConvProcess proc(&progDlg, step, 1000, lround(mediaFile->GetDuration() * mediaFile->GetVideoStream()->GetFps()));
+		AvConvProcess proc(&progDlg, step/10, 1000,
+				lround(mediaFile->GetDuration() * mediaFile->GetVideoStream()->GetFps()));
 		if (!proc.Execute(cmd)) {
 			RemoveTempFiles(tempFiles);
 			return;
 		}
-		cerr << endl;
+		progDlg.DoLogMessage("");
 		step += 10;
 	}
 
@@ -459,7 +467,7 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 		cmd += " -cat \"" + fileName + '"';
 	}
 	cmd += " \"" + fileName + '"';
-	cerr << cmd << endl;
+	progDlg.DoLogMessage(cmd);
 
 	// execute MP4Box
 	step--;
@@ -469,12 +477,18 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 }
 
 void MainWin::OnSettingsBt(wxCommandEvent& event) {
-	OptionsDlg dlg(this);
+	OptionsDlg dlg(this, false);
 	dlg.SetForceReencodeAudio(forceReencodeAudio);
 	dlg.SetForceReencodeVideo(forceReencodeVideo);
+	dlg.SetCrf(crf);
+	dlg.SetPreset(preset);
+	dlg.SetLogFile(logFileName);
 	if (dlg.ShowModal() == wxID_OK) {
 		forceReencodeAudio = dlg.IsForceReencodeAudio();
 		forceReencodeVideo = dlg.IsForceReencodeVideo();
+		crf = dlg.IsForceReencodeVideo() ? dlg.GetCrf() : DEF_CRF;
+		preset = dlg.GetPreset();
+		logFileName = dlg.GetLogFile();
 	}
 }
 

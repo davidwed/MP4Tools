@@ -17,6 +17,7 @@
 #include <wx/statusbr.h>
 //*)
 #include "MediaListBox.h"
+#include <wx/ffile.h>
 
 /**
  * Main window
@@ -68,6 +69,9 @@ private:
 	vector<MediaFile*> files;
 	bool forceReencodeAudio;
 	bool forceReencodeVideo;
+	int crf; // Constant Rate Factor (quality of video)
+	int preset; // preset is a collection of options that will provide a certain encoding speed to compression ratio
+	wxString logFileName;
 	
 	DECLARE_EVENT_TABLE()
 };

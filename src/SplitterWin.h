@@ -83,6 +83,7 @@ private:
 	long videoPos;
 	void SeekVideo(long pos, bool updateTimeCtrl = true);
 	vector<long> cutPoints;
+	wxString logFileName;
 
 	DECLARE_EVENT_TABLE()
 };

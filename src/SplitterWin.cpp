@@ -20,11 +20,13 @@
 #include <wx/artprov.h>
 #include <wx/aboutdlg.h>
 #include "VideoPropDlg.h"
+#include "ProgressDlg.h"
 #include "AvConvProcess.h"
 #include "Languages.h"
 #include "Config.h"
 #include "Version.h"
 #include "utils.h"
+#include "OptionsDlg.h"
 #include "../resources/mp4splitter.png.h"
 #include "../resources/add.png.h"
 #include "../resources/remove.png.h"
@@ -320,8 +322,7 @@ void SplitterWin::OnRunBt(wxCommandEvent& event) {
 		return;
 
 	// show progress dialog
-	wxProgressDialog progDlg(_("MP4 Splitter"), _("Splitting the file"), stepCount*100, this,
-			wxPD_APP_MODAL | wxPD_CAN_ABORT | wxPD_ELAPSED_TIME | wxPD_ESTIMATED_TIME);
+	ProgressDlg progDlg(this, _("MP4 Splitter"), _("Splitting the file"), stepCount*100, logFileName);
 	progDlg.Show();
 	int step = 0;
 
@@ -365,14 +366,14 @@ void SplitterWin::OnRunBt(wxCommandEvent& event) {
 
 		// output file
 		cmd += " \"" + resultFile + '"';
-		cerr << cmd << endl;
+		progDlg.DoLogMessage(cmd);
 
 		// execute avconv/ffmpeg
 		AvConvProcess proc(&progDlg, step++, 100, (endTime - startTime) * mediaFile.GetVideoStream()->GetFps() / 1000);
 		if (!proc.Execute(cmd)) {
 			return;
 		}
-		cerr << endl;
+		progDlg.DoLogMessage("");
 
 		idx++;
 	}
@@ -383,18 +384,11 @@ void SplitterWin::OnRunBt(wxCommandEvent& event) {
 }
 
 void SplitterWin::OnSettingsBt(wxCommandEvent& event) {
-	int langId = wxLANGUAGE_ENGLISH;
-	if (wxLocale::FindLanguageInfo(s_config.GetLanguageCode()))
-		langId = wxLocale::FindLanguageInfo(s_config.GetLanguageCode())->Language;
-	int lang = ChooseLanguage(langId);
-	if (lang == wxLANGUAGE_UNKNOWN)
-		return;
-	wxString languageCode = wxLocale::GetLanguageInfo(lang)->CanonicalName;
-	if (languageCode == s_config.GetLanguageCode())
-		return;
-	s_config.SetLanguageCode(languageCode);
-	wxMessageBox(_("Language change will not take effect until MP4Splitter is restarted"),
-			GetTitle(), wxOK|wxICON_INFORMATION, this);
+	OptionsDlg dlg(this, true);
+	dlg.SetLogFile(logFileName);
+	if (dlg.ShowModal() == wxID_OK) {
+		logFileName = dlg.GetLogFile();
+	}
 }
 
 wxString FixEmail(const wxString& str) {
