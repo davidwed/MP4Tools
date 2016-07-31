@@ -1,20 +1,21 @@
-[Setup]
+[Setup]          
 AppName=MP4Tools
-AppVerName=MP4Tools v3.3
+AppVerName=MP4Tools v3.4
+AppPublisher=Thüring IT-Consulting
 AppPublisherURL=http://www.mp4joiner.org
 AppSupportURL=http://www.mp4joiner.org
 AppUpdatesURL=http://www.mp4joiner.org
 DefaultDirName={pf}\MP4Tools
 DefaultGroupName=MP4Tools
-OutputBaseFilename=MP4Tools-3.3-win32
+OutputBaseFilename=MP4Tools-3.4-win32
 Compression=lzma
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\MP4Joiner.exe
 PrivilegesRequired=admin
 WizardSmallImageFile=MP4Joiner.bmp
+DisableWelcomePage=no
 ChangesAssociations=yes
 AllowNoIcons=yes
-;LicenseFile=..\COPYING
 InfoBeforeFile=Info.rtf
 
 [Languages]

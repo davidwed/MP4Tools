@@ -1,3 +1,10 @@
+Version 3.4 <2016-07-31>
+------------------------
+
+  * added option to save log file
+  * MP4Joiner: added CRF and Preset options
+  * updated ffmpeg to version 3.1.1
+
 Version 3.3 <2016-03-27>
 ------------------------
 
