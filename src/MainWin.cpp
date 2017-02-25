@@ -239,7 +239,7 @@ void MainWin::UpdateToolBar() {
 
 void MainWin::OnAddFileBt(wxCommandEvent& event) {
 	wxFileDialog fileDlg(this, _("Choose a file"), wxT(""), wxT(""),
-			wxString(_("MP4 Files")) + wxT(" (*.mp4;*.ts)|*.mp4;*ts|")
+			wxString(_("MP4 Files")) + wxT(" (*.mp4;*.m4v;*.ts)|*.mp4;*.m4v;*ts|")
 			+ wxString(_("AVI Files")) + wxT(" (*.avi;*.mov)|*.avi;*.mov|")
 			+ wxString(_("All Files")) + wxT(" (*.*)|*.*"), wxFD_OPEN | wxFD_MULTIPLE);
 	fileDlg.SetDirectory(s_config.GetLastAddDir() + wxFILE_SEP_PATH);
@@ -319,7 +319,7 @@ void RemoveTempFiles(const map<int, wxString>& tempFiles) {
 void MainWin::OnRunBt(wxCommandEvent& event) {
 	// choose a file to save
 	wxFileDialog fileDlg(this, _("Choose a file to save"), wxT(""), _("Output.mp4"),
-		wxString(_("MP4 Files")) + wxT(" (*.mp4)|*.mp4|")
+		wxString(_("MP4 Files")) + wxT(" (*.mp4;*.m4v)|*.mp4;*.m4v|")
 		+ wxString(_("All Files")) + wxT(" (*.*)|*.*"), wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
 	if (fileDlg.ShowModal() != wxID_OK)
 		return;
