@@ -5,6 +5,8 @@ doc_DATA = AUTHORS COPYING INSTALL README ChangeLog
 run: all
 	$(MAKE) -C src run
 
+apps: MP4Joiner.app MP4Splitter.app
+
 MP4Joiner.app: Info.plist src/mp4joiner
 	-mkdir MP4Joiner.app
 	-mkdir MP4Joiner.app/Contents
