@@ -4,7 +4,7 @@
 # building lang.mo files from the translated lang.po catalogs.
 
 PROGNAME=mp4tools
-LINGUAS=de es fr pt pt_BR ru
+LINGUAS=de es fr pl pt pt_BR ru
 
 prefix=@prefix@
 datarootdir=@datarootdir@
