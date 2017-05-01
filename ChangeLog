@@ -1,3 +1,11 @@
+Version 3.5 <2017-05-01>
+------------------------
+
+  * MP4Joiner: fixed some bugs
+  * updated MP4Box to version 0.7.2-DEV-rev5
+  * updated ffmpeg to version 3.2.4
+  * added Polish translation (thanks to Andrzej Rudnik)
+
 Version 3.4 <2016-07-31>
 ------------------------
 

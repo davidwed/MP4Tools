@@ -115,8 +115,6 @@ bool MediaFile::HasCompatibleVideoStreams(const MediaFile* mediaFile) {
 
 /** Checks this file has audio streams compatible to given one */
 bool MediaFile::HasCompatibleAudioStreams(const MediaFile* mediaFile) {
-	if (GetStreams().size() != mediaFile->GetStreams().size())
-		return false;
 	unsigned int streamIdx1 = 0;
 	for (unsigned int i = 0; i < GetStreams().size(); i++) {
 		if (GetStreams()[i]->GetType() != stAUDIO)
@@ -125,6 +123,8 @@ bool MediaFile::HasCompatibleAudioStreams(const MediaFile* mediaFile) {
 		while (streamIdx1 < mediaFile->GetStreams().size()
 				&& mediaFile->GetStreams()[streamIdx1]->GetType() != stAUDIO)
 			streamIdx1++;
+		if (streamIdx1 >= mediaFile->GetStreams().size())
+			return false;
 		if (GetStreams()[i]->GetType() == stAUDIO && !GetStreams()[i]->IsCompatibleTo(mediaFile->GetStreams()[streamIdx1]))
 			return false;
 		streamIdx1++;
