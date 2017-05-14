@@ -73,7 +73,7 @@ msgstr "Informacje o programie"
 
 #: src/MainWin.cpp:225
 msgid "Total duration"
-msgstr "Czas konwersji"
+msgstr "Czas trwania"
 
 #: src/MainWin.cpp:232
 msgid "total size"
