@@ -1,3 +1,9 @@
+Version 3.6 beta 1 <2017-11-11>
+-------------------------------
+
+  * MP4Joiner: added option "-bs-switching merge" and "-force-cat"
+  * updated MP4Box to version 0.7.2-DEV-rev321
+
 Version 3.5 <2017-05-01>
 ------------------------
 
