@@ -462,7 +462,7 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 #if defined(__WXMSW__) || defined(__WXMAC__)
 	cmd = '"' + wxGetAppPath() + cmd + '"';
 #endif
-	cmd += " -bs-switching merge"; // 
+	cmd += " -bs-switching merge -force-cat"; // 
 	for (unsigned int idx = 0; idx < files.size(); idx++) {
 		wxString fileName = tempFiles.find(idx) != tempFiles.end() ? tempFiles[idx] : files[idx]->GetFileName();
 		cmd += " -cat \"" + fileName + '"';
