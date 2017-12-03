@@ -1,0 +1,378 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MP4Tools 3.6b1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-18 13:54+0100\n"
+"PO-Revision-Date: 2017-11-18 13:54+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"Last-Translator: Luigi Baldoni <aloisio@gmx.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it\n"
+"X-Source-Language: C\n"
+"X-Language: it_IT\n"
+
+#: src/MainWin.cpp:56 src/SplitterWin.cpp:380
+msgid "Successful"
+msgstr "Operazione riuscita"
+
+#: src/MainWin.cpp:117 src/MainWin.cpp:346
+msgid "MP4 Joiner"
+msgstr "MP4 Joiner"
+
+#: src/MainWin.cpp:148
+msgid "Add Video"
+msgstr "Aggiungi Video"
+
+#: src/MainWin.cpp:149
+msgid "Add video file"
+msgstr "Aggiungi file video"
+
+#: src/MainWin.cpp:151 src/MainWin.cpp:160
+msgid "Remove"
+msgstr "Rimuovi"
+
+#: src/MainWin.cpp:152 src/MainWin.cpp:161
+msgid "Remove selected video"
+msgstr "Rimuovi video selezionato"
+
+#: src/MainWin.cpp:154
+msgid "&Remove selected"
+msgstr "&Rimuovi selezionato"
+
+#: src/MainWin.cpp:155
+msgid "Remove a&ll"
+msgstr "Rimuovi &tutto"
+
+#: src/MainWin.cpp:164
+msgid "Remove all"
+msgstr "Rimuovi tutto"
+
+#: src/MainWin.cpp:165
+msgid "Remove all videos"
+msgstr "Rimuovi tutti i video"
+
+#: src/MainWin.cpp:167
+msgid "Join"
+msgstr "Unisci"
+
+#: src/MainWin.cpp:168
+msgid "Select output file and start join"
+msgstr "Seleziona file di destinazione e avvia l'unione"
+
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:47
+msgid "Options"
+msgstr "Opzioni"
+
+#: src/MainWin.cpp:174
+msgid "About"
+msgstr "Informazioni"
+
+#: src/MainWin.cpp:175
+msgid "About the program"
+msgstr "Informazioni sul programma"
+
+#: src/MainWin.cpp:225
+msgid "Total duration"
+msgstr "Durata totale"
+
+#: src/MainWin.cpp:232
+msgid "total size"
+msgstr "dimensione totale"
+
+#: src/MainWin.cpp:234 src/MediaListBox.cpp:98
+msgid "GB"
+msgstr "GB"
+
+#: src/MainWin.cpp:236 src/MediaListBox.cpp:100
+msgid "MB"
+msgstr "MB"
+
+#: src/MainWin.cpp:241 src/SplitterWin.cpp:229
+msgid "Choose a file"
+msgstr "Scegli un file"
+
+#: src/MainWin.cpp:242 src/MainWin.cpp:322 src/SplitterWin.cpp:230
+msgid "MP4 Files"
+msgstr "File MP4"
+
+#: src/MainWin.cpp:243
+msgid "AVI Files"
+msgstr "File AVI"
+
+#: src/MainWin.cpp:244 src/MainWin.cpp:323 src/SplitterWin.cpp:231
+msgid "All Files"
+msgstr "Tutti i file"
+
+#: src/MainWin.cpp:321
+msgid "Choose a file to save"
+msgstr "Scegli un file da salvare"
+
+#: src/MainWin.cpp:321
+msgid "Output.mp4"
+msgstr "Destinazione.mp4"
+
+#: src/MainWin.cpp:346
+msgid "Joning the files"
+msgstr "Unione file in corso"
+
+#: src/MainWin.cpp:358
+#, c-format
+msgid "Reencode video from file %s"
+msgstr "Ricodifica video dal file %s"
+
+#: src/MainWin.cpp:360
+#, c-format
+msgid "Reencode audio from file %s"
+msgstr "Ricodifica audio dal file %s"
+
+#: src/MainWin.cpp:362
+#, c-format
+msgid "Cut video from file %s"
+msgstr "Taglia video dal file %s"
+
+#: src/MainWin.cpp:505
+msgid "Simple tool to join multiple MP4 files into one."
+msgstr "Semplice strumento per unire file MP4 multipli in uno solo."
+
+#: src/MainWin.cpp:522 src/SplitterWin.cpp:297
+msgid "&Remove"
+msgstr "&Rimuovi"
+
+#: src/MainWin.cpp:523
+msgid "&Cut video..."
+msgstr "&Taglia video..."
+
+#: src/MainWin.cpp:525
+msgid "&Sort"
+msgstr "&Ordina"
+
+#: src/MediaListBox.cpp:83 src/SplitterWin.cpp:168
+msgid "Duration"
+msgstr "Durata"
+
+#: src/MediaListBox.cpp:95
+msgid "Size"
+msgstr "Dimensione"
+
+#: src/MediaListBox.cpp:102
+msgid "KB"
+msgstr "KB"
+
+#: src/MediaListBox.cpp:112
+msgid "Video:"
+msgstr "Video:"
+
+#: src/MediaListBox.cpp:117
+msgid "Audio:"
+msgstr "Audio:"
+
+#: src/MediaListBox.cpp:122
+msgid "Subtitle:"
+msgstr "Sottotitolo:"
+
+#: src/MediaStream.cpp:58
+msgid "mono"
+msgstr "mono"
+
+#: src/MediaStream.cpp:60
+msgid "stereo"
+msgstr "stereo"
+
+#: src/MediaStream.cpp:64
+#, c-format
+msgid "%d channels"
+msgstr "%d canali"
+
+#: src/MediaStream.cpp:67
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: src/MediaStream.cpp:69
+#, c-format
+msgid "%d kbit/s"
+msgstr "%d kbit/s"
+
+#: src/OptionsDlg.cpp:50
+msgid "Language:"
+msgstr "Lingua:"
+
+#: src/OptionsDlg.cpp:54
+msgid "Log file:"
+msgstr "File registro:"
+
+#: src/OptionsDlg.cpp:59
+msgid "..."
+msgstr "..."
+
+#: src/OptionsDlg.cpp:63
+msgid "force reencode video"
+msgstr "forza ricodifica video"
+
+#: src/OptionsDlg.cpp:69
+msgid "CRF (quality):"
+msgstr "CRF (qualità):"
+
+#: src/OptionsDlg.cpp:73
+msgid "Preset:"
+msgstr "Profilo:"
+
+#: src/OptionsDlg.cpp:76
+msgid "veryslow"
+msgstr "molto lento"
+
+#: src/OptionsDlg.cpp:77
+msgid "slower"
+msgstr "più lento"
+
+#: src/OptionsDlg.cpp:78
+msgid "slow"
+msgstr "lento"
+
+#: src/OptionsDlg.cpp:79
+msgid "medium"
+msgstr "medio"
+
+#: src/OptionsDlg.cpp:80
+msgid "fast"
+msgstr "veloce"
+
+#: src/OptionsDlg.cpp:81
+msgid "faster"
+msgstr "più veloce"
+
+#: src/OptionsDlg.cpp:82
+msgid "veryfast"
+msgstr "molto veloce"
+
+#: src/OptionsDlg.cpp:83
+msgid "superfast"
+msgstr "super veloce"
+
+#: src/OptionsDlg.cpp:84
+msgid "ultrafast"
+msgstr "ultra veloce"
+
+#: src/OptionsDlg.cpp:88
+msgid "force reencode audio"
+msgstr "forza ricodifica audio"
+
+#: src/OptionsDlg.cpp:111
+msgid "best"
+msgstr "migliore"
+
+#: src/OptionsDlg.cpp:113
+msgid "worst"
+msgstr "peggiore"
+
+#: src/OptionsDlg.cpp:115
+msgid "default"
+msgstr "predefinito"
+
+#: src/OptionsDlg.cpp:143
+msgid "Language change will not take effect until the application is restarted"
+msgstr ""
+"La modifica della lingua non avrà effetto fino al riavvio dell'applicazione"
+
+#: src/OptionsDlg.cpp:151
+msgid "Save a log file"
+msgstr "Salva un file di registro"
+
+#: src/ProgramProcess.cpp:28
+msgid "Failed"
+msgstr "Operazione non riuscita"
+
+#: src/ProgramProcess.cpp:73
+#, c-format
+msgid "Execution of '%s' failed."
+msgstr "Esecuzione di '%s' non riuscita."
+
+#: src/SplitterWin.cpp:74 src/SplitterWin.cpp:325
+msgid "MP4 Splitter"
+msgstr "MP4 Splitter"
+
+#: src/SplitterWin.cpp:86 src/VideoPropDlg.cpp:74
+msgid "Time:"
+msgstr "Tempo:"
+
+#: src/SplitterWin.cpp:98
+msgid "Add split point"
+msgstr "Aggiungi punto di divisione"
+
+#: src/SplitterWin.cpp:104
+msgid "Open Video"
+msgstr "Apri Video"
+
+#: src/SplitterWin.cpp:112
+msgid "Split points:"
+msgstr "Punti di divisione:"
+
+#: src/SplitterWin.cpp:118
+msgid "Start splitting"
+msgstr "Avvia divisione"
+
+#: src/SplitterWin.cpp:166
+msgid "Start"
+msgstr "Inizio"
+
+#: src/SplitterWin.cpp:167
+msgid "End"
+msgstr "Fine"
+
+#: src/SplitterWin.cpp:298
+msgid "Remove &all"
+msgstr "Rimuovi &tutto"
+
+#: src/SplitterWin.cpp:304
+msgid "Choose a output directory"
+msgstr "Scegli una cartella di destinazione"
+
+#: src/SplitterWin.cpp:325
+msgid "Splitting the file"
+msgstr "Divisione file in corso"
+
+#: src/SplitterWin.cpp:342
+#, c-format
+msgid "File '%s' already exist. Do you want to overwrite it?"
+msgstr "File '%s' già esistente. Lo vuoi sovrascrivere?"
+
+#: src/SplitterWin.cpp:343
+msgid "Confirmation"
+msgstr "Conferma"
+
+#: src/SplitterWin.cpp:352
+#, c-format
+msgid "Writting %s"
+msgstr "Scrittura di %s in corso"
+
+#: src/SplitterWin.cpp:404
+msgid "Simple tool to split a MP4 file."
+msgstr "Semplice strumento per dividere un file MP4."
+
+#: src/VideoPropDlg.cpp:62
+msgid "Cut video"
+msgstr "Taglia video"
+
+#: src/VideoPropDlg.cpp:86
+msgid "Start:"
+msgstr "Inizio:"
+
+#: src/VideoPropDlg.cpp:100
+msgid "Cut beginning"
+msgstr "Taglia inizio"
+
+#: src/VideoPropDlg.cpp:102
+msgid "End:"
+msgstr "Fine:"
+
+#: src/VideoPropDlg.cpp:116
+msgid "Cut ending"
+msgstr "Taglia fine"
+
+#: src/VideoPropDlg.cpp:279 src/VideoPropDlg.cpp:284
+msgid "Invalid time"
+msgstr "Tempo non valido"
