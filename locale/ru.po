@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MP4Tools 3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-31 09:40+0200\n"
+"POT-Creation-Date: 2017-12-10 21:30+0100\n"
 "PO-Revision-Date: 2016-07-31 10:04+0200\n"
 "Last-Translator: Alex Thüring <alex at thuering.biz>\n"
 "Language-Team: alex AT thuering.biz\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Successful"
 msgstr "Успешно"
 
-#: src/MainWin.cpp:117 src/MainWin.cpp:346
+#: src/MainWin.cpp:117 src/MainWin.cpp:348
 msgid "MP4 Joiner"
 msgstr "MP4 Joiner"
 
@@ -63,7 +63,7 @@ msgstr "Соединить"
 msgid "Select output file and start join"
 msgstr "Выбрать выходной файл и стартовать соединение"
 
-#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:47
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:56
 msgid "Options"
 msgstr "Опции"
 
@@ -115,38 +115,38 @@ msgstr "Выберите файл для сохранения"
 msgid "Output.mp4"
 msgstr "Output.mp4"
 
-#: src/MainWin.cpp:346
+#: src/MainWin.cpp:348
 msgid "Joning the files"
 msgstr "Соединить файлы"
 
-#: src/MainWin.cpp:358
+#: src/MainWin.cpp:360
 #, c-format
 msgid "Reencode video from file %s"
 msgstr "Перекодировка видео из файла %s"
 
-#: src/MainWin.cpp:360
+#: src/MainWin.cpp:362
 #, c-format
 msgid "Reencode audio from file %s"
 msgstr "Перекодировка аудио из файла %s"
 
-#: src/MainWin.cpp:362
+#: src/MainWin.cpp:364
 #, c-format
 msgid "Cut video from file %s"
 msgstr "Вырез видео из файла %s"
 
-#: src/MainWin.cpp:505
+#: src/MainWin.cpp:511
 msgid "Simple tool to join multiple MP4 files into one."
 msgstr "Простая программа для соединения нескольких MP4 файлов в один."
 
-#: src/MainWin.cpp:522 src/SplitterWin.cpp:297
+#: src/MainWin.cpp:528 src/SplitterWin.cpp:297
 msgid "&Remove"
 msgstr "&Удалить"
 
-#: src/MainWin.cpp:523
+#: src/MainWin.cpp:529
 msgid "&Cut video..."
 msgstr "&Вырезать видео..."
 
-#: src/MainWin.cpp:525
+#: src/MainWin.cpp:531
 msgid "&Sort"
 msgstr "&Сортировать"
 
@@ -197,89 +197,107 @@ msgstr "%d Гц"
 msgid "%d kbit/s"
 msgstr "%d кбит/с"
 
-#: src/OptionsDlg.cpp:50
+#: src/OptionsDlg.cpp:59
 msgid "Language:"
 msgstr "Язык:"
 
-#: src/OptionsDlg.cpp:54
-msgid "Log file:"
-msgstr "Файл журнала:"
+#: src/OptionsDlg.cpp:63
+msgid "MP4Box parameters:"
+msgstr ""
 
-#: src/OptionsDlg.cpp:59
+#: src/OptionsDlg.cpp:67
+#, fuzzy
+msgid "Temp directory:"
+msgstr "Выберите каталог для сохранения"
+
+#: src/OptionsDlg.cpp:72 src/OptionsDlg.cpp:80
 msgid "..."
 msgstr "..."
 
-#: src/OptionsDlg.cpp:63
+#: src/OptionsDlg.cpp:75
+msgid "Log file:"
+msgstr "Файл журнала:"
+
+#: src/OptionsDlg.cpp:84
 msgid "force reencode video"
 msgstr "принудительная перекодировка видео"
 
-#: src/OptionsDlg.cpp:69
+#: src/OptionsDlg.cpp:90
 msgid "CRF (quality):"
 msgstr "CRF (качество):"
 
-#: src/OptionsDlg.cpp:73
+#: src/OptionsDlg.cpp:94
 msgid "Preset:"
 msgstr "Предустановки:"
 
-#: src/OptionsDlg.cpp:76
+#: src/OptionsDlg.cpp:97
 msgid "veryslow"
 msgstr "очень медленно"
 
-#: src/OptionsDlg.cpp:77
+#: src/OptionsDlg.cpp:98
 msgid "slower"
 msgstr "медленнее"
 
-#: src/OptionsDlg.cpp:78
+#: src/OptionsDlg.cpp:99
 msgid "slow"
 msgstr "медленно"
 
-#: src/OptionsDlg.cpp:79
+#: src/OptionsDlg.cpp:100
 msgid "medium"
 msgstr "средне"
 
-#: src/OptionsDlg.cpp:80
+#: src/OptionsDlg.cpp:101
 msgid "fast"
 msgstr "быстро"
 
-#: src/OptionsDlg.cpp:81
+#: src/OptionsDlg.cpp:102
 msgid "faster"
 msgstr "быстрее"
 
-#: src/OptionsDlg.cpp:82
+#: src/OptionsDlg.cpp:103
 msgid "veryfast"
 msgstr "очень быстро"
 
-#: src/OptionsDlg.cpp:83
+#: src/OptionsDlg.cpp:104
 msgid "superfast"
 msgstr "супер быстро"
 
-#: src/OptionsDlg.cpp:84
+#: src/OptionsDlg.cpp:105
 msgid "ultrafast"
 msgstr "ультра быстро"
 
-#: src/OptionsDlg.cpp:88
+#: src/OptionsDlg.cpp:109
 msgid "force reencode audio"
 msgstr "принудительная перекодировка аудио"
 
-#: src/OptionsDlg.cpp:111
+#: src/OptionsDlg.cpp:133
 msgid "best"
 msgstr "лучшее"
 
-#: src/OptionsDlg.cpp:113
+#: src/OptionsDlg.cpp:135
 msgid "worst"
 msgstr "худшее"
 
-#: src/OptionsDlg.cpp:115
+#: src/OptionsDlg.cpp:137
 msgid "default"
 msgstr "по-умолчанию"
 
-#: src/OptionsDlg.cpp:143
+#: src/OptionsDlg.cpp:175
 msgid "Language change will not take effect until the application is restarted"
 msgstr "Изменение языка вступит в силу только после перезагрузки программы."
 
-#: src/OptionsDlg.cpp:151
+#: src/OptionsDlg.cpp:181
+#, c-format
+msgid "Directory %s doesn't exist."
+msgstr ""
+
+#: src/OptionsDlg.cpp:196
 msgid "Save a log file"
 msgstr "Сохранение файла журнала"
+
+#: src/OptionsDlg.cpp:202
+msgid "Choose a directory for temporary files"
+msgstr ""
 
 #: src/ProgramProcess.cpp:28
 msgid "Failed"
