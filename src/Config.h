@@ -13,8 +13,9 @@
 #include <wx/config.h>
 #include <wx/filename.h>
 
-const wxString DEF_LANGUAGE_CODE= wxT("EN");
+const wxString DEF_LANGUAGE_CODE= "EN";
 #define DEF_LAST_ADD_DIR wxGetHomeDir()
+const wxString DEF_MP4BOX_PARAMS = "-bs-switching merge -force-cat";
 
 #define CONFIG_PROP(name, cfgName, defValue)\
   CONFIG_PROP_T(name, cfgName, defValue, wxString, wxString)
@@ -48,8 +49,10 @@ public:
     
     wxConfigBase* GetConfigBase() { return cfg; }
 	
-	CONFIG_PROP(LanguageCode, _T("Interface/LanguageCode"), DEF_LANGUAGE_CODE)
-	CONFIG_PROP(LastAddDir, _T("Interface/LastAddDir"), DEF_LAST_ADD_DIR)
+	CONFIG_PROP(LanguageCode, "Interface/LanguageCode", DEF_LANGUAGE_CODE)
+	CONFIG_PROP(LastAddDir, "Interface/LastAddDir", DEF_LAST_ADD_DIR)
+	CONFIG_PROP(MP4BoxParam, "Core/MP4BoxParams", DEF_MP4BOX_PARAMS)
+	CONFIG_PROP(TempDir, "Core/TempDir", "")
 	
   protected:
     wxConfigBase* cfg;
