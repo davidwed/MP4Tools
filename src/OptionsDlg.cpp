@@ -11,13 +11,20 @@
 #include "Languages.h"
 #include "Config.h"
 
+#include "../resources/delete.png.h"
+
 //(*InternalHeaders(OptionsDlg)
 #include <wx/intl.h>
 #include <wx/string.h>
 //*)
+#include <wx/dir.h>
 
 //(*IdInit(OptionsDlg)
 const long OptionsDlg::ID_LANG_COMBO = wxNewId();
+const long OptionsDlg::ID_STATICTEXT1 = wxNewId();
+const long OptionsDlg::ID_TEXTCTRL1 = wxNewId();
+const long OptionsDlg::ID_TMPDIR_TEXTCTRL = wxNewId();
+const long OptionsDlg::ID_TEMPDIR_BT = wxNewId();
 const long OptionsDlg::ID_LOGFILE_TEXTCTRL = wxNewId();
 const long OptionsDlg::ID_LOGFILE_BT = wxNewId();
 const long OptionsDlg::ID_VIDEO_CHECK = wxNewId();
@@ -31,9 +38,10 @@ BEGIN_EVENT_TABLE(OptionsDlg,wxDialog)
 	//*)
 END_EVENT_TABLE()
 
-OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions) {
+OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions, bool disableTempDir) {
 	//(*Initialize(OptionsDlg)
 	wxStaticText* presetLabel;
+	wxButton* tempDirBt;
 	wxStaticText* qualityLabel;
 	wxFlexGridSizer* gridSizer;
 	wxStaticText* StaticText1;
@@ -41,6 +49,7 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions) {
 	wxStaticText* label1;
 	wxBoxSizer* BoxSizer1;
 	wxButton* logFileBt;
+	wxBoxSizer* BoxSizer3;
 	wxBoxSizer* mainSizer;
 	wxStdDialogButtonSizer* StdDialogButtonSizer1;
 
@@ -51,6 +60,18 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions) {
 	gridSizer->Add(label1, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
 	langaugeCombo = new wxBitmapComboBox(this, ID_LANG_COMBO, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, wxCB_READONLY, wxDefaultValidator, _T("ID_LANG_COMBO"));
 	gridSizer->Add(langaugeCombo, 1, wxALL|wxEXPAND, 5);
+	mp4boxParamsLabel = new wxStaticText(this, ID_STATICTEXT1, _("MP4Box parameters:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+	gridSizer->Add(mp4boxParamsLabel, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	mp4boxParamsCtrl = new wxTextCtrl(this, ID_TEXTCTRL1, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
+	gridSizer->Add(mp4boxParamsCtrl, 1, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND, 5);
+	tempDirLabel = new wxStaticText(this, wxID_ANY, _("Temp directory:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	gridSizer->Add(tempDirLabel, 1, wxBOTTOM|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	BoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
+	tempDirCtrl = new wxTextCtrl(this, ID_TMPDIR_TEXTCTRL, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TMPDIR_TEXTCTRL"));
+	BoxSizer3->Add(tempDirCtrl, 1, wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+	tempDirBt = new wxButton(this, ID_TEMPDIR_BT, _("..."), wxDefaultPosition, wxSize(20,20), 0, wxDefaultValidator, _T("ID_TEMPDIR_BT"));
+	BoxSizer3->Add(tempDirBt, 0, wxEXPAND, 0);
+	gridSizer->Add(BoxSizer3, 1, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND, 5);
 	StaticText1 = new wxStaticText(this, wxID_ANY, _("Log file:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
 	gridSizer->Add(StaticText1, 0, wxBOTTOM|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
@@ -99,6 +120,7 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions) {
 	mainSizer->SetSizeHints(this);
 	Center();
 
+	Connect(ID_TEMPDIR_BT,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&OptionsDlg::OnSelectTempDir);
 	Connect(ID_LOGFILE_BT,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&OptionsDlg::OnSelectFile);
 	//*)
 	const wxArrayString& langNames = GetLangNames();
@@ -123,6 +145,16 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions) {
 		presetChoice->Enable(false);
 		audioReencode->Enable(false);
 	}
+	if (disableTempDir) {
+		tempDirLabel->Show(false);
+		tempDirCtrl->Show(false);
+		tempDirBt->Show(false);
+		mp4boxParamsLabel->Show(false);
+		mp4boxParamsCtrl->Show(false);
+	} else {
+		tempDirCtrl->SetValue(s_config.GetTempDir());
+		mp4boxParamsCtrl->SetValue(s_config.GetMP4BoxParam());
+	}
 }
 
 OptionsDlg::~OptionsDlg() {
@@ -143,6 +175,19 @@ int OptionsDlg::ShowModal() {
 			wxMessageBox(_("Language change will not take effect until the application is restarted"),
 					GetTitle(), wxOK|wxICON_INFORMATION, this);
 		}
+		if (tempDirCtrl->IsShown()) {
+			if (tempDirCtrl->GetValue().size() > 0
+					&& !wxDir::Exists(tempDirCtrl->GetValue())) {
+				wxMessageBox(wxString::Format(_("Directory %s doesn't exist."), tempDirCtrl->GetValue()),
+									GetTitle(), wxOK|wxICON_ERROR, this);
+				s_config.SetTempDir("");
+			} else {
+				s_config.SetTempDir(tempDirCtrl->GetValue());
+			}
+		}
+		if (mp4boxParamsCtrl->IsShown()) {
+			s_config.SetMP4BoxParam(mp4boxParamsCtrl->GetValue());
+		}
 	}
 	return res;
 }
@@ -151,4 +196,12 @@ void OptionsDlg::OnSelectFile(wxCommandEvent& event) {
 	wxFileDialog dialog(this, _("Save a log file"), "", "mp4tools.log", "Log files (*.log)|*.log", wxFD_SAVE);
 	if (dialog.ShowModal() == wxID_OK)
 		logFileCtrl->SetValue(dialog.GetPath());
+}
+
+void OptionsDlg::OnSelectTempDir(wxCommandEvent& event) {
+	wxDirDialog dialog(this, _("Choose a directory for temporary files"), tempDirCtrl->GetValue(),
+			wxDD_DEFAULT_STYLE | wxDD_NEW_DIR_BUTTON);
+	dialog.SetPath(tempDirCtrl->GetValue());
+	if (dialog.ShowModal() == wxID_OK)
+		tempDirCtrl->SetValue(dialog.GetPath());
 }

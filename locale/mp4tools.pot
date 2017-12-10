@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-31 09:40+0200\n"
+"POT-Creation-Date: 2017-12-10 21:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Successful"
 msgstr ""
 
-#: src/MainWin.cpp:117 src/MainWin.cpp:346
+#: src/MainWin.cpp:117 src/MainWin.cpp:348
 msgid "MP4 Joiner"
 msgstr ""
 
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Select output file and start join"
 msgstr ""
 
-#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:47
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:56
 msgid "Options"
 msgstr ""
 
@@ -116,38 +116,38 @@ msgstr ""
 msgid "Output.mp4"
 msgstr ""
 
-#: src/MainWin.cpp:346
+#: src/MainWin.cpp:348
 msgid "Joning the files"
-msgstr ""
-
-#: src/MainWin.cpp:358
-#, c-format
-msgid "Reencode video from file %s"
 msgstr ""
 
 #: src/MainWin.cpp:360
 #, c-format
-msgid "Reencode audio from file %s"
+msgid "Reencode video from file %s"
 msgstr ""
 
 #: src/MainWin.cpp:362
 #, c-format
+msgid "Reencode audio from file %s"
+msgstr ""
+
+#: src/MainWin.cpp:364
+#, c-format
 msgid "Cut video from file %s"
 msgstr ""
 
-#: src/MainWin.cpp:505
+#: src/MainWin.cpp:511
 msgid "Simple tool to join multiple MP4 files into one."
 msgstr ""
 
-#: src/MainWin.cpp:522 src/SplitterWin.cpp:297
+#: src/MainWin.cpp:528 src/SplitterWin.cpp:297
 msgid "&Remove"
 msgstr ""
 
-#: src/MainWin.cpp:523
+#: src/MainWin.cpp:529
 msgid "&Cut video..."
 msgstr ""
 
-#: src/MainWin.cpp:525
+#: src/MainWin.cpp:531
 msgid "&Sort"
 msgstr ""
 
@@ -198,88 +198,105 @@ msgstr ""
 msgid "%d kbit/s"
 msgstr ""
 
-#: src/OptionsDlg.cpp:50
+#: src/OptionsDlg.cpp:59
 msgid "Language:"
 msgstr ""
 
-#: src/OptionsDlg.cpp:54
-msgid "Log file:"
+#: src/OptionsDlg.cpp:63
+msgid "MP4Box parameters:"
 msgstr ""
 
-#: src/OptionsDlg.cpp:59
+#: src/OptionsDlg.cpp:67
+msgid "Temp directory:"
+msgstr ""
+
+#: src/OptionsDlg.cpp:72 src/OptionsDlg.cpp:80
 msgid "..."
 msgstr ""
 
-#: src/OptionsDlg.cpp:63
-msgid "force reencode video"
-msgstr ""
-
-#: src/OptionsDlg.cpp:69
-msgid "CRF (quality):"
-msgstr ""
-
-#: src/OptionsDlg.cpp:73
-msgid "Preset:"
-msgstr ""
-
-#: src/OptionsDlg.cpp:76
-msgid "veryslow"
-msgstr ""
-
-#: src/OptionsDlg.cpp:77
-msgid "slower"
-msgstr ""
-
-#: src/OptionsDlg.cpp:78
-msgid "slow"
-msgstr ""
-
-#: src/OptionsDlg.cpp:79
-msgid "medium"
-msgstr ""
-
-#: src/OptionsDlg.cpp:80
-msgid "fast"
-msgstr ""
-
-#: src/OptionsDlg.cpp:81
-msgid "faster"
-msgstr ""
-
-#: src/OptionsDlg.cpp:82
-msgid "veryfast"
-msgstr ""
-
-#: src/OptionsDlg.cpp:83
-msgid "superfast"
+#: src/OptionsDlg.cpp:75
+msgid "Log file:"
 msgstr ""
 
 #: src/OptionsDlg.cpp:84
+msgid "force reencode video"
+msgstr ""
+
+#: src/OptionsDlg.cpp:90
+msgid "CRF (quality):"
+msgstr ""
+
+#: src/OptionsDlg.cpp:94
+msgid "Preset:"
+msgstr ""
+
+#: src/OptionsDlg.cpp:97
+msgid "veryslow"
+msgstr ""
+
+#: src/OptionsDlg.cpp:98
+msgid "slower"
+msgstr ""
+
+#: src/OptionsDlg.cpp:99
+msgid "slow"
+msgstr ""
+
+#: src/OptionsDlg.cpp:100
+msgid "medium"
+msgstr ""
+
+#: src/OptionsDlg.cpp:101
+msgid "fast"
+msgstr ""
+
+#: src/OptionsDlg.cpp:102
+msgid "faster"
+msgstr ""
+
+#: src/OptionsDlg.cpp:103
+msgid "veryfast"
+msgstr ""
+
+#: src/OptionsDlg.cpp:104
+msgid "superfast"
+msgstr ""
+
+#: src/OptionsDlg.cpp:105
 msgid "ultrafast"
 msgstr ""
 
-#: src/OptionsDlg.cpp:88
+#: src/OptionsDlg.cpp:109
 msgid "force reencode audio"
 msgstr ""
 
-#: src/OptionsDlg.cpp:111
+#: src/OptionsDlg.cpp:133
 msgid "best"
 msgstr ""
 
-#: src/OptionsDlg.cpp:113
+#: src/OptionsDlg.cpp:135
 msgid "worst"
 msgstr ""
 
-#: src/OptionsDlg.cpp:115
+#: src/OptionsDlg.cpp:137
 msgid "default"
 msgstr ""
 
-#: src/OptionsDlg.cpp:143
+#: src/OptionsDlg.cpp:175
 msgid "Language change will not take effect until the application is restarted"
 msgstr ""
 
-#: src/OptionsDlg.cpp:151
+#: src/OptionsDlg.cpp:181
+#, c-format
+msgid "Directory %s doesn't exist."
+msgstr ""
+
+#: src/OptionsDlg.cpp:196
 msgid "Save a log file"
+msgstr ""
+
+#: src/OptionsDlg.cpp:202
+msgid "Choose a directory for temporary files"
 msgstr ""
 
 #: src/ProgramProcess.cpp:28
