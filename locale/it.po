@@ -203,12 +203,11 @@ msgstr "Lingua:"
 
 #: src/OptionsDlg.cpp:63
 msgid "MP4Box parameters:"
-msgstr ""
+msgstr "Parametri MP4Box:"
 
 #: src/OptionsDlg.cpp:67
-#, fuzzy
 msgid "Temp directory:"
-msgstr "Scegli una cartella di destinazione"
+msgstr "Cartella temporanea:"
 
 #: src/OptionsDlg.cpp:72 src/OptionsDlg.cpp:80
 msgid "..."
@@ -289,7 +288,7 @@ msgstr "La modifica della lingua non avrà effetto fino al riavvio dell'applicaz
 #: src/OptionsDlg.cpp:181
 #, c-format
 msgid "Directory %s doesn't exist."
-msgstr ""
+msgstr "La cartella %s non esiste."
 
 #: src/OptionsDlg.cpp:196
 msgid "Save a log file"
@@ -297,7 +296,7 @@ msgstr "Salva un file di registro"
 
 #: src/OptionsDlg.cpp:202
 msgid "Choose a directory for temporary files"
-msgstr ""
+msgstr "Scegli una cartella per i file temporanei"
 
 #: src/ProgramProcess.cpp:28
 msgid "Failed"

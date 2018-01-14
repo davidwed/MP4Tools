@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MP4Tools 3.3\n"
+"Project-Id-Version: MP4Tools 3.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-10 21:30+0100\n"
-"PO-Revision-Date: 2016-07-31 09:49+0200\n"
+"PO-Revision-Date: 2018-01-14 09:45+0100\n"
 "Last-Translator: Alex Thüring <alex at thuering.biz>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: iso-8859-15\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.5\n"
 
 #: src/MainWin.cpp:56 src/SplitterWin.cpp:380
 msgid "Successful"
@@ -201,12 +201,11 @@ msgstr "Sprache:"
 
 #: src/OptionsDlg.cpp:63
 msgid "MP4Box parameters:"
-msgstr ""
+msgstr "MP4Box-Parameter:"
 
 #: src/OptionsDlg.cpp:67
-#, fuzzy
 msgid "Temp directory:"
-msgstr "Ausgabeordner auswählen"
+msgstr "Temporärer Ordner:"
 
 #: src/OptionsDlg.cpp:72 src/OptionsDlg.cpp:80
 msgid "..."
@@ -287,7 +286,7 @@ msgstr "Änderung der Sprache wird erst nach dem Neustart des Programms wirksam"
 #: src/OptionsDlg.cpp:181
 #, c-format
 msgid "Directory %s doesn't exist."
-msgstr ""
+msgstr "Das Verzeichnis%s existiert nicht."
 
 #: src/OptionsDlg.cpp:196
 msgid "Save a log file"
@@ -295,7 +294,7 @@ msgstr "Protokolldatei speichern"
 
 #: src/OptionsDlg.cpp:202
 msgid "Choose a directory for temporary files"
-msgstr ""
+msgstr "Wählen Sie ein Verzeichnis für temporäre Dateien"
 
 #: src/ProgramProcess.cpp:28
 msgid "Failed"
