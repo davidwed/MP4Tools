@@ -32,7 +32,7 @@ const int DEF_CRF = 23;
  */
 class OptionsDlg: public wxDialog {
 public:
-	OptionsDlg(wxWindow* parent, bool disableEncodingOptions);
+	OptionsDlg(wxWindow* parent, bool disableEncodingOptions, bool disableTempDir = true);
 	virtual ~OptionsDlg();
 
     /** Displays dialog */
@@ -65,15 +65,23 @@ public:
 private:
 	//(*Declarations(OptionsDlg)
 	wxTextCtrl* logFileCtrl;
+	wxStaticText* tempDirLabel;
+	wxTextCtrl* tempDirCtrl;
 	wxChoice* presetChoice;
 	wxChoice* qualityChoice;
+	wxStaticText* mp4boxParamsLabel;
 	wxCheckBox* audioReencode;
 	wxCheckBox* videoReencode;
+	wxTextCtrl* mp4boxParamsCtrl;
 	wxBitmapComboBox* langaugeCombo;
 	//*)
 
 	//(*Identifiers(OptionsDlg)
 	static const long ID_LANG_COMBO;
+	static const long ID_STATICTEXT1;
+	static const long ID_TEXTCTRL1;
+	static const long ID_TMPDIR_TEXTCTRL;
+	static const long ID_TEMPDIR_BT;
 	static const long ID_LOGFILE_TEXTCTRL;
 	static const long ID_LOGFILE_BT;
 	static const long ID_VIDEO_CHECK;
@@ -84,6 +92,7 @@ private:
 
 	//(*Handlers(OptionsDlg)
 	void OnSelectFile(wxCommandEvent& event);
+	void OnSelectTempDir(wxCommandEvent& event);
 	//*)
 
 	DECLARE_EVENT_TABLE()

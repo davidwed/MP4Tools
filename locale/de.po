@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MP4Tools 3.3\n"
+"Project-Id-Version: MP4Tools 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-31 09:40+0200\n"
-"PO-Revision-Date: 2016-07-31 09:49+0200\n"
+"POT-Creation-Date: 2017-12-10 21:30+0100\n"
+"PO-Revision-Date: 2018-01-14 09:45+0100\n"
 "Last-Translator: Alex Thüring <alex at thuering.biz>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: iso-8859-15\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.5\n"
 
 #: src/MainWin.cpp:56 src/SplitterWin.cpp:380
 msgid "Successful"
 msgstr "Erfolgreich"
 
-#: src/MainWin.cpp:117 src/MainWin.cpp:346
+#: src/MainWin.cpp:117 src/MainWin.cpp:348
 msgid "MP4 Joiner"
 msgstr "MP4 Joiner"
 
@@ -61,7 +61,7 @@ msgstr "Zusammenfügen"
 msgid "Select output file and start join"
 msgstr "Ausgabe Datei auswählen und Zusammenfügen starten"
 
-#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:47
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:56
 msgid "Options"
 msgstr "Optionen"
 
@@ -113,38 +113,38 @@ msgstr "Bitte wählen Sie eine Datei zum Speichern"
 msgid "Output.mp4"
 msgstr "Ausgabe.mp4"
 
-#: src/MainWin.cpp:346
+#: src/MainWin.cpp:348
 msgid "Joning the files"
 msgstr "Zusammenfügen der Dateien"
 
-#: src/MainWin.cpp:358
+#: src/MainWin.cpp:360
 #, c-format
 msgid "Reencode video from file %s"
 msgstr "Umwandeln Video  aus der Datei %s"
 
-#: src/MainWin.cpp:360
+#: src/MainWin.cpp:362
 #, c-format
 msgid "Reencode audio from file %s"
 msgstr "Umwandeln Audio aus der Datei %s"
 
-#: src/MainWin.cpp:362
+#: src/MainWin.cpp:364
 #, c-format
 msgid "Cut video from file %s"
 msgstr "Ausschneiden Video  aus der Datei %s"
 
-#: src/MainWin.cpp:505
+#: src/MainWin.cpp:511
 msgid "Simple tool to join multiple MP4 files into one."
 msgstr "Einfaches Tool zum Zusammenfügen mehrerer MP4 Dateien in eine."
 
-#: src/MainWin.cpp:522 src/SplitterWin.cpp:297
+#: src/MainWin.cpp:528 src/SplitterWin.cpp:297
 msgid "&Remove"
 msgstr "&Entfernen"
 
-#: src/MainWin.cpp:523
+#: src/MainWin.cpp:529
 msgid "&Cut video..."
 msgstr "Video&schnitt..."
 
-#: src/MainWin.cpp:525
+#: src/MainWin.cpp:531
 msgid "&Sort"
 msgstr "&Sortieren"
 
@@ -195,89 +195,106 @@ msgstr "%d Hz"
 msgid "%d kbit/s"
 msgstr "%d kbit/s"
 
-#: src/OptionsDlg.cpp:50
+#: src/OptionsDlg.cpp:59
 msgid "Language:"
 msgstr "Sprache:"
 
-#: src/OptionsDlg.cpp:54
-msgid "Log file:"
-msgstr "Protokolldatei:"
+#: src/OptionsDlg.cpp:63
+msgid "MP4Box parameters:"
+msgstr "MP4Box-Parameter:"
 
-#: src/OptionsDlg.cpp:59
+#: src/OptionsDlg.cpp:67
+msgid "Temp directory:"
+msgstr "Temporärer Ordner:"
+
+#: src/OptionsDlg.cpp:72 src/OptionsDlg.cpp:80
 msgid "..."
 msgstr "..."
 
-#: src/OptionsDlg.cpp:63
+#: src/OptionsDlg.cpp:75
+msgid "Log file:"
+msgstr "Protokolldatei:"
+
+#: src/OptionsDlg.cpp:84
 msgid "force reencode video"
 msgstr "Umwandeln von Video erzwingen"
 
-#: src/OptionsDlg.cpp:69
+#: src/OptionsDlg.cpp:90
 msgid "CRF (quality):"
 msgstr "CRF (Qualität):"
 
-#: src/OptionsDlg.cpp:73
+#: src/OptionsDlg.cpp:94
 msgid "Preset:"
 msgstr "Voreinstellungen:"
 
-#: src/OptionsDlg.cpp:76
+#: src/OptionsDlg.cpp:97
 msgid "veryslow"
 msgstr "sehr langsam"
 
-#: src/OptionsDlg.cpp:77
+#: src/OptionsDlg.cpp:98
 msgid "slower"
 msgstr "langsamer"
 
-#: src/OptionsDlg.cpp:78
+#: src/OptionsDlg.cpp:99
 msgid "slow"
 msgstr "langsam"
 
-#: src/OptionsDlg.cpp:79
+#: src/OptionsDlg.cpp:100
 msgid "medium"
 msgstr "mittel"
 
-#: src/OptionsDlg.cpp:80
+#: src/OptionsDlg.cpp:101
 msgid "fast"
 msgstr "schnell"
 
-#: src/OptionsDlg.cpp:81
+#: src/OptionsDlg.cpp:102
 msgid "faster"
 msgstr "schneller"
 
-#: src/OptionsDlg.cpp:82
+#: src/OptionsDlg.cpp:103
 msgid "veryfast"
 msgstr "sehr schnell"
 
-#: src/OptionsDlg.cpp:83
+#: src/OptionsDlg.cpp:104
 msgid "superfast"
 msgstr "super schnell"
 
-#: src/OptionsDlg.cpp:84
+#: src/OptionsDlg.cpp:105
 msgid "ultrafast"
 msgstr "ultra schnell"
 
-#: src/OptionsDlg.cpp:88
+#: src/OptionsDlg.cpp:109
 msgid "force reencode audio"
 msgstr "Umwandeln von Audio erzwingen"
 
-#: src/OptionsDlg.cpp:111
+#: src/OptionsDlg.cpp:133
 msgid "best"
 msgstr "beste"
 
-#: src/OptionsDlg.cpp:113
+#: src/OptionsDlg.cpp:135
 msgid "worst"
 msgstr "schlechteste"
 
-#: src/OptionsDlg.cpp:115
+#: src/OptionsDlg.cpp:137
 msgid "default"
 msgstr "Standard"
 
-#: src/OptionsDlg.cpp:143
+#: src/OptionsDlg.cpp:175
 msgid "Language change will not take effect until the application is restarted"
 msgstr "Änderung der Sprache wird erst nach dem Neustart des Programms wirksam"
 
-#: src/OptionsDlg.cpp:151
+#: src/OptionsDlg.cpp:181
+#, c-format
+msgid "Directory %s doesn't exist."
+msgstr "Das Verzeichnis%s existiert nicht."
+
+#: src/OptionsDlg.cpp:196
 msgid "Save a log file"
 msgstr "Protokolldatei speichern"
+
+#: src/OptionsDlg.cpp:202
+msgid "Choose a directory for temporary files"
+msgstr "Wählen Sie ein Verzeichnis für temporäre Dateien"
 
 #: src/ProgramProcess.cpp:28
 msgid "Failed"

@@ -336,8 +336,10 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 		mediaFile->SetReencodeVideo(!mediaFile->HasCompatibleVideoStreams(mediaFile1) || forceReencodeVideo);
 		if (!mediaFile->IsReencodeVideo() && !mediaFile->IsReencodeAudio() && !mediaFile->IsCutVideo())
 			continue;
-		tempFiles[idx] = wxFileName::CreateTempFileName(wxFileName::GetTempDir() + wxFILE_SEP_PATH)
-				+ "." + mediaFile1->GetFormatName();
+		wxString tmpDir = s_config.GetTempDir();
+		if (tmpDir.length() == 0)
+			tmpDir = wxFileName::GetTempDir();
+		tempFiles[idx] = wxFileName::CreateTempFileName(tmpDir + wxFILE_SEP_PATH) + "." + mediaFile1->GetFormatName();
 	}
 
 	// show progress dialog
@@ -462,7 +464,10 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 #if defined(__WXMSW__) || defined(__WXMAC__)
 	cmd = '"' + wxGetAppPath() + cmd + '"';
 #endif
-	cmd += " -bs-switching merge"; // 
+	if (s_config.GetTempDir().length() > 0)
+		cmd += " -tmp \"" + s_config.GetTempDir() + '"';
+	if (s_config.GetMP4BoxParam().length())
+		cmd += " " + s_config.GetMP4BoxParam();
 	for (unsigned int idx = 0; idx < files.size(); idx++) {
 		wxString fileName = tempFiles.find(idx) != tempFiles.end() ? tempFiles[idx] : files[idx]->GetFileName();
 		cmd += " -cat \"" + fileName + '"';
@@ -478,7 +483,7 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 }
 
 void MainWin::OnSettingsBt(wxCommandEvent& event) {
-	OptionsDlg dlg(this, false);
+	OptionsDlg dlg(this, false, false);
 	dlg.SetForceReencodeAudio(forceReencodeAudio);
 	dlg.SetForceReencodeVideo(forceReencodeVideo);
 	dlg.SetCrf(crf);
