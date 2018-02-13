@@ -68,7 +68,7 @@ libs: MP4Joiner.libs MP4Splitter.libs
 dmg:
 	rm -f MP4Tools.dmg MP4Tools-@VERSION@-MacOSX.dmg
 	hdiutil eject /dev/disk1 || echo
-	hdiutil create -megabytes 120 -layout NONE MP4Tools.dmg
+	hdiutil create -megabytes 150 -layout NONE MP4Tools.dmg
 	hdid -nomount MP4Tools.dmg
 	newfs_hfs -v MP4Tools /dev/disk1
 	hdiutil eject /dev/disk1
