@@ -1,13 +1,13 @@
 [Setup]          
 AppName=MP4Tools
-AppVerName=MP4Tools v3.6
+AppVerName=MP4Tools v3.6.1
 AppPublisher=Thüring IT-Consulting
 AppPublisherURL=http://www.mp4joiner.org
 AppSupportURL=http://www.mp4joiner.org
 AppUpdatesURL=http://www.mp4joiner.org
 DefaultDirName={pf}\MP4Tools
 DefaultGroupName=MP4Tools
-OutputBaseFilename=MP4Tools-3.6-win32
+OutputBaseFilename=MP4Tools-3.6.1-win32
 Compression=lzma
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\MP4Joiner.exe
@@ -28,6 +28,7 @@ Name: "pl"; MessagesFile: "compiler:Languages\Polish.isl"
 Name: "pt"; MessagesFile: "compiler:Languages\Portuguese.isl"
 Name: "pt_BR"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
+Name: "zh_TW"; MessagesFile: "Languages\ChineseTrad.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
@@ -47,6 +48,7 @@ Source: "..\locale\pl\*"; DestDir: "{app}\locale\pl"; Flags: ignoreversion
 Source: "..\locale\pt\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
 Source: "..\locale\pt_BR\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
 Source: "..\locale\ru\*"; DestDir: "{app}\locale\ru"; Flags: ignoreversion
+Source: "..\locale\zh_TW\*"; DestDir: "{app}\locale\zh_TW"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\MP4Joiner"; Filename: "{app}\bin\MP4Joiner.exe"
