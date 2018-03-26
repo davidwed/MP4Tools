@@ -1,5 +1,10 @@
+DEV
+---
+
+  * added Traditional Chinese translation (thanks to Jason WU)
+
 Version 3.6 <2018-01-14>
--------------------------
+------------------------
 
   * MP4Joiner: added possibility to specify temporary directory 
   * MP4Joiner: added options "-bs-switching merge" and "-force-cat" to MP4Box
