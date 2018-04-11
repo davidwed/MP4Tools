@@ -8,7 +8,7 @@ AppUpdatesURL=http://www.mp4joiner.org
 DefaultDirName={pf}\MP4Tools
 DefaultGroupName=MP4Tools
 OutputBaseFilename=MP4Tools-3.6.1-win32
-Compression=lzma
+Compression=lzma2
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\MP4Joiner.exe
 PrivilegesRequired=admin
@@ -27,7 +27,8 @@ Name: "it"; MessagesFile: "compiler:Languages\Italian.isl"
 Name: "pl"; MessagesFile: "compiler:Languages\Polish.isl"
 Name: "pt"; MessagesFile: "compiler:Languages\Portuguese.isl"
 Name: "pt_BR"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
-Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
+Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"       
+Name: "tr"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "zh_TW"; MessagesFile: "Languages\ChineseTrad.isl"
 
 [Tasks]
