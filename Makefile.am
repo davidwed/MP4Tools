@@ -18,7 +18,7 @@ MP4Joiner.app: Info.plist src/mp4joiner
 	cp src/mp4joiner MP4Joiner.app/Contents/MacOS/MP4Joiner
 	cp resources/mp4joiner.icns MP4Joiner.app/Contents/Resources/MP4Joiner.icns
 	-mkdir MP4Joiner.app/Contents/locale
-	(cd locale && cp -r de es fr pl pt pt_BR ru ../MP4Joiner.app/Contents/locale/)
+	(cd locale && cp -r de es fr it pl pt pt_BR ru tr zh_TW ../MP4Joiner.app/Contents/locale/)
 	cp /opt/local/bin/ffmpeg MP4Joiner.app/Contents/MacOS/
 	strip MP4Joiner.app/Contents/MacOS/MP4Joiner
 	strip MP4Joiner.app/Contents/MacOS/ffmpeg
@@ -45,7 +45,7 @@ MP4Splitter.app: Info.plist src/mp4splitter
 	cp src/mp4splitter MP4Splitter.app/Contents/MacOS/MP4Splitter
 	cp resources/mp4splitter.icns MP4Splitter.app/Contents/Resources/MP4Splitter.icns
 	-mkdir MP4Splitter.app/Contents/locale
-	(cd locale && cp -r de es fr pl pt pt_BR ru ../MP4Splitter.app/Contents/locale/)
+	(cd locale && cp -r de es fr it pl pt pt_BR ru tr zh_TW ../MP4Splitter.app/Contents/locale/)
 	cp /opt/local/bin/ffmpeg MP4Splitter.app/Contents/MacOS/
 	strip MP4Splitter.app/Contents/MacOS/MP4Splitter
 	strip MP4Splitter.app/Contents/MacOS/ffmpeg
