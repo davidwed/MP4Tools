@@ -43,12 +43,13 @@ Source: "..\ChangeLog"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "..\locale\de\*"; DestDir: "{app}\locale\de"; Flags: ignoreversion
 Source: "..\locale\es\*"; DestDir: "{app}\locale\es"; Flags: ignoreversion  
-Source: "..\locale\fr\*"; DestDir: "{app}\locale\es"; Flags: ignoreversion 
+Source: "..\locale\fr\*"; DestDir: "{app}\locale\fr"; Flags: ignoreversion 
 Source: "..\locale\it\*"; DestDir: "{app}\locale\it"; Flags: ignoreversion
 Source: "..\locale\pl\*"; DestDir: "{app}\locale\pl"; Flags: ignoreversion
 Source: "..\locale\pt\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
-Source: "..\locale\pt_BR\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
+Source: "..\locale\pt_BR\*"; DestDir: "{app}\locale\pt_BR"; Flags: ignoreversion 
 Source: "..\locale\ru\*"; DestDir: "{app}\locale\ru"; Flags: ignoreversion
+Source: "..\locale\tr\*"; DestDir: "{app}\locale\tr"; Flags: ignoreversion
 Source: "..\locale\zh_TW\*"; DestDir: "{app}\locale\zh_TW"; Flags: ignoreversion
 
 [Icons]

@@ -345,7 +345,7 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 	// show progress dialog
 	int streamCount = mediaFile1->GetStreams().size();
 	int stepCount = tempFiles.size()*10 + files.size()*(streamCount + 1) + 1;
-	ProgressDlg progDlg(this, _("MP4 Joiner"), _("Joning the files"), stepCount*100, logFileName);
+	ProgressDlg progDlg(this, _("MP4 Joiner"), _("Joining the files"), stepCount*100, logFileName);
 	progDlg.Show();
 	int step = 0;
 
