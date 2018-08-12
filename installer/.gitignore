@@ -1,5 +1,6 @@
 /bak
 /Output
 /*.exe
-/Br*.rtf
+/br*.*
+/Br*.*
 /*BS.iss
