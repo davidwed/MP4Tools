@@ -16,9 +16,9 @@
 //(*InternalHeaders(VideoPropDlg)
 #include <wx/artprov.h>
 #include <wx/bitmap.h>
-#include <wx/intl.h>
 #include <wx/button.h>
 #include <wx/image.h>
+#include <wx/intl.h>
 #include <wx/string.h>
 //*)
 
@@ -50,14 +50,14 @@ VideoPropDlg::VideoPropDlg(wxWindow* parent, MediaFile* mediaFile) {
 	m_videoPos = 0;
 
 	//(*Initialize(VideoPropDlg)
-	wxBoxSizer* mediaSizer;
-	wxStdDialogButtonSizer* stdDialogButtonSizer;
-	wxStaticText* staticText1;
-	wxStaticText* startLabel;
-	wxStaticText* endLabel;
-	wxBoxSizer* timeSizer;
-	wxBoxSizer* mainSizer;
 	wxBoxSizer* hSizer;
+	wxBoxSizer* mainSizer;
+	wxBoxSizer* mediaSizer;
+	wxBoxSizer* timeSizer;
+	wxStaticText* endLabel;
+	wxStaticText* startLabel;
+	wxStaticText* staticText1;
+	wxStdDialogButtonSizer* stdDialogButtonSizer;
 
 	Create(parent, wxID_ANY, _("Cut video"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER, _T("wxID_ANY"));
 	SetClientSize(wxSize(750,500));
@@ -67,22 +67,22 @@ VideoPropDlg::VideoPropDlg(wxWindow* parent, MediaFile* mediaFile) {
 	m_mediaCtrl = new MediaCtrlFF(this, ID_CUSTOM1, wxT(""), wxDefaultPosition,wxDefaultSize, 0, wxDefaultValidator, _T("ID_CUSTOM1"));
 	m_mediaCtrl->SetMinSize(wxSize(300, 200));
 	m_mediaCtrl->SetWindowStyle(wxBORDER_NONE);
-	mediaSizer->Add(m_mediaCtrl, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
+	mediaSizer->Add(m_mediaCtrl, 1, wxALL|wxEXPAND, 4);
 	m_slider = new wxSlider(this, ID_SLIDER, 0, 0, 100, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_SLIDER"));
-	mediaSizer->Add(m_slider, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+	mediaSizer->Add(m_slider, 0, wxEXPAND, 2);
 	timeSizer = new wxBoxSizer(wxHORIZONTAL);
 	staticText1 = new wxStaticText(this, wxID_ANY, _("Time:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
 	timeSizer->Add(staticText1, 0, wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
 	m_timeCtrl = new wxTextCtrl(this, ID_TIME_CTRL, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TIME_CTRL"));
-	timeSizer->Add(m_timeCtrl, 0, wxLEFT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+	timeSizer->Add(m_timeCtrl, 0, wxLEFT|wxEXPAND, 2);
 	m_timeSpinBt = new wxSpinButton(this, ID_TIME_SPINB, wxDefaultPosition, wxDefaultSize, wxSP_VERTICAL|wxSP_ARROW_KEYS, _T("ID_TIME_SPINB"));
 	m_timeSpinBt->SetRange(0, 100);
 	m_timeSpinBt->SetMinSize(wxSize(16,12));
-	timeSizer->Add(m_timeSpinBt, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	timeSizer->Add(m_timeSpinBt, 0, wxEXPAND, 5);
 	m_frameSpinBt = new wxSpinButton(this, ID_FRAME_SPINBT, wxDefaultPosition, wxDefaultSize, wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP, _T("ID_FRAME_SPINBT"));
 	m_frameSpinBt->SetRange(-9999, 9999);
 	m_frameSpinBt->SetMinSize(wxSize(16,12));
-	timeSizer->Add(m_frameSpinBt, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	timeSizer->Add(m_frameSpinBt, 0, wxEXPAND, 5);
 	startLabel = new wxStaticText(this, wxID_ANY, _("Start:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
 	timeSizer->Add(startLabel, 0, wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 8);
 	m_startCtrl = new wxTextCtrl(this, ID_TEXTCTRL2, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL2"));
@@ -90,11 +90,11 @@ VideoPropDlg::VideoPropDlg(wxWindow* parent, MediaFile* mediaFile) {
 	m_startSpin = new wxSpinButton(this, ID_SPINBUTTON1, wxDefaultPosition, wxDefaultSize, wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP, _T("ID_SPINBUTTON1"));
 	m_startSpin->SetRange(-9999, 9999);
 	m_startSpin->SetMinSize(wxSize(16,12));
-	timeSizer->Add(m_startSpin, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	timeSizer->Add(m_startSpin, 0, wxEXPAND, 5);
 	m_startFrameSpin = new wxSpinButton(this, ID_SPINBUTTON2, wxDefaultPosition, wxDefaultSize, wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP, _T("ID_SPINBUTTON2"));
 	m_startFrameSpin->SetRange(-9999, 9999);
 	m_startFrameSpin->SetMinSize(wxSize(16,12));
-	timeSizer->Add(m_startFrameSpin, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	timeSizer->Add(m_startFrameSpin, 0, wxEXPAND, 5);
 	m_startBt = new wxBitmapButton(this, START_BT_ID, wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_CUT")),wxART_MENU), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW, wxDefaultValidator, _T("START_BT_ID"));
 	m_startBt->SetDefault();
 	m_startBt->SetToolTip(_("Cut beginning"));
@@ -106,23 +106,23 @@ VideoPropDlg::VideoPropDlg(wxWindow* parent, MediaFile* mediaFile) {
 	m_endSpin = new wxSpinButton(this, ID_SPINBUTTON3, wxDefaultPosition, wxDefaultSize, wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP, _T("ID_SPINBUTTON3"));
 	m_endSpin->SetRange(-9999, 9999);
 	m_endSpin->SetMinSize(wxSize(16,12));
-	timeSizer->Add(m_endSpin, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	timeSizer->Add(m_endSpin, 0, wxEXPAND, 0);
 	m_endFrameSpin = new wxSpinButton(this, ID_SPINBUTTON4, wxDefaultPosition, wxDefaultSize, wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP, _T("ID_SPINBUTTON4"));
 	m_endFrameSpin->SetRange(-9999, 9999);
 	m_endFrameSpin->SetMinSize(wxSize(16,12));
-	timeSizer->Add(m_endFrameSpin, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	timeSizer->Add(m_endFrameSpin, 0, wxEXPAND, 0);
 	m_endBt = new wxBitmapButton(this, ID_RESET_TIME_BT, wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_CUT")),wxART_MENU), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW, wxDefaultValidator, _T("ID_RESET_TIME_BT"));
 	m_endBt->SetDefault();
 	m_endBt->SetToolTip(_("Cut ending"));
-	timeSizer->Add(m_endBt, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
-	mediaSizer->Add(timeSizer, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	hSizer->Add(mediaSizer, 1, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	mainSizer->Add(hSizer, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	timeSizer->Add(m_endBt, 0, wxEXPAND, 2);
+	mediaSizer->Add(timeSizer, 0, wxALL|wxEXPAND, 5);
+	hSizer->Add(mediaSizer, 1, wxEXPAND, 5);
+	mainSizer->Add(hSizer, 1, wxALL|wxEXPAND, 5);
 	stdDialogButtonSizer = new wxStdDialogButtonSizer();
 	stdDialogButtonSizer->AddButton(new wxButton(this, wxID_OK, wxEmptyString));
 	stdDialogButtonSizer->AddButton(new wxButton(this, wxID_CANCEL, wxEmptyString));
 	stdDialogButtonSizer->Realize();
-	mainSizer->Add(stdDialogButtonSizer, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
+	mainSizer->Add(stdDialogButtonSizer, 0, wxALL|wxEXPAND, 4);
 	SetSizer(mainSizer);
 	SetSizer(mainSizer);
 	Layout();
