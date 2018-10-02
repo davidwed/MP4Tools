@@ -1,0 +1,391 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MP4Tools 3.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-10 21:30+0100\n"
+"PO-Revision-Date: 2018-09-27 07:55+0200\n"
+"Last-Translator: Joco47 <jakothu at jakot47.hu>\n"
+"Language-Team: LANGUAGE <Joco47\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: src/MainWin.cpp:56 src/SplitterWin.cpp:380
+msgid "Successful"
+msgstr "Sikeres"
+
+#: src/MainWin.cpp:117 src/MainWin.cpp:348
+msgid "MP4 Joiner"
+msgstr "MP4 Joiner"
+
+#: src/MainWin.cpp:148
+msgid "Add Video"
+msgstr "Videó hozzáadása"
+
+#: src/MainWin.cpp:149
+msgid "Add video file"
+msgstr "Videófájl hozzáadása"
+
+#: src/MainWin.cpp:151 src/MainWin.cpp:160
+msgid "Remove"
+msgstr "Távolítsa el"
+
+#: src/MainWin.cpp:152 src/MainWin.cpp:161
+msgid "Remove selected video"
+msgstr "Távolítsuk el a kiválasztott videót"
+
+#: src/MainWin.cpp:154
+msgid "&Remove selected"
+msgstr "A &kiválasztott eltávolítása"
+
+#: src/MainWin.cpp:155
+msgid "Remove a&ll"
+msgstr "&Összes eltávolítása"
+
+#: src/MainWin.cpp:164
+msgid "Remove all"
+msgstr "Összes eltávolítása"
+
+#: src/MainWin.cpp:165
+msgid "Remove all videos"
+msgstr "Összes videó eltávolítása"
+
+#: src/MainWin.cpp:167
+msgid "Join"
+msgstr "Egyesít"
+
+#: src/MainWin.cpp:168
+msgid "Select output file and start join"
+msgstr "Válassza ki a kimeneti fájlt és indítsa el az egyesítést"
+
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:56
+msgid "Options"
+msgstr "Beállítások"
+
+#: src/MainWin.cpp:174
+msgid "About"
+msgstr "Névjegy"
+
+#: src/MainWin.cpp:175
+msgid "About the program"
+msgstr "A programról"
+
+#: src/MainWin.cpp:225
+msgid "Total duration"
+msgstr "Teljes idõtartam"
+
+#: src/MainWin.cpp:232
+msgid "total size"
+msgstr "teljes méret"
+
+#: src/MainWin.cpp:234 src/MediaListBox.cpp:98
+msgid "GB"
+msgstr "GB"
+
+#: src/MainWin.cpp:236 src/MediaListBox.cpp:100
+msgid "MB"
+msgstr "MB"
+
+#: src/MainWin.cpp:241 src/SplitterWin.cpp:229
+msgid "Choose a file"
+msgstr "Válasszon fájlt"
+
+#: src/MainWin.cpp:242 src/MainWin.cpp:322 src/SplitterWin.cpp:230
+msgid "MP4 Files"
+msgstr "MP4 Fájlok"
+
+#: src/MainWin.cpp:243
+msgid "AVI Files"
+msgstr "AVI Fájlok"
+
+#: src/MainWin.cpp:244 src/MainWin.cpp:323 src/SplitterWin.cpp:231
+msgid "All Files"
+msgstr "Összes fájl"
+
+#: src/MainWin.cpp:321
+msgid "Choose a file to save"
+msgstr "Válassza ki a menteni kívánt fájlt"
+
+#: src/MainWin.cpp:321
+msgid "Output.mp4"
+msgstr "Kimenet.MP4"
+
+#: src/MainWin.cpp:348
+msgid "Joning the files"
+msgstr "A fájlok egyesítése"
+
+#: src/MainWin.cpp:360
+#, c-format
+msgid "Reencode video from file %s"
+msgstr "Újrakódolni videót a (z)%s fájlból"
+
+#: src/MainWin.cpp:362
+#, c-format
+msgid "Reencode audio from file %s"
+msgstr "Újrakódolni a hanfájt a (z)%s fájlból"
+
+#: src/MainWin.cpp:364
+#, c-format
+msgid "Cut video from file %s"
+msgstr "Videó vágása a (z)%s fájlból"
+
+#: src/MainWin.cpp:511
+msgid "Simple tool to join multiple MP4 files into one."
+msgstr "Egyszerû eszköz több MP4 fájl egybeolvasztásához."
+
+#: src/MainWin.cpp:528 src/SplitterWin.cpp:297
+msgid "&Remove"
+msgstr "&Eltávolít"
+
+#: src/MainWin.cpp:529
+msgid "&Cut video..."
+msgstr "&Videó vágása ..."
+
+#: src/MainWin.cpp:531
+msgid "&Sort"
+msgstr "&Rendezés"
+
+#: src/MediaListBox.cpp:83 src/SplitterWin.cpp:168
+msgid "Duration"
+msgstr "Idõtartam"
+
+#: src/MediaListBox.cpp:95
+msgid "Size"
+msgstr "Méret"
+
+#: src/MediaListBox.cpp:102
+msgid "KB"
+msgstr "Kb"
+
+#: src/MediaListBox.cpp:112
+msgid "Video:"
+msgstr "Video:"
+
+#: src/MediaListBox.cpp:117
+msgid "Audio:"
+msgstr "Audio:"
+
+#: src/MediaListBox.cpp:122
+msgid "Subtitle:"
+msgstr "Felirat:"
+
+#: src/MediaStream.cpp:58
+msgid "mono"
+msgstr "mono"
+
+#: src/MediaStream.cpp:60
+msgid "stereo"
+msgstr "sztereo"
+
+#: src/MediaStream.cpp:64
+#, c-format
+msgid "%d channels"
+msgstr "%d csatornák"
+
+#: src/MediaStream.cpp:67
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: src/MediaStream.cpp:69
+#, c-format
+msgid "%d kbit/s"
+msgstr "%d kbit/s"
+
+#: src/OptionsDlg.cpp:59
+msgid "Language:"
+msgstr "Nyelv:"
+
+#: src/OptionsDlg.cpp:63
+msgid "MP4Box parameters:"
+msgstr "MP4Box paraméterek:"
+
+#: src/OptionsDlg.cpp:67
+msgid "Temp directory:"
+msgstr "Temp könyvtár:"
+
+#: src/OptionsDlg.cpp:72 src/OptionsDlg.cpp:80
+msgid "..."
+msgstr "..."
+
+#: src/OptionsDlg.cpp:75
+msgid "Log file:"
+msgstr "Naplófájl:"
+
+#: src/OptionsDlg.cpp:84
+msgid "force reencode video"
+msgstr "a videó konvertálás kényszerítés"
+
+#: src/OptionsDlg.cpp:90
+msgid "CRF (quality):"
+msgstr "CRF (minõség)"
+
+#: src/OptionsDlg.cpp:94
+msgid "Preset:"
+msgstr "Beállított:"
+
+#: src/OptionsDlg.cpp:97
+msgid "veryslow"
+msgstr "nagyon lassú"
+
+#: src/OptionsDlg.cpp:98
+msgid "slower"
+msgstr "lassabb"
+
+#: src/OptionsDlg.cpp:99
+msgid "slow"
+msgstr "lassú"
+
+#: src/OptionsDlg.cpp:100
+msgid "medium"
+msgstr "közepes"
+
+#: src/OptionsDlg.cpp:101
+msgid "fast"
+msgstr "gyors"
+
+#: src/OptionsDlg.cpp:102
+msgid "faster"
+msgstr "gyorsabb"
+
+#: src/OptionsDlg.cpp:103
+msgid "veryfast"
+msgstr "nagyon gyors"
+
+#: src/OptionsDlg.cpp:104
+msgid "superfast"
+msgstr "szuper gyors"
+
+#: src/OptionsDlg.cpp:105
+msgid "ultrafast"
+msgstr "ultragyors"
+
+#: src/OptionsDlg.cpp:109
+msgid "force reencode audio"
+msgstr "a hang konvertálása"
+
+#: src/OptionsDlg.cpp:133
+msgid "best"
+msgstr "legjobb"
+
+#: src/OptionsDlg.cpp:135
+msgid "worst"
+msgstr "legrosszabb"
+
+#: src/OptionsDlg.cpp:137
+msgid "default"
+msgstr "alapértelmezett"
+
+#: src/OptionsDlg.cpp:175
+msgid "Language change will not take effect until the application is restarted"
+msgstr "A nyelvváltoztatás csak az alkalmazás újraindítása után lép érvénybe"
+
+#: src/OptionsDlg.cpp:181
+#, c-format
+msgid "Directory %s doesn't exist."
+msgstr "A (z) %s könyvtár nem létezik."
+
+#: src/OptionsDlg.cpp:196
+msgid "Save a log file"
+msgstr "Naplófájl mentése"
+
+#: src/OptionsDlg.cpp:202
+msgid "Choose a directory for temporary files"
+msgstr "Válasszon egy könyvtárat az ideiglenes fájloknak"
+
+#: src/ProgramProcess.cpp:28
+msgid "Failed"
+msgstr "Sikertelen"
+
+#: src/ProgramProcess.cpp:73
+#, c-format
+msgid "Execution of '%s' failed."
+msgstr "A (z) '%s' végrehajtása sikertelen."
+
+#: src/SplitterWin.cpp:74 src/SplitterWin.cpp:325
+msgid "MP4 Splitter"
+msgstr "MP4 Daraboló"
+
+#: src/SplitterWin.cpp:86 src/VideoPropDlg.cpp:74
+msgid "Time:"
+msgstr "Idõ:"
+
+#: src/SplitterWin.cpp:98
+msgid "Add split point"
+msgstr "Adja hozzá egy osztó pontot"
+
+#: src/SplitterWin.cpp:104
+msgid "Open Video"
+msgstr "Videó megnyitás"
+
+#: src/SplitterWin.cpp:112
+msgid "Split points:"
+msgstr "Osztott pontokat:"
+
+#: src/SplitterWin.cpp:118
+msgid "Start splitting"
+msgstr "Indítsa el a felosztást"
+
+#: src/SplitterWin.cpp:166
+msgid "Start"
+msgstr "Indítás"
+
+#: src/SplitterWin.cpp:167
+msgid "End"
+msgstr "Vége"
+
+#: src/SplitterWin.cpp:298
+msgid "Remove &all"
+msgstr "&Összes eltávolítása"
+
+#: src/SplitterWin.cpp:304
+msgid "Choose a output directory"
+msgstr "Válasszon ki egy kimeneti könyvtárat"
+
+#: src/SplitterWin.cpp:325
+msgid "Splitting the file"
+msgstr "A fájl megosztása"
+
+#: src/SplitterWin.cpp:342
+#, c-format
+msgid "File '%s' already exist. Do you want to overwrite it?"
+msgstr "A (z) '%s' fájl már létezik. Felülírja?"
+
+#: src/SplitterWin.cpp:343
+msgid "Confirmation"
+msgstr "Megerõsítés"
+
+#: src/SplitterWin.cpp:352
+#, c-format
+msgid "Writting %s"
+msgstr "%s írása"
+
+#: src/SplitterWin.cpp:404
+msgid "Simple tool to split a MP4 file."
+msgstr "Egyszerû eszköz az MP4 fájl megosztására."
+
+#: src/VideoPropDlg.cpp:62
+msgid "Cut video"
+msgstr "Videó vágása"
+
+#: src/VideoPropDlg.cpp:86
+msgid "Start:"
+msgstr "Indítás:"
+
+#: src/VideoPropDlg.cpp:100
+msgid "Cut beginning"
+msgstr "Vágja le az elejét"
+
+#: src/VideoPropDlg.cpp:102
+msgid "End:"
+msgstr "Vége:"
+
+#: src/VideoPropDlg.cpp:116
+msgid "Cut ending"
+msgstr "Vágja le a végét"
+
+#: src/VideoPropDlg.cpp:279 src/VideoPropDlg.cpp:284
+msgid "Invalid time"
+msgstr "Érvénytelen idõ"

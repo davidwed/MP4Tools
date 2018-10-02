@@ -1,6 +1,7 @@
 /Makefile
 /de
 /es
+/hu
 /pt
 /pt_BR
 /ru
@@ -8,5 +9,6 @@
 /pl
 /it
 /.DS_Store
+/zh_CN
 /zh_TW
 /tr
