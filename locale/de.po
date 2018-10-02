@@ -114,7 +114,7 @@ msgid "Output.mp4"
 msgstr "Ausgabe.mp4"
 
 #: src/MainWin.cpp:348
-msgid "Joning the files"
+msgid "Joining the files"
 msgstr "Zusammenfügen der Dateien"
 
 #: src/MainWin.cpp:360
