@@ -13,12 +13,12 @@
 				<object class="wxBoxSizer" variable="mediaSizer" member="no">
 					<orient>wxVERTICAL</orient>
 					<object class="sizeritem">
-						<object class="Custom" name="ID_CUSTOM1" subclass="MediaCtrlFF" variable="mediaCtrl" member="yes">
+						<object class="Custom" name="ID_MEDIA_CTRL" subclass="MediaCtrlFF" variable="mediaCtrl" member="yes">
 							<creating_code>$(THIS) = new $(CLASS)($(PARENT), $(ID), wxT(&quot;&quot;), $(POS),$(SIZE), 0, wxDefaultValidator, $(NAME));&#x0A;$(THIS)-&gt;SetMinSize(wxSize(300, 200));&#x0A;$(THIS)-&gt;SetWindowStyle(wxBORDER__NONE);</creating_code>
 							<style></style>
 							<minsize>100,100</minsize>
 						</object>
-						<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<flag>wxALL|wxEXPAND</flag>
 						<border>4</border>
 						<option>1</option>
 					</object>
@@ -26,11 +26,18 @@
 						<object class="wxSlider" name="ID_SLIDER" variable="mediaSlider" member="yes">
 							<handler function="OnSliderScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
 						</object>
-						<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<flag>wxEXPAND</flag>
 						<border>2</border>
 					</object>
 					<object class="sizeritem">
 						<object class="wxBoxSizer" variable="timeSizer" member="no">
+							<object class="sizeritem">
+								<object class="wxBitmapButton" name="ID_PLAY_BT" variable="playBt" member="yes">
+									<handler function="OnPlay" entry="EVT_BUTTON" />
+								</object>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
 							<object class="sizeritem">
 								<object class="wxStaticText" name="wxID_ANY" variable="staticText1" member="no">
 									<label>Time:</label>
@@ -39,31 +46,37 @@
 								<border>4</border>
 							</object>
 							<object class="sizeritem">
-								<object class="wxTextCtrl" name="ID_TIME_CTRL" variable="timeCtrl" member="yes">
-									<handler function="OnChangeTime" entry="EVT_TEXT" />
+								<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+									<object class="sizeritem">
+										<object class="wxTextCtrl" name="ID_TIME_CTRL" variable="timeCtrl" member="yes">
+											<handler function="OnChangeTime" entry="EVT_TEXT" />
+										</object>
+										<flag>wxLEFT|wxALIGN_CENTER_VERTICAL</flag>
+										<border>2</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxSpinButton" name="ID_TIME_SPIN" variable="timeSpinBt" member="yes">
+											<max>100</max>
+											<minsize>16,12</minsize>
+											<handler function="OnTimeSpin" entry="EVT_SPIN" />
+										</object>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxSpinButton" name="ID_FRAME_SPIN" variable="frameSpinBt" member="yes">
+											<min>-9999</min>
+											<max>9999</max>
+											<minsize>16,12</minsize>
+											<style>wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP</style>
+											<handler function="OnFrameSpin" entry="EVT_SPIN_UP" />
+											<handler function="OnFrameSpinDown" entry="EVT_SPIN_DOWN" />
+										</object>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+									</object>
 								</object>
-								<flag>wxLEFT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<border>2</border>
-							</object>
-							<object class="sizeritem">
-								<object class="wxSpinButton" name="ID_TIME_SPIN" variable="timeSpinBt" member="yes">
-									<max>100</max>
-									<minsize>16,12</minsize>
-									<handler function="OnTimeSpin" entry="EVT_SPIN" />
-								</object>
-								<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<border>5</border>
-							</object>
-							<object class="sizeritem">
-								<object class="wxSpinButton" name="ID_FRAME_SPIN" variable="frameSpinBt" member="yes">
-									<min>-9999</min>
-									<max>9999</max>
-									<minsize>16,12</minsize>
-									<style>wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP</style>
-									<handler function="OnFrameSpin" entry="EVT_SPIN_UP" />
-									<handler function="OnFrameSpinDown" entry="EVT_SPIN_DOWN" />
-								</object>
-								<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 							</object>
 							<object class="sizeritem">
@@ -76,11 +89,11 @@
 								<border>8</border>
 							</object>
 						</object>
-						<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<flag>wxALL|wxEXPAND</flag>
 						<border>5</border>
 					</object>
 				</object>
-				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxALL|wxEXPAND</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>
@@ -119,14 +132,14 @@
 								<border>2</border>
 							</object>
 						</object>
-						<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<flag>wxEXPAND</flag>
 						<border>5</border>
 					</object>
 					<object class="sizeritem">
 						<object class="wxStaticText" name="wxID_ANY" variable="label1" member="no">
 							<label>Split points:</label>
 						</object>
-						<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+						<flag>wxALL|wxALIGN_LEFT</flag>
 						<border>5</border>
 					</object>
 					<object class="sizeritem">
@@ -136,12 +149,12 @@
 									<style>wxLC_REPORT|wxLC_SINGLE_SEL</style>
 									<handler function="OnCutPointRClick" entry="EVT_LIST_ITEM_RIGHT_CLICK" />
 								</object>
-								<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<flag>wxEXPAND</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>
 						</object>
-						<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<flag>wxEXPAND</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>
@@ -150,11 +163,11 @@
 							<label>Start splitting</label>
 							<handler function="OnRunBt" entry="EVT_BUTTON" />
 						</object>
-						<flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+						<flag>wxALL|wxALIGN_RIGHT</flag>
 						<border>5</border>
 					</object>
 				</object>
-				<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxEXPAND</flag>
 				<border>5</border>
 			</object>
 		</object>

@@ -9,12 +9,12 @@
 #define MAINWIN_H
 
 //(*Headers(MainWin)
-#include <wx/sizer.h>
-#include <wx/listbox.h>
-#include <wx/toolbar.h>
 #include <wx/bmpbuttn.h>
 #include <wx/frame.h>
+#include <wx/listbox.h>
+#include <wx/sizer.h>
 #include <wx/statusbr.h>
+#include <wx/toolbar.h>
 //*)
 #include "MediaListBox.h"
 #include <wx/ffile.h>
@@ -32,11 +32,11 @@ public:
 private:
 
 	//(*Declarations(MainWin)
-	wxBitmapButton* upButton;
-	wxBitmapButton* downButton;
-	wxToolBar* toolbar;
 	MediaListBox* mediaListBox;
+	wxBitmapButton* downButton;
+	wxBitmapButton* upButton;
 	wxStatusBar* statusBar;
+	wxToolBar* toolbar;
 	//*)
 
 	//(*Identifiers(MainWin)

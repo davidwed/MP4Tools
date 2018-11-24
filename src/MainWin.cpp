@@ -10,9 +10,9 @@
 
 //(*InternalHeaders(MainWin)
 #include <wx/bitmap.h>
-#include <wx/settings.h>
-#include <wx/intl.h>
 #include <wx/image.h>
+#include <wx/intl.h>
+#include <wx/settings.h>
 #include <wx/string.h>
 //*)
 #include <wx/toolbar.h>
@@ -111,21 +111,21 @@ END_EVENT_TABLE()
 
 MainWin::MainWin(): forceReencodeAudio(false), forceReencodeVideo(false), crf(DEF_CRF), preset(3) {
 	//(*Initialize(MainWin)
-	wxBoxSizer* BoxSizer2;
 	wxBoxSizer* BoxSizer1;
+	wxBoxSizer* BoxSizer2;
 
 	Create(0, wxID_ANY, _("MP4 Joiner"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL, _T("wxID_ANY"));
 	SetFocus();
 	SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNFACE));
 	BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
 	mediaListBox = new MediaListBox(this, ID_MEDIA_LISTBOX, wxPoint(328,48), wxSize(300,400), 0, 0, 0, wxDefaultValidator, _T("ID_MEDIA_LISTBOX"));
-	BoxSizer1->Add(mediaListBox, 1, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
+	BoxSizer1->Add(mediaListBox, 1, wxEXPAND, 4);
 	BoxSizer2 = new wxBoxSizer(wxVERTICAL);
 	upButton = new wxBitmapButton(this, ID_BITMAPBUTTON1, wxBITMAP_FROM_MEMORY(up), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW|wxTAB_TRAVERSAL, wxDefaultValidator, _T("ID_BITMAPBUTTON1"));
 	BoxSizer2->Add(upButton, 0, wxBOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
 	downButton = new wxBitmapButton(this, ID_BITMAPBUTTON2, wxBITMAP_FROM_MEMORY(down), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW|wxSTATIC_BORDER, wxDefaultValidator, _T("ID_BITMAPBUTTON2"));
 	BoxSizer2->Add(downButton, 0, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer1->Add(BoxSizer2, 0, wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+	BoxSizer1->Add(BoxSizer2, 0, wxLEFT|wxRIGHT|wxEXPAND, 2);
 	SetSizer(BoxSizer1);
 	statusBar = new wxStatusBar(this, ID_STATUSBAR, 0, _T("ID_STATUSBAR"));
 	int __wxStatusBarWidths_1[1] = { -10 };
@@ -250,10 +250,16 @@ void MainWin::OnAddFileBt(wxCommandEvent& event) {
 	fileDlg.GetPaths(paths);
 	for (unsigned int i = 0; i < paths.GetCount(); i++) {
 		MediaFile* mediaFile = new MediaFile;
-		if (mediaFile->Init(paths[i]))
-			files.push_back(mediaFile);
-		else
+		if (!mediaFile->Init(paths[i])) {
 			delete mediaFile;
+			continue;
+		}
+		if (paths[i].Contains("#")) {
+			wxLogError("Files with # characters in their name are not supported yet.");
+			delete mediaFile;
+			continue;
+		}
+		files.push_back(mediaFile);
 	}
 	mediaListBox->RefreshAll();
 	if (mediaListBox->GetItemCount() > 0 && mediaListBox->GetSelection() == -1)
@@ -345,7 +351,7 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 	// show progress dialog
 	int streamCount = mediaFile1->GetStreams().size();
 	int stepCount = tempFiles.size()*10 + files.size()*(streamCount + 1) + 1;
-	ProgressDlg progDlg(this, _("MP4 Joiner"), _("Joning the files"), stepCount*100, logFileName);
+	ProgressDlg progDlg(this, _("MP4 Joiner"), _("Joining the files"), stepCount*100, logFileName);
 	progDlg.Show();
 	int step = 0;
 

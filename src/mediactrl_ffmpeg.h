@@ -26,4 +26,6 @@ public:
 	wxImage GetImage();
 };
 
+wxDECLARE_EVENT(EVT_MEDIA_UPDATED, wxMediaEvent);
+
 #endif // MEDIA_CTRL_FF_H

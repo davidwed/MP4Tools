@@ -3,4 +3,6 @@
 /*.exe
 /br*.*
 /Br*.*
+/Go*.*
 /*BS.iss
+/*NT.iss

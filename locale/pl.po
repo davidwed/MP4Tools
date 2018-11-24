@@ -112,7 +112,7 @@ msgid "Output.mp4"
 msgstr "Wyjscie.mp4"
 
 #: src/MainWin.cpp:348
-msgid "Joning the files"
+msgid "Joining the files"
 msgstr "Łączenie plików"
 
 #: src/MainWin.cpp:360
@@ -199,12 +199,11 @@ msgstr "Język:"
 
 #: src/OptionsDlg.cpp:63
 msgid "MP4Box parameters:"
-msgstr ""
+msgstr "MP4Box parametry:"
 
 #: src/OptionsDlg.cpp:67
-#, fuzzy
 msgid "Temp directory:"
-msgstr "Wybierz folder docelowy"
+msgstr "Katalog tymczasowy:"
 
 #: src/OptionsDlg.cpp:72 src/OptionsDlg.cpp:80
 msgid "..."
@@ -285,7 +284,7 @@ msgstr "Zmiana języka wymaga ponownego uruchomienia programu"
 #: src/OptionsDlg.cpp:181
 #, c-format
 msgid "Directory %s doesn't exist."
-msgstr ""
+msgstr "Katalog %s nie istnieje."
 
 #: src/OptionsDlg.cpp:196
 msgid "Save a log file"

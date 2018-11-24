@@ -14,13 +14,13 @@
 #include "mediactrl_ffmpeg.h"
 
 //(*Headers(VideoPropDlg)
+#include <wx/bmpbuttn.h>
+#include <wx/dialog.h>
 #include <wx/sizer.h>
+#include <wx/slider.h>
+#include <wx/spinbutt.h>
 #include <wx/stattext.h>
 #include <wx/textctrl.h>
-#include <wx/slider.h>
-#include <wx/bmpbuttn.h>
-#include <wx/frame.h>
-#include <wx/spinbutt.h>
 //*)
 
 class VideoPropDlg: public wxDialog {
@@ -34,19 +34,19 @@ public:
 
 private:
 	//(*Declarations(VideoPropDlg)
+	MediaCtrlFF* m_mediaCtrl;
+	wxBitmapButton* m_endBt;
+	wxBitmapButton* m_startBt;
 	wxSlider* m_slider;
+	wxSpinButton* m_endFrameSpin;
+	wxSpinButton* m_endSpin;
 	wxSpinButton* m_frameSpinBt;
 	wxSpinButton* m_startFrameSpin;
-	wxTextCtrl* m_startCtrl;
-	MediaCtrlFF* m_mediaCtrl;
-	wxSpinButton* m_endSpin;
-	wxTextCtrl* m_timeCtrl;
-	wxBitmapButton* m_startBt;
-	wxTextCtrl* m_endCtrl;
-	wxBitmapButton* m_endBt;
-	wxSpinButton* m_endFrameSpin;
-	wxSpinButton* m_timeSpinBt;
 	wxSpinButton* m_startSpin;
+	wxSpinButton* m_timeSpinBt;
+	wxTextCtrl* m_endCtrl;
+	wxTextCtrl* m_startCtrl;
+	wxTextCtrl* m_timeCtrl;
 	//*)
 
 	//(*Identifiers(VideoPropDlg)
