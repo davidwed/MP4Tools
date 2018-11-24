@@ -1,19 +1,11 @@
-Version 3.7 beta 3 <2018-10-01>
--------------------------------
-
-  * added Hungarian translation (thanks to Bodrogi J�zsef)
-  * updated French translation (thanks Patrice FIEVRE)
-
-Version 3.7 beta 2 <2018-08-12>
--------------------------------
+Version 3.7 <2018-11-24>
+------------------------
 
   * MP4Splitter: added support of .mpg files
-
-Version 3.7 beta 1 <2018-08-11>
--------------------------------
-
   * MP4Splitter: added play/pause button
   * added Simplified Chinese translation (thanks to Julian Lee)
+  * added Hungarian translation (thanks to Bodrogi József)
+  * updated French translation (thanks Patrice FIEVRE)
   * updated ffmpeg to version 4.0.2
 
 Version 3.6.1 <2018-04-10>
@@ -93,7 +85,7 @@ Version 2.1 <2013-08-06>
 
   * added loading of video images
   * updated ffmpeg to version 2.0
-  * added Portuguese translation (thanks to Jo�o Frade)
+  * added Portuguese translation (thanks to João Frade)
 
 Version 2.0 <2013-03-04>
 ------------------------
