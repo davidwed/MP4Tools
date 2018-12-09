@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 
 dnl initialization
-AC_INIT([MP4Tools], [3.7], [http://www.mp4joiner.org])
+AC_INIT([MP4Tools], [3.8b1], [http://www.mp4joiner.org])
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
 
