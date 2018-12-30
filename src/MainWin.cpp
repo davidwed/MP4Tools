@@ -109,7 +109,7 @@ BEGIN_EVENT_TABLE(MainWin,wxFrame)
 	//*)
 END_EVENT_TABLE()
 
-MainWin::MainWin(): forceReencodeAudio(false), forceReencodeVideo(false), crf(DEF_CRF), preset(3) {
+MainWin::MainWin(): forceReencodeAudio(false), forceReencodeVideo(false), crf(DEF_CRF), preset(3), sampleRateIdx(0), audioBitrate(192) {
 	//(*Initialize(MainWin)
 	wxBoxSizer* BoxSizer1;
 	wxBoxSizer* BoxSizer2;
@@ -427,7 +427,18 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 					wxString codec = mediaFile1->GetStreams()[streamIdx1]->GetCodecName();
 					cmd += wxString::Format(" -c:a:%d ", audioIdx) + codec;
 					cmd += wxString::Format(" -ac:a:%d %d", audioIdx, mediaFile1->GetStreams()[streamIdx1]->GetChannelNumber());
-					cmd += wxString::Format(" -ar:a:%d %d", audioIdx, mediaFile1->GetStreams()[streamIdx1]->GetSampleRate());
+					int sampleRate = 48000;
+					if (sampleRateIdx == 0) {
+						sampleRate = mediaFile1->GetStreams()[streamIdx1]->GetSampleRate();
+					} else if (sampleRateIdx == 1) {
+						sampleRate = 44100;
+					} else if (sampleRateIdx == 3 && codec != "ac3") {
+						sampleRate = 96000;
+					} else if (sampleRateIdx == 4 && codec != "ac3") {
+						sampleRate = 192000;
+					}
+					cmd += wxString::Format(" -ar:a:%d %d", audioIdx, sampleRate);
+					cmd += wxString::Format(" -b:a:%d %d", audioIdx, audioBitrate*1000);
 					audioIdx++;
 					streamIdx1++;
 				}
@@ -494,12 +505,16 @@ void MainWin::OnSettingsBt(wxCommandEvent& event) {
 	dlg.SetForceReencodeVideo(forceReencodeVideo);
 	dlg.SetCrf(crf);
 	dlg.SetPreset(preset);
+	dlg.SetSampleRate(sampleRateIdx);
+	dlg.SetAudioBitrate(audioBitrate);
 	dlg.SetLogFile(logFileName);
 	if (dlg.ShowModal() == wxID_OK) {
 		forceReencodeAudio = dlg.IsForceReencodeAudio();
 		forceReencodeVideo = dlg.IsForceReencodeVideo();
 		crf = dlg.IsForceReencodeVideo() ? dlg.GetCrf() : DEF_CRF;
 		preset = dlg.GetPreset();
+		sampleRateIdx = dlg.GetSampleRate();
+		audioBitrate = dlg.GetAudioBitrate();
 		logFileName = dlg.GetLogFile();
 	}
 }

@@ -71,6 +71,8 @@ private:
 	bool forceReencodeVideo;
 	int crf; // Constant Rate Factor (quality of video)
 	int preset; // preset is a collection of options that will provide a certain encoding speed to compression ratio
+	int sampleRateIdx;
+	int audioBitrate;
 	wxString logFileName;
 	
 	DECLARE_EVENT_TABLE()

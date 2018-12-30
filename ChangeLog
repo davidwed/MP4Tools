@@ -1,3 +1,8 @@
+Version 3.7 beta 1 <2018-12-09>
+-------------------------------
+
+  * MP4Joiner: added possibility to specify audio sample rate and bitrate for re-encoding 
+
 Version 3.7 <2018-11-24>
 ------------------------
 
@@ -41,7 +46,7 @@ Version 3.4 <2016-07-31>
 Version 3.3 <2016-03-27>
 ------------------------
 
-  * MP4Joiner: added options to force reencoding
+  * MP4Joiner: added options to force re-encoding
   * updated ffmpeg to version 3.0
   * added French translation (thanks to Cocoa Pod)
 
@@ -62,7 +67,7 @@ Version 3.0 <2015-07-05>
 
   * Initial revision of MP4Splitter
   * MP4Joiner: added possibility to cut video
-  * MP4Joiner: added reencoding of video if video formats are different
+  * MP4Joiner: added re-encoding of video if video formats are different
   * MP4Joiner: added Brazilian Portuguese translation (thanks to Marcel Testa)
 
 Version 2.2 <2015-03-16>
@@ -90,7 +95,7 @@ Version 2.1 <2013-08-06>
 Version 2.0 <2013-03-04>
 ------------------------
 
-  * added reencoding of audio streams if codecs or count of channels are different
+  * added re-encoding of audio streams if codecs or count of channels are different
   * added support of drag & drop
 
 Version 1.0 <2012-07-15>

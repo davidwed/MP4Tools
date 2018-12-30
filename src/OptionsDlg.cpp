@@ -31,6 +31,8 @@ const long OptionsDlg::ID_VIDEO_CHECK = wxNewId();
 const long OptionsDlg::ID_CHOICE1 = wxNewId();
 const long OptionsDlg::ID_CHOICE2 = wxNewId();
 const long OptionsDlg::ID_AUDIO_CHECK = wxNewId();
+const long OptionsDlg::ID_CHOICE3 = wxNewId();
+const long OptionsDlg::ID_SPINCTRL1 = wxNewId();
 //*)
 
 BEGIN_EVENT_TABLE(OptionsDlg,wxDialog)
@@ -40,17 +42,21 @@ END_EVENT_TABLE()
 
 OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions, bool disableTempDir) {
 	//(*Initialize(OptionsDlg)
-	wxStaticText* presetLabel;
+	wxBoxSizer* BoxSizer1;
+	wxBoxSizer* BoxSizer2;
+	wxBoxSizer* BoxSizer3;
+	wxBoxSizer* BoxSizer4;
+	wxBoxSizer* mainSizer;
+	wxButton* logFileBt;
 	wxButton* tempDirBt;
-	wxStaticText* qualityLabel;
 	wxFlexGridSizer* gridSizer;
 	wxStaticText* StaticText1;
-	wxBoxSizer* BoxSizer2;
+	wxStaticText* StaticText2;
+	wxStaticText* StaticText3;
+	wxStaticText* StaticText4;
 	wxStaticText* label1;
-	wxBoxSizer* BoxSizer1;
-	wxButton* logFileBt;
-	wxBoxSizer* BoxSizer3;
-	wxBoxSizer* mainSizer;
+	wxStaticText* presetLabel;
+	wxStaticText* qualityLabel;
 	wxStdDialogButtonSizer* StdDialogButtonSizer1;
 
 	Create(parent, wxID_ANY, _("Options"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
@@ -109,6 +115,26 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions, bool disab
 	audioReencode = new wxCheckBox(this, ID_AUDIO_CHECK, _("force reencode audio"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_AUDIO_CHECK"));
 	audioReencode->SetValue(false);
 	gridSizer->Add(audioReencode, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	gridSizer->Add(8,8,1, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);
+	BoxSizer4->Add(8,8,0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticText2 = new wxStaticText(this, wxID_ANY, _("Sample Rate:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	BoxSizer4->Add(StaticText2, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	sampleRateChoice = new wxChoice(this, ID_CHOICE3, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE3"));
+	sampleRateChoice->Append(_("As Source"));
+	sampleRateChoice->Append(_("44100"));
+	sampleRateChoice->Append(_("48000"));
+	sampleRateChoice->Append(_("96000"));
+	sampleRateChoice->Append(_("192000"));
+	BoxSizer4->Add(sampleRateChoice, 0, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticText3 = new wxStaticText(this, wxID_ANY, _("Bitrate:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	BoxSizer4->Add(StaticText3, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	audioBitrateCtrl = new wxSpinCtrl(this, ID_SPINCTRL1, _T("192"), wxDefaultPosition, wxSize(64,-1), 0, 0, 999, 192, _T("ID_SPINCTRL1"));
+	audioBitrateCtrl->SetValue(_T("192"));
+	BoxSizer4->Add(audioBitrateCtrl, 0, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticText4 = new wxStaticText(this, wxID_ANY, _("KBit/s"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
+	BoxSizer4->Add(StaticText4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	gridSizer->Add(BoxSizer4, 1, wxRIGHT|wxEXPAND, 5);
 	mainSizer->Add(gridSizer, 1, wxEXPAND, 5);
 	StdDialogButtonSizer1 = new wxStdDialogButtonSizer();
 	StdDialogButtonSizer1->AddButton(new wxButton(this, wxID_OK, wxEmptyString));
@@ -145,6 +171,8 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions, bool disab
 		presetLabel->Enable(false);
 		presetChoice->Enable(false);
 		audioReencode->Enable(false);
+		sampleRateChoice->Enable(false);
+		audioBitrateCtrl->Enable(false);
 	}
 	if (disableTempDir) {
 		tempDirLabel->Show(false);
