@@ -154,6 +154,7 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions, bool disab
 	Connect(ID_TEMPDIR_BT,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&OptionsDlg::OnSelectTempDir);
 	Connect(ID_LOGFILE_BT,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&OptionsDlg::OnSelectFile);
 	//*)
+	wxDisableAsserts();
 	const wxArrayString& langNames = GetLangNames();
 	for (unsigned int i = 0; i < langNames.size(); i++) {
 		langaugeCombo->Append(langNames[i], GetLangBitmaps()[i]);

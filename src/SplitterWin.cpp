@@ -151,9 +151,9 @@ SplitterWin::SplitterWin() {
 	Connect(wxEVT_CLOSE_WINDOW, (wxObjectEventFunction)&SplitterWin::OnClose);
 	
 	wxAcceleratorEntry entries[2];
-	entries[1].Set(wxACCEL_CTRL, (int) 'X', wxID_EXIT);
-	entries[2].Set(wxACCEL_CTRL, (int) 'O', ID_OPEN_BT);
-	wxAcceleratorTable accel(4, entries);
+	entries[0].Set(wxACCEL_ALT, (int) 'X', wxID_EXIT);
+	entries[1].Set(wxACCEL_CTRL, (int) 'O', ID_OPEN_BT);
+	wxAcceleratorTable accel(2, entries);
 	SetAcceleratorTable(accel);
 
 	addSplitPointBt->SetBitmap(wxArtProvider::GetBitmap(wxART_CUT, wxART_BUTTON));
