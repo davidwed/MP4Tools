@@ -86,6 +86,7 @@ private:
 	
 	MediaFile mediaFile;
 	long videoPos;
+	bool splitOnKeyFrame;
 	void SeekVideo(long pos, bool updateTimeCtrl = true);
 	vector<long> cutPoints;
 	wxString logFileName;

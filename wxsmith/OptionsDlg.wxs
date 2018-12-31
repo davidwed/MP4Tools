@@ -103,7 +103,21 @@
 						<size>8,8</size>
 					</object>
 					<object class="sizeritem">
-						<object class="wxCheckBox" name="ID_VIDEO_CHECK" variable="videoReencode" member="yes">
+						<object class="wxCheckBox" name="ID_CHECKBOX1" variable="keyFrameCtrl" member="yes">
+							<label>split/cut on key frames only</label>
+						</object>
+						<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="spacer">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+						<size>8,8</size>
+					</object>
+					<object class="sizeritem">
+						<object class="wxCheckBox" name="ID_VIDEO_CHECK" variable="videoReencodeCtrl" member="yes">
 							<label>force reencode video</label>
 						</object>
 						<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
@@ -170,7 +184,7 @@
 						<size>8,8</size>
 					</object>
 					<object class="sizeritem">
-						<object class="wxCheckBox" name="ID_AUDIO_CHECK" variable="audioReencode" member="yes">
+						<object class="wxCheckBox" name="ID_AUDIO_CHECK" variable="audioReencodeCtrl" member="yes">
 							<label>force reencode audio</label>
 						</object>
 						<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>

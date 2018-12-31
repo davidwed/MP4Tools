@@ -38,15 +38,21 @@ public:
 
     /** Displays dialog */
 	virtual int ShowModal();
+	
+	/** Returns true, if splitting only on key frames is allowed */
+	bool IsSplitOnKeyFrame() { return keyFrameCtrl->IsChecked(); }
+	/** Sets, if splitting only on key frames is allowed */
+	void SetSplitOnKeyFrame(bool value) { keyFrameCtrl->SetValue(value); }
+	
 	/** Returns true, if option to force reencoding of audio streams is enabled */
-	bool IsForceReencodeAudio() { return audioReencode->IsChecked(); }
+	bool IsForceReencodeAudio() { return audioReencodeCtrl->IsChecked(); }
 	/** Sets the option to force reencoding of audio streams */
-	void SetForceReencodeAudio(bool value) { audioReencode->SetValue(value); }
+	void SetForceReencodeAudio(bool value) { audioReencodeCtrl->SetValue(value); }
 	
 	/** Returns true, if option to force reencoding of video streams is enabled */
-	bool IsForceReencodeVideo() { return videoReencode->IsChecked(); }
+	bool IsForceReencodeVideo() { return videoReencodeCtrl->IsChecked(); }
 	/** Sets the option to force reencoding of video streams */
-	void SetForceReencodeVideo(bool value) { videoReencode->SetValue(value); }
+	void SetForceReencodeVideo(bool value) { videoReencodeCtrl->SetValue(value); }
 	
 	/** Returns Constant Rate Factor (quality of video) */
 	int GetCrf() { return qualityChoice->GetSelection() + MIN_CRF; }
@@ -76,8 +82,9 @@ public:
 private:
 	//(*Declarations(OptionsDlg)
 	wxBitmapComboBox* langaugeCombo;
-	wxCheckBox* audioReencode;
-	wxCheckBox* videoReencode;
+	wxCheckBox* audioReencodeCtrl;
+	wxCheckBox* keyFrameCtrl;
+	wxCheckBox* videoReencodeCtrl;
 	wxChoice* presetChoice;
 	wxChoice* qualityChoice;
 	wxChoice* sampleRateChoice;
@@ -97,6 +104,7 @@ private:
 	static const long ID_TEMPDIR_BT;
 	static const long ID_LOGFILE_TEXTCTRL;
 	static const long ID_LOGFILE_BT;
+	static const long ID_CHECKBOX1;
 	static const long ID_VIDEO_CHECK;
 	static const long ID_CHOICE1;
 	static const long ID_CHOICE2;

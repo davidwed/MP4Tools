@@ -167,7 +167,7 @@ private:
 /////////////////////////////////////////////////////////////////////////////
 class wxFFMediaBackend: public wxMediaBackendCommonBase {
 public:
-	wxFFMediaBackend(): m_loaded(false), m_duration(0), m_evtHandler(NULL) {
+	wxFFMediaBackend(): m_loaded(false), m_duration(0), m_seekKeyFrame(false), m_keyFramePos(0), m_evtHandler(NULL) {
 		m_pThread = NULL;
 	}
 	
@@ -230,15 +230,29 @@ public:
 				m_decoder.GetNextFrame();
 			}
 		}
-		m_decoder.SetPosition(dpos > 1.0 ? dpos - 1.0 : 0.0, dpos != 0);
 		wxImage image;
-		for (int i = 0; i < 60; i++) {
+		if (m_seekKeyFrame) {
+			m_decoder.SetPosition(dpos, true, false);
 			image = m_decoder.GetNextFrame();
-			if (m_decoder.GetPosition() >= dpos)
-				break;
+			m_keyFramePos = m_decoder.GetPosition() - 1.0 / m_decoder.GetFps();
+		} else {
+			m_decoder.SetPosition(dpos > 1.0 ? dpos - 1.0 : 0.0, dpos != 0);
+			for (int i = 0; i < 60; i++) {
+				image = m_decoder.GetNextFrame();
+				if (m_decoder.GetPosition() >= dpos)
+					break;
+			}
 		}
 		m_evtHandler->SetImage(image);
 		return true;
+	}
+	
+	void SetPositionOnKeyFrame(bool value) {
+		m_seekKeyFrame = value;
+	}
+	
+	double GetKeyFramePos() {
+		return m_keyFramePos;
 	}
 	
 	virtual wxLongLong GetPosition() {
@@ -338,6 +352,8 @@ private:
 	wxFfmpegMediaDecoder m_decoder;
 	wxMutex m_decoderMutex;
 	double m_duration;
+	bool m_seekKeyFrame;
+	double m_keyFramePos;
 	FFEvtHandler* m_evtHandler;
 	
 	DECLARE_DYNAMIC_CLASS(wxFFMediaBackend)
@@ -397,3 +413,10 @@ wxImage MediaCtrlFF::GetImage() {
 	return ((wxFFMediaBackend*) m_imp)->GetImage();
 }
 
+void MediaCtrlFF::SetPositionOnKeyFrame(bool value) {
+	((wxFFMediaBackend*) m_imp)->SetPositionOnKeyFrame(value);
+}
+
+double MediaCtrlFF::GetKeyFramePosition() {
+	return ((wxFFMediaBackend*) m_imp)->GetKeyFramePos();
+}

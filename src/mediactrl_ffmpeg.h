@@ -24,6 +24,8 @@ public:
 	double GetFps();
 	wxFfmpegMediaDecoder& GetDecoder();
 	wxImage GetImage();
+	void SetPositionOnKeyFrame(bool value);
+	double GetKeyFramePosition();
 };
 
 wxDECLARE_EVENT(EVT_MEDIA_UPDATED, wxMediaEvent);

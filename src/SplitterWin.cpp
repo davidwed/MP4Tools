@@ -185,6 +185,9 @@ SplitterWin::SplitterWin() {
 	pointListCtrl->AppendColumn(_("Start"));
 	pointListCtrl->AppendColumn(_("End"));
 	pointListCtrl->AppendColumn(_("Duration"));
+	
+	splitOnKeyFrame = true;
+	mediaCtrl->SetPositionOnKeyFrame(splitOnKeyFrame);
 	UpdateControls();
 
 	pointListCtrl->SetFocus();
@@ -232,10 +235,12 @@ void SplitterWin::UpdateControls() {
 }
 
 void SplitterWin::SeekVideo(long pos, bool updateTimeCtrl) {
+	mediaCtrl->Seek((wxFileOffset) pos);
+	if (splitOnKeyFrame)
+		pos = mediaCtrl->GetKeyFramePosition() * 1000;
 	videoPos = pos;
 	mediaSlider->SetValue(lround(pos / 1000));
 	timeSpinBt->SetValue(lround(pos / 1000));
-	mediaCtrl->Seek((wxFileOffset) pos);
 	if (updateTimeCtrl)
 		timeCtrl->ChangeValue(Time2String(pos, true));
 }
@@ -431,9 +436,12 @@ void SplitterWin::OnRunBt(wxCommandEvent& event) {
 
 void SplitterWin::OnSettingsBt(wxCommandEvent& event) {
 	OptionsDlg dlg(this, true);
+	dlg.SetSplitOnKeyFrame(splitOnKeyFrame);
 	dlg.SetLogFile(logFileName);
 	if (dlg.ShowModal() == wxID_OK) {
 		logFileName = dlg.GetLogFile();
+		splitOnKeyFrame = dlg.IsSplitOnKeyFrame();
+		mediaCtrl->SetPositionOnKeyFrame(splitOnKeyFrame);
 	}
 }
 

@@ -27,6 +27,7 @@ const long OptionsDlg::ID_TMPDIR_TEXTCTRL = wxNewId();
 const long OptionsDlg::ID_TEMPDIR_BT = wxNewId();
 const long OptionsDlg::ID_LOGFILE_TEXTCTRL = wxNewId();
 const long OptionsDlg::ID_LOGFILE_BT = wxNewId();
+const long OptionsDlg::ID_CHECKBOX1 = wxNewId();
 const long OptionsDlg::ID_VIDEO_CHECK = wxNewId();
 const long OptionsDlg::ID_CHOICE1 = wxNewId();
 const long OptionsDlg::ID_CHOICE2 = wxNewId();
@@ -87,9 +88,13 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions, bool disab
 	BoxSizer2->Add(logFileBt, 0, wxEXPAND, 0);
 	gridSizer->Add(BoxSizer2, 1, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND, 5);
 	gridSizer->Add(8,8,1, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	videoReencode = new wxCheckBox(this, ID_VIDEO_CHECK, _("force reencode video"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_VIDEO_CHECK"));
-	videoReencode->SetValue(false);
-	gridSizer->Add(videoReencode, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	keyFrameCtrl = new wxCheckBox(this, ID_CHECKBOX1, _("split/cut on key frames only"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
+	keyFrameCtrl->SetValue(false);
+	gridSizer->Add(keyFrameCtrl, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	gridSizer->Add(8,8,1, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	videoReencodeCtrl = new wxCheckBox(this, ID_VIDEO_CHECK, _("force reencode video"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_VIDEO_CHECK"));
+	videoReencodeCtrl->SetValue(false);
+	gridSizer->Add(videoReencodeCtrl, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
 	gridSizer->Add(8,8,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
 	BoxSizer1->Add(8,8,0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
@@ -112,9 +117,9 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions, bool disab
 	BoxSizer1->Add(presetChoice, 0, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
 	gridSizer->Add(BoxSizer1, 1, wxRIGHT|wxEXPAND, 5);
 	gridSizer->Add(8,8,1, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	audioReencode = new wxCheckBox(this, ID_AUDIO_CHECK, _("force reencode audio"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_AUDIO_CHECK"));
-	audioReencode->SetValue(false);
-	gridSizer->Add(audioReencode, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	audioReencodeCtrl = new wxCheckBox(this, ID_AUDIO_CHECK, _("force reencode audio"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_AUDIO_CHECK"));
+	audioReencodeCtrl->SetValue(false);
+	gridSizer->Add(audioReencodeCtrl, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
 	gridSizer->Add(8,8,1, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);
 	BoxSizer4->Add(8,8,0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
@@ -164,12 +169,12 @@ OptionsDlg::OptionsDlg(wxWindow* parent, bool disableEncodingOptions, bool disab
 		qualityChoice->Append(label);
 	}
 	if (disableEncodingOptions) {
-		videoReencode->Enable(false);
+		videoReencodeCtrl->Enable(false);
 		qualityLabel->Enable(false);
 		qualityChoice->Enable(false);
 		presetLabel->Enable(false);
 		presetChoice->Enable(false);
-		audioReencode->Enable(false);
+		audioReencodeCtrl->Enable(false);
 		sampleRateChoice->Enable(false);
 		audioBitrateCtrl->Enable(false);
 	}
