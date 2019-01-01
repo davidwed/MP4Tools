@@ -8,6 +8,7 @@
 #include "../locale/bitmaps/portugal.png.h"
 #include "../locale/bitmaps/russia.png.h"
 #include "../locale/bitmaps/spain.png.h"
+#include "../locale/bitmaps/sri_lanka.png.h"
 #include "../locale/bitmaps/taiwan.png.h"
 #include "../locale/bitmaps/turkey.png.h"
 #include "../locale/bitmaps/united_kingdom.png.h"
@@ -29,6 +30,7 @@ Lang s_langs[] = {
 	{ "Polski", wxLANGUAGE_POLISH, (const unsigned char *) poland_png, sizeof(poland_png)},
 	{ "Português", wxLANGUAGE_PORTUGUESE, (const unsigned char *) portugal_png, sizeof(portugal_png)},
 	{ "Pyccкий", wxLANGUAGE_RUSSIAN, (const unsigned char *) russia_png, sizeof(russia_png)},
+	{ "සිංහල", wxLANGUAGE_SINHALESE, (const unsigned char *) sri_lanka_png, sizeof(sri_lanka_png)},
 	{ "Türkçe", wxLANGUAGE_TURKISH, (const unsigned char *) turkey_png, sizeof(turkey_png)},
 	{ "简体中文", wxLANGUAGE_CHINESE_SIMPLIFIED, (const unsigned char *) china_png, sizeof(china_png)},
 	{ "繁體中文", wxLANGUAGE_CHINESE_TRADITIONAL, (const unsigned char *) taiwan_png, sizeof(taiwan_png)},

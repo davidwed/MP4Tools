@@ -1,0 +1,392 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-19 12:08+0200\n"
+"PO-Revision-Date: 2018-12-24 12:11+0530\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: si_LK\n"
+
+#: src/MainWin.cpp:56 src/SplitterWin.cpp:380
+msgid "Successful"
+msgstr "සාර්ථකයි"
+
+#: src/MainWin.cpp:117 src/MainWin.cpp:348
+msgid "MP4 Joiner"
+msgstr "MP4 Joiner"
+
+#: src/MainWin.cpp:148
+msgid "Add Video"
+msgstr "වීඩියෝවක් එක් කරන්න"
+
+#: src/MainWin.cpp:149
+msgid "Add video file"
+msgstr "වීඩියෝ ගොනුවක් එක් කරන්න"
+
+#: src/MainWin.cpp:151 src/MainWin.cpp:160
+msgid "Remove"
+msgstr "ඉවත් කරන්න"
+
+#: src/MainWin.cpp:152 src/MainWin.cpp:161
+msgid "Remove selected video"
+msgstr "තෝරාගත් වීඩියෝව ඉවත් කරන්න"
+
+#: src/MainWin.cpp:154
+msgid "&Remove selected"
+msgstr "තේරීම ඉවත් කරන්න"
+
+#: src/MainWin.cpp:155
+msgid "Remove a&ll"
+msgstr "සියල්ල ඉවත් කරන්න"
+
+#: src/MainWin.cpp:164
+msgid "Remove all"
+msgstr "සියල්ල ඉවත් කරන්න"
+
+#: src/MainWin.cpp:165
+msgid "Remove all videos"
+msgstr "සියළු වීඩියෝ ඉවත් කරන්න"
+
+#: src/MainWin.cpp:167
+msgid "Join"
+msgstr "සම්බන්ධ කරන්න"
+
+#: src/MainWin.cpp:168
+msgid "Select output file and start join"
+msgstr "ප්‍රතිදාන ගොනුව තෝරා සම්බන්ධ කිරීම අරඹන්න"
+
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:56
+msgid "Options"
+msgstr "විකල්ප"
+
+#: src/MainWin.cpp:174
+msgid "About"
+msgstr "පිළිබඳ"
+
+#: src/MainWin.cpp:175
+msgid "About the program"
+msgstr "මෘදුකාංගය පිළිබඳ"
+
+#: src/MainWin.cpp:225
+msgid "Total duration"
+msgstr "මුළු ප්‍රවර්තනය"
+
+#: src/MainWin.cpp:232
+msgid "total size"
+msgstr "මුළු පරිමාණය"
+
+#: src/MainWin.cpp:234 src/MediaListBox.cpp:98
+msgid "GB"
+msgstr "ගිබ"
+
+#: src/MainWin.cpp:236 src/MediaListBox.cpp:100
+msgid "MB"
+msgstr "මෙබ"
+
+#: src/MainWin.cpp:241 src/SplitterWin.cpp:229
+msgid "Choose a file"
+msgstr "ගොනුවක් තෝරන්න"
+
+#: src/MainWin.cpp:242 src/MainWin.cpp:322 src/SplitterWin.cpp:230
+msgid "MP4 Files"
+msgstr "MP4 ගොනු"
+
+#: src/MainWin.cpp:243
+msgid "AVI Files"
+msgstr "AVI ගොනු"
+
+#: src/MainWin.cpp:244 src/MainWin.cpp:323 src/SplitterWin.cpp:231
+msgid "All Files"
+msgstr "සියළු ගොනු"
+
+#: src/MainWin.cpp:321
+msgid "Choose a file to save"
+msgstr "සුරැකීමට ගොනුවක් තෝරන්න"
+
+#: src/MainWin.cpp:321
+msgid "Output.mp4"
+msgstr "ප්‍රතිදාන.mp4"
+
+#: src/MainWin.cpp:348
+msgid "Joining the files"
+msgstr "ගොනු සම්බන්ධ කරමින්"
+
+#: src/MainWin.cpp:360
+#, c-format
+msgid "Reencode video from file %s"
+msgstr "%s ගොනුවේ සිට වීඩියෝව ප්‍රතිවිකේතනය කරන්න"
+
+#: src/MainWin.cpp:362
+#, c-format
+msgid "Reencode audio from file %s"
+msgstr "%s ගොනුවේ සිට ශ්‍රව්‍ය ප්‍රතිවිකේතනය කරන්න"
+
+#: src/MainWin.cpp:364
+#, c-format
+msgid "Cut video from file %s"
+msgstr "%s ගොනුවෙන් වීඩියෝව කපන්න"
+
+#: src/MainWin.cpp:511
+msgid "Simple tool to join multiple MP4 files into one."
+msgstr "PM4 ගොනු කිහිපයක් එක් ගොනුවකට සම්බන්ධ කළ හැකි සරළ මෙවලමක්."
+
+#: src/MainWin.cpp:528 src/SplitterWin.cpp:297
+msgid "&Remove"
+msgstr "ඉවත් කරන්න"
+
+#: src/MainWin.cpp:529
+msgid "&Cut video..."
+msgstr "වීඩියෝව කපන්න..."
+
+#: src/MainWin.cpp:531
+msgid "&Sort"
+msgstr "වෙන් කරන්න"
+
+#: src/MediaListBox.cpp:83 src/SplitterWin.cpp:168
+msgid "Duration"
+msgstr "ප්‍රවර්තනය"
+
+#: src/MediaListBox.cpp:95
+msgid "Size"
+msgstr "පරිමාණය"
+
+#: src/MediaListBox.cpp:102
+msgid "KB"
+msgstr "කිබ"
+
+#: src/MediaListBox.cpp:112
+msgid "Video:"
+msgstr "වීඩියෝව:"
+
+#: src/MediaListBox.cpp:117
+msgid "Audio:"
+msgstr "ශ්‍රව්‍ය:"
+
+#: src/MediaListBox.cpp:122
+msgid "Subtitle:"
+msgstr "උපසිරැසි:"
+
+#: src/MediaStream.cpp:58
+msgid "mono"
+msgstr "තනි (Mono)"
+
+#: src/MediaStream.cpp:60
+msgid "stereo"
+msgstr "ද්විමාන (Stereo)"
+
+#: src/MediaStream.cpp:64
+#, c-format
+msgid "%d channels"
+msgstr "%d නාලිකා"
+
+#: src/MediaStream.cpp:67
+#, c-format
+msgid "%d Hz"
+msgstr "හට්ස් %d"
+
+#: src/MediaStream.cpp:69
+#, c-format
+msgid "%d kbit/s"
+msgstr "තත්. කිබිටු %d"
+
+#: src/OptionsDlg.cpp:59
+msgid "Language:"
+msgstr "භාෂාව:"
+
+#: src/OptionsDlg.cpp:63
+msgid "MP4Box parameters:"
+msgstr "MP4Box පරාමිති:"
+
+#: src/OptionsDlg.cpp:67
+msgid "Temp directory:"
+msgstr "තාවකාලික නාමාවලිය:"
+
+#: src/OptionsDlg.cpp:72 src/OptionsDlg.cpp:80
+msgid "..."
+msgstr "..."
+
+#: src/OptionsDlg.cpp:75
+msgid "Log file:"
+msgstr "ලඝු ගොනුව:"
+
+#: src/OptionsDlg.cpp:84
+msgid "force reencode video"
+msgstr "වීඩියෝව ප්‍රතිවිකේතනයට බලපෑම් කරන්න"
+
+#: src/OptionsDlg.cpp:90
+msgid "CRF (quality):"
+msgstr "CRF (ගුණත්වය):"
+
+#: src/OptionsDlg.cpp:94
+msgid "Preset:"
+msgstr "ප්‍රතිසැකසුම්:"
+
+#: src/OptionsDlg.cpp:97
+msgid "veryslow"
+msgstr "ඉතා සෙමින්"
+
+#: src/OptionsDlg.cpp:98
+msgid "slower"
+msgstr "ප්‍රමාද"
+
+#: src/OptionsDlg.cpp:99
+msgid "slow"
+msgstr "සෙමින්"
+
+#: src/OptionsDlg.cpp:100
+msgid "medium"
+msgstr "මධ්‍යම"
+
+#: src/OptionsDlg.cpp:101
+msgid "fast"
+msgstr "වේගවත්"
+
+#: src/OptionsDlg.cpp:102
+msgid "faster"
+msgstr "හදිසි"
+
+#: src/OptionsDlg.cpp:103
+msgid "veryfast"
+msgstr "ඉතා වේගවත්"
+
+#: src/OptionsDlg.cpp:104
+msgid "superfast"
+msgstr "සුපිරි වේගවත්"
+
+#: src/OptionsDlg.cpp:105
+msgid "ultrafast"
+msgstr "අතිශය වේගවත්"
+
+#: src/OptionsDlg.cpp:109
+msgid "force reencode audio"
+msgstr "ශ්‍රව්‍ය ප්‍රතිවිකේතනයට බලපෑම් කරන්න"
+
+#: src/OptionsDlg.cpp:133
+msgid "best"
+msgstr "විශිෂ්ඨ"
+
+#: src/OptionsDlg.cpp:135
+msgid "worst"
+msgstr "නරක"
+
+#: src/OptionsDlg.cpp:137
+msgid "default"
+msgstr "මූලික"
+
+#: src/OptionsDlg.cpp:175
+msgid "Language change will not take effect until the application is restarted"
+msgstr "මෘදුකාංගය නැවත ආරම්භ කරන තුරු භාෂා වෙනස්කම බල නො පායි"
+
+#: src/OptionsDlg.cpp:181
+#, c-format
+msgid "Directory %s doesn't exist."
+msgstr "%s නාමාවලිය නො පවතියි."
+
+#: src/OptionsDlg.cpp:196
+msgid "Save a log file"
+msgstr "ලඝු ගොනුවක් සුරකින්න"
+
+#: src/OptionsDlg.cpp:202
+msgid "Choose a directory for temporary files"
+msgstr "තාවකාලික ගොනු සඳහා නාමාවලියක් තෝරන්න"
+
+#: src/ProgramProcess.cpp:28
+msgid "Failed"
+msgstr "අසාර්ථකයි"
+
+#: src/ProgramProcess.cpp:73
+#, c-format
+msgid "Execution of '%s' failed."
+msgstr "'%s' ක්‍රියා කරවීම අසාර්ථකයි."
+
+#: src/SplitterWin.cpp:74 src/SplitterWin.cpp:325
+msgid "MP4 Splitter"
+msgstr "MP4 විභේදකය"
+
+#: src/SplitterWin.cpp:86 src/VideoPropDlg.cpp:74
+msgid "Time:"
+msgstr "කාලය:"
+
+#: src/SplitterWin.cpp:98
+msgid "Add split point"
+msgstr "විභේදන ලක්ෂ්‍ය ලබා දෙන්න"
+
+#: src/SplitterWin.cpp:104
+msgid "Open Video"
+msgstr "වීඩියෝව විවෘත කරන්න"
+
+#: src/SplitterWin.cpp:112
+msgid "Split points:"
+msgstr "විභේදන ලක්ෂ්‍ය:"
+
+#: src/SplitterWin.cpp:118
+msgid "Start splitting"
+msgstr "විභේදනය ආරම්භ කරන්න"
+
+#: src/SplitterWin.cpp:166
+msgid "Start"
+msgstr "ආරම්භ"
+
+#: src/SplitterWin.cpp:167
+msgid "End"
+msgstr "අවසන්"
+
+#: src/SplitterWin.cpp:298
+msgid "Remove &all"
+msgstr "සියල්ල ඉවත් කරන්න"
+
+#: src/SplitterWin.cpp:304
+msgid "Choose a output directory"
+msgstr "ප්‍රතිදාන නාමාවලියක් තෝරන්න"
+
+#: src/SplitterWin.cpp:325
+msgid "Splitting the file"
+msgstr "ගොනුව විභේදනය කරමින්"
+
+#: src/SplitterWin.cpp:342
+#, c-format
+msgid "File '%s' already exist. Do you want to overwrite it?"
+msgstr "'%s' ගොනුව දැනටමත් පවතියි. ඔබට මෙය නැවත ලිවීමට අවශ්‍ය ද?"
+
+#: src/SplitterWin.cpp:343
+msgid "Confirmation"
+msgstr "ස්ථිර කිරීම"
+
+#: src/SplitterWin.cpp:352
+#, c-format
+msgid "Writting %s"
+msgstr "%s ලියමින්"
+
+#: src/SplitterWin.cpp:404
+msgid "Simple tool to split a MP4 file."
+msgstr "MP4 ගොනුවක් විභේදනය කළ හැකි සරළ මෙවලමක්."
+
+#: src/VideoPropDlg.cpp:62
+msgid "Cut video"
+msgstr "වීඩියෝව කපන්න"
+
+#: src/VideoPropDlg.cpp:86
+msgid "Start:"
+msgstr "ආරම්භ:"
+
+#: src/VideoPropDlg.cpp:100
+msgid "Cut beginning"
+msgstr "ආරම්භය කපන්න"
+
+#: src/VideoPropDlg.cpp:102
+msgid "End:"
+msgstr "අවසානය:"
+
+#: src/VideoPropDlg.cpp:116
+msgid "Cut ending"
+msgstr "අවසානය කපන්න"
+
+#: src/VideoPropDlg.cpp:279 src/VideoPropDlg.cpp:284
+msgid "Invalid time"
+msgstr "අවලංගු කාලය"

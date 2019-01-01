@@ -1,13 +1,13 @@
 [Setup]          
 AppName=MP4Tools
-AppVerName=MP4Tools v3.8b1
+AppVerName=MP4Tools v3.8b2
 AppPublisher=Thüring IT-Consulting
 AppPublisherURL=http://www.mp4joiner.org
 AppSupportURL=http://www.mp4joiner.org
 AppUpdatesURL=http://www.mp4joiner.org
 DefaultDirName={pf}\MP4Tools
 DefaultGroupName=MP4Tools
-OutputBaseFilename=MP4Tools-3.8b1-win32
+OutputBaseFilename=MP4Tools-3.8b2-win32
 Compression=lzma2
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\MP4Joiner.exe
