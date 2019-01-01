@@ -186,7 +186,7 @@ SplitterWin::SplitterWin() {
 	pointListCtrl->AppendColumn(_("End"));
 	pointListCtrl->AppendColumn(_("Duration"));
 	
-	splitOnKeyFrame = true;
+	splitOnKeyFrame = false;
 	mediaCtrl->SetPositionOnKeyFrame(splitOnKeyFrame);
 	UpdateControls();
 
