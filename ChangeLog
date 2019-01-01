@@ -1,4 +1,15 @@
-Version 3.7 beta 1 <2018-12-09>
+Version 3.8 beta 3 <2018-01-01>
+-------------------------------
+
+  * added Sinhala tramslation (thanks to Asanka Sovis / අසංක සෝවිස්)
+  * MP4Splitter: split on key frames only is disabled by default
+
+Version 3.8 beta 2 <2018-12-16>
+-------------------------------
+
+  * MP4Splitter: split by default on key frames only 
+
+Version 3.8 beta 1 <2018-12-09>
 -------------------------------
 
   * MP4Joiner: added possibility to specify audio sample rate and bitrate for re-encoding 
