@@ -1,13 +1,13 @@
 [Setup]          
 AppName=MP4Tools
-AppVerName=MP4Tools v3.8b2
+AppVerName=MP4Tools v3.8b3
 AppPublisher=Thüring IT-Consulting
 AppPublisherURL=http://www.mp4joiner.org
 AppSupportURL=http://www.mp4joiner.org
 AppUpdatesURL=http://www.mp4joiner.org
 DefaultDirName={pf}\MP4Tools
 DefaultGroupName=MP4Tools
-OutputBaseFilename=MP4Tools-3.8b2-win32
+OutputBaseFilename=MP4Tools-3.8b3-win32
 Compression=lzma2
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\MP4Joiner.exe
@@ -52,6 +52,7 @@ Source: "..\locale\pl\*"; DestDir: "{app}\locale\pl"; Flags: ignoreversion
 Source: "..\locale\pt\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
 Source: "..\locale\pt_BR\*"; DestDir: "{app}\locale\pt_BR"; Flags: ignoreversion 
 Source: "..\locale\ru\*"; DestDir: "{app}\locale\ru"; Flags: ignoreversion
+Source: "..\locale\si\*"; DestDir: "{app}\locale\si"; Flags: ignoreversion
 Source: "..\locale\tr\*"; DestDir: "{app}\locale\tr"; Flags: ignoreversion
 Source: "..\locale\zh_CN\*"; DestDir: "{app}\locale\zh_CN"; Flags: ignoreversion
 Source: "..\locale\zh_TW\*"; DestDir: "{app}\locale\zh_TW"; Flags: ignoreversion
