@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MP4Tools 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-10 21:30+0100\n"
+"POT-Creation-Date: 2019-01-13 13:11+0100\n"
 "PO-Revision-Date: 2018-04-08 17:03+0300\n"
 "Last-Translator: Bilal Harun <bilal_harun35 at hotmail.com>\n"
 "Language-Team: \n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/MainWin.cpp:56 src/SplitterWin.cpp:380
+#: src/MainWin.cpp:56 src/SplitterWin.cpp:431
 msgid "Successful"
 msgstr "Başarılı"
 
-#: src/MainWin.cpp:117 src/MainWin.cpp:348
+#: src/MainWin.cpp:117 src/MainWin.cpp:354
 msgid "MP4 Joiner"
 msgstr "MP4 Birleştirici"
 
@@ -25,7 +25,12 @@ msgstr "MP4 Birleştirici"
 msgid "Add Video"
 msgstr "Video Ekle"
 
-#: src/MainWin.cpp:149 src/MainWin.cpp:151 src/MainWin.cpp:160
+#: src/MainWin.cpp:149
+#, fuzzy
+msgid "Add video file"
+msgstr "Video Ekle"
+
+#: src/MainWin.cpp:151 src/MainWin.cpp:160
 msgid "Remove"
 msgstr "Kaldır"
 
@@ -57,7 +62,7 @@ msgstr "Birleştir"
 msgid "Select output file and start join"
 msgstr "Çıktıyı seçip birleştirmeyi başlat"
 
-#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:56
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:63
 msgid "Options"
 msgstr "Tercihler"
 
@@ -77,19 +82,19 @@ msgstr "Toplam süre"
 msgid "total size"
 msgstr "toplam boyut"
 
-#: src/MainWin.cpp:234 src/MediaListBox.cpp:98
+#: src/MainWin.cpp:234 src/MediaListBox.cpp:100
 msgid "GB"
 msgstr "GB"
 
-#: src/MainWin.cpp:236 src/MediaListBox.cpp:100
+#: src/MainWin.cpp:236 src/MediaListBox.cpp:102
 msgid "MB"
 msgstr "MB"
 
-#: src/MainWin.cpp:241 src/SplitterWin.cpp:229
+#: src/MainWin.cpp:241 src/SplitterWin.cpp:254
 msgid "Choose a file"
 msgstr "Dosya seç"
 
-#: src/MainWin.cpp:242 src/MainWin.cpp:322 src/SplitterWin.cpp:230
+#: src/MainWin.cpp:242 src/MainWin.cpp:328 src/SplitterWin.cpp:255
 msgid "MP4 Files"
 msgstr "MP4 Dosyaları"
 
@@ -97,74 +102,74 @@ msgstr "MP4 Dosyaları"
 msgid "AVI Files"
 msgstr "AVI Dosyaları"
 
-#: src/MainWin.cpp:244 src/MainWin.cpp:323 src/SplitterWin.cpp:231
+#: src/MainWin.cpp:244 src/MainWin.cpp:329 src/SplitterWin.cpp:257
 msgid "All Files"
 msgstr "Dosyaların tamamı"
 
-#: src/MainWin.cpp:321
+#: src/MainWin.cpp:327
 msgid "Choose a file to save"
 msgstr "Kaydedilecek dosyayı seç"
 
-#: src/MainWin.cpp:321
+#: src/MainWin.cpp:327
 msgid "Output.mp4"
 msgstr "Çıktı.mp4"
 
-#: src/MainWin.cpp:348
+#: src/MainWin.cpp:354
 msgid "Joining the files"
 msgstr "Dosyalar birleştiriliyor"
 
-#: src/MainWin.cpp:360
+#: src/MainWin.cpp:366
 #, c-format
 msgid "Reencode video from file %s"
 msgstr "%s dosyasından videoyu tekrar kodla"
 
-#: src/MainWin.cpp:362
+#: src/MainWin.cpp:368
 #, c-format
 msgid "Reencode audio from file %s"
 msgstr "%s dosyasından sesi tekrar kodla"
 
-#: src/MainWin.cpp:364
+#: src/MainWin.cpp:370
 #, c-format
 msgid "Cut video from file %s"
 msgstr "%s dosyasından videoyu kes"
 
-#: src/MainWin.cpp:511
+#: src/MainWin.cpp:532
 msgid "Simple tool to join multiple MP4 files into one."
 msgstr "Çoklu MP4 dosyalarını tek dosyaya birleştiren basit araç."
 
-#: src/MainWin.cpp:528 src/SplitterWin.cpp:297
+#: src/MainWin.cpp:549 src/SplitterWin.cpp:345
 msgid "&Remove"
 msgstr "Kaldı&r"
 
-#: src/MainWin.cpp:529
+#: src/MainWin.cpp:550
 msgid "&Cut video..."
 msgstr "Videoyu &Kes..."
 
-#: src/MainWin.cpp:531
+#: src/MainWin.cpp:552
 msgid "&Sort"
 msgstr "&Sırala"
 
-#: src/MediaListBox.cpp:83 src/SplitterWin.cpp:168
+#: src/MediaListBox.cpp:85 src/SplitterWin.cpp:187
 msgid "Duration"
 msgstr "Süre"
 
-#: src/MediaListBox.cpp:95
+#: src/MediaListBox.cpp:97
 msgid "Size"
 msgstr "Boyut"
 
-#: src/MediaListBox.cpp:102
+#: src/MediaListBox.cpp:104
 msgid "KB"
 msgstr "KB"
 
-#: src/MediaListBox.cpp:112
+#: src/MediaListBox.cpp:114
 msgid "Video:"
 msgstr "Video:"
 
-#: src/MediaListBox.cpp:117
+#: src/MediaListBox.cpp:119
 msgid "Audio:"
 msgstr "Ses:"
 
-#: src/MediaListBox.cpp:122
+#: src/MediaListBox.cpp:124
 msgid "Subtitle:"
 msgstr "Altyazı:"
 
@@ -191,104 +196,140 @@ msgstr "%d Hz"
 msgid "%d kbit/s"
 msgstr "%d kbit/s"
 
-#: src/OptionsDlg.cpp:59
+#: src/OptionsDlg.cpp:66
 msgid "Language:"
 msgstr "Dil:"
 
-#: src/OptionsDlg.cpp:63
+#: src/OptionsDlg.cpp:70
 msgid "MP4Box parameters:"
 msgstr "MP4Box parametreleri:"
 
-#: src/OptionsDlg.cpp:67
+#: src/OptionsDlg.cpp:74
 msgid "Temp directory:"
 msgstr "Geçici klasör:"
 
-#: src/OptionsDlg.cpp:72 src/OptionsDlg.cpp:80
+#: src/OptionsDlg.cpp:79 src/OptionsDlg.cpp:87
 msgid "..."
 msgstr "..."
 
-#: src/OptionsDlg.cpp:75
+#: src/OptionsDlg.cpp:82
 msgid "Log file:"
 msgstr "Kütük dosyası:"
 
-#: src/OptionsDlg.cpp:84
+#: src/OptionsDlg.cpp:91
+msgid "split/cut on key frames only"
+msgstr ""
+
+#: src/OptionsDlg.cpp:95
 msgid "force reencode video"
 msgstr "videoyu kodlamaya zorla"
 
-#: src/OptionsDlg.cpp:90
+#: src/OptionsDlg.cpp:101
 msgid "CRF (quality):"
 msgstr "CRF (kalite):"
 
-#: src/OptionsDlg.cpp:94
+#: src/OptionsDlg.cpp:105
 msgid "Preset:"
 msgstr "Önayar:"
 
-#: src/OptionsDlg.cpp:97
+#: src/OptionsDlg.cpp:108
 msgid "veryslow"
 msgstr "çok yavaş"
 
-#: src/OptionsDlg.cpp:98
+#: src/OptionsDlg.cpp:109
 msgid "slower"
 msgstr "daha yavaş"
 
-#: src/OptionsDlg.cpp:99
+#: src/OptionsDlg.cpp:110
 msgid "slow"
 msgstr "yavaş"
 
-#: src/OptionsDlg.cpp:100
+#: src/OptionsDlg.cpp:111
 msgid "medium"
 msgstr "orta"
 
-#: src/OptionsDlg.cpp:101
+#: src/OptionsDlg.cpp:112
 msgid "fast"
 msgstr "hızlı"
 
-#: src/OptionsDlg.cpp:102
+#: src/OptionsDlg.cpp:113
 msgid "faster"
 msgstr "daha hızlı"
 
-#: src/OptionsDlg.cpp:103
+#: src/OptionsDlg.cpp:114
 msgid "veryfast"
 msgstr "çok hızlı"
 
-#: src/OptionsDlg.cpp:104
+#: src/OptionsDlg.cpp:115
 msgid "superfast"
 msgstr "süper hızlı"
 
-#: src/OptionsDlg.cpp:105
+#: src/OptionsDlg.cpp:116
 msgid "ultrafast"
 msgstr "ultra hızlı"
 
-#: src/OptionsDlg.cpp:109
+#: src/OptionsDlg.cpp:120
 msgid "force reencode audio"
 msgstr "sesi kodlamaya zorla"
 
+#: src/OptionsDlg.cpp:126
+msgid "Sample Rate:"
+msgstr ""
+
+#: src/OptionsDlg.cpp:129
+msgid "As Source"
+msgstr ""
+
+#: src/OptionsDlg.cpp:130
+msgid "44100"
+msgstr ""
+
+#: src/OptionsDlg.cpp:131
+msgid "48000"
+msgstr ""
+
+#: src/OptionsDlg.cpp:132
+msgid "96000"
+msgstr ""
+
 #: src/OptionsDlg.cpp:133
+msgid "192000"
+msgstr ""
+
+#: src/OptionsDlg.cpp:135
+msgid "Bitrate:"
+msgstr ""
+
+#: src/OptionsDlg.cpp:140
+msgid "KBit/s"
+msgstr ""
+
+#: src/OptionsDlg.cpp:165
 msgid "best"
 msgstr "en iyi"
 
-#: src/OptionsDlg.cpp:135
+#: src/OptionsDlg.cpp:167
 msgid "worst"
 msgstr "en kötü"
 
-#: src/OptionsDlg.cpp:137
+#: src/OptionsDlg.cpp:169
 msgid "default"
 msgstr "varsayılan"
 
-#: src/OptionsDlg.cpp:175
+#: src/OptionsDlg.cpp:209
 msgid "Language change will not take effect until the application is restarted"
 msgstr "Dil değişikliği yazılımın tekrar başlatılmasına kadar etkili olmayacak"
 
-#: src/OptionsDlg.cpp:181
+#: src/OptionsDlg.cpp:215
 #, c-format
 msgid "Directory %s doesn't exist."
 msgstr "%s klasörü mevcut değil."
 
-#: src/OptionsDlg.cpp:196
+#: src/OptionsDlg.cpp:230
 msgid "Save a log file"
 msgstr "Bir kütük dosyası kaydet"
 
-#: src/OptionsDlg.cpp:202
+#: src/OptionsDlg.cpp:236
 msgid "Choose a directory for temporary files"
 msgstr "Geçici dosyalar için bir klasör seçin"
 
@@ -301,65 +342,70 @@ msgstr "Hata"
 msgid "Execution of '%s' failed."
 msgstr "'%s' dosyasında bir hata meydana geldi."
 
-#: src/SplitterWin.cpp:74 src/SplitterWin.cpp:325
+#: src/SplitterWin.cpp:78 src/SplitterWin.cpp:373
 msgid "MP4 Splitter"
 msgstr "MP4 Ayırıcı"
 
-#: src/SplitterWin.cpp:86 src/VideoPropDlg.cpp:74
+#: src/SplitterWin.cpp:92 src/VideoPropDlg.cpp:74
 msgid "Time:"
 msgstr "Zaman:"
 
-#: src/SplitterWin.cpp:98
+#: src/SplitterWin.cpp:106
 msgid "Add split point"
 msgstr "Ayırma noktası ekle"
 
-#: src/SplitterWin.cpp:104
+#: src/SplitterWin.cpp:112
 msgid "Open Video"
 msgstr "Videoyu Aç"
 
-#: src/SplitterWin.cpp:112
+#: src/SplitterWin.cpp:120
 msgid "Split points:"
 msgstr "Ayırma noktaları:"
 
-#: src/SplitterWin.cpp:118
+#: src/SplitterWin.cpp:126
 msgid "Start splitting"
 msgstr "Ayırmaya başla"
 
-#: src/SplitterWin.cpp:166
+#: src/SplitterWin.cpp:185
 msgid "Start"
 msgstr "Başlangıç"
 
-#: src/SplitterWin.cpp:167
+#: src/SplitterWin.cpp:186
 msgid "End"
 msgstr "Bitiş"
 
-#: src/SplitterWin.cpp:298
+#: src/SplitterWin.cpp:256
+#, fuzzy
+msgid "Video Files"
+msgstr "AVI Dosyaları"
+
+#: src/SplitterWin.cpp:346
 msgid "Remove &all"
 msgstr "T&amamını kaldır"
 
-#: src/SplitterWin.cpp:304
+#: src/SplitterWin.cpp:352
 msgid "Choose a output directory"
 msgstr "Bir çıktı klasörü seçin"
 
-#: src/SplitterWin.cpp:325
+#: src/SplitterWin.cpp:373
 msgid "Splitting the file"
 msgstr "Dosya ayrılıyor"
 
-#: src/SplitterWin.cpp:342
+#: src/SplitterWin.cpp:393
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
 msgstr "'%s' dosyası zaten mevcut. Üzerine yazmak istiyor musunuz?"
 
-#: src/SplitterWin.cpp:343
+#: src/SplitterWin.cpp:394
 msgid "Confirmation"
 msgstr "Tasdik"
 
-#: src/SplitterWin.cpp:352
+#: src/SplitterWin.cpp:403
 #, c-format
 msgid "Writting %s"
 msgstr "%s yazılıyor"
 
-#: src/SplitterWin.cpp:404
+#: src/SplitterWin.cpp:458
 msgid "Simple tool to split a MP4 file."
 msgstr "MP4 dosyasını ayırmak için basit bir araç."
 
