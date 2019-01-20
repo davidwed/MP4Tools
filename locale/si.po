@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-13 13:11+0100\n"
-"PO-Revision-Date: 2018-12-24 12:11+0530\n"
+"PO-Revision-Date: 2019-01-16 07:53+0530\n"
 "Last-Translator: Asanka Sovis (අසංක සෝවිස්)  <akashsovis at gmail.com>\n"
 "Language-Team: \n"
 "Language: si\n"
@@ -217,7 +217,7 @@ msgstr "ලඝු ගොනුව:"
 
 #: src/OptionsDlg.cpp:91
 msgid "split/cut on key frames only"
-msgstr ""
+msgstr "ප්‍රධාන රාමු මත භේදය / කැපීම පමණි"
 
 #: src/OptionsDlg.cpp:95
 msgid "force reencode video"
@@ -273,35 +273,35 @@ msgstr "ශ්‍රව්‍ය ප්‍රතිවිකේතනයට බ�
 
 #: src/OptionsDlg.cpp:126
 msgid "Sample Rate:"
-msgstr ""
+msgstr "සාම්පල සීඝ්‍රතාව:"
 
 #: src/OptionsDlg.cpp:129
 msgid "As Source"
-msgstr ""
+msgstr "මූලාශ්‍ර ආකෘතිය"
 
 #: src/OptionsDlg.cpp:130
 msgid "44100"
-msgstr ""
+msgstr "44100"
 
 #: src/OptionsDlg.cpp:131
 msgid "48000"
-msgstr ""
+msgstr "48000"
 
 #: src/OptionsDlg.cpp:132
 msgid "96000"
-msgstr ""
+msgstr "96000"
 
 #: src/OptionsDlg.cpp:133
 msgid "192000"
-msgstr ""
+msgstr "192000"
 
 #: src/OptionsDlg.cpp:135
 msgid "Bitrate:"
-msgstr ""
+msgstr "බිටු සීඝ්‍රතාව:"
 
 #: src/OptionsDlg.cpp:140
 msgid "KBit/s"
-msgstr ""
+msgstr "තත්. කිබිටු"
 
 #: src/OptionsDlg.cpp:165
 msgid "best"
@@ -374,9 +374,8 @@ msgid "End"
 msgstr "අවසන්"
 
 #: src/SplitterWin.cpp:256
-#, fuzzy
 msgid "Video Files"
-msgstr "AVI ගොනු"
+msgstr "වීඩියෝ ගොනු"
 
 #: src/SplitterWin.cpp:346
 msgid "Remove &all"
