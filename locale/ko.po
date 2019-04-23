@@ -1,0 +1,427 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MP4Tools 3.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-13 13:11+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Hae Moon, Kwon <seagate2 at naver.com>\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWin.cpp:56 src/SplitterWin.cpp:431
+msgid "Successful"
+msgstr "성공"
+
+#: src/MainWin.cpp:117 src/MainWin.cpp:354
+msgid "MP4 Joiner"
+msgstr "MP4 Joiner"
+
+#: src/MainWin.cpp:148
+msgid "Add Video"
+msgstr "비디오 추가"
+
+#: src/MainWin.cpp:149
+msgid "Add video file"
+msgstr "비디오 파일 추가"
+
+#: src/MainWin.cpp:151 src/MainWin.cpp:160
+msgid "Remove"
+msgstr "제거"
+
+#: src/MainWin.cpp:152 src/MainWin.cpp:161
+msgid "Remove selected video"
+msgstr "선택된 비디오 제거"
+
+#: src/MainWin.cpp:154
+msgid "&Remove selected"
+msgstr "선택된 항목 제거(&R)"
+
+#: src/MainWin.cpp:155
+msgid "Remove a&ll"
+msgstr "모두 제거(&l)"
+
+#: src/MainWin.cpp:164
+msgid "Remove all"
+msgstr "모두 제거"
+
+#: src/MainWin.cpp:165
+msgid "Remove all videos"
+msgstr "모든 비디오 파일 제거"
+
+#: src/MainWin.cpp:167
+msgid "Join"
+msgstr "합치기"
+
+#: src/MainWin.cpp:168
+msgid "Select output file and start join"
+msgstr "저장될 파일 선택 후 합치기 시작"
+
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:63
+msgid "Options"
+msgstr "선택사항"
+
+#: src/MainWin.cpp:174
+msgid "About"
+msgstr "정보"
+
+#: src/MainWin.cpp:175
+msgid "About the program"
+msgstr "프로그램 정보"
+
+#: src/MainWin.cpp:225
+msgid "Total duration"
+msgstr "전체 시간"
+
+#: src/MainWin.cpp:232
+msgid "total size"
+msgstr "전체 크기"
+
+#: src/MainWin.cpp:234 src/MediaListBox.cpp:100
+msgid "GB"
+msgstr "GB"
+
+#: src/MainWin.cpp:236 src/MediaListBox.cpp:102
+msgid "MB"
+msgstr "MB"
+
+#: src/MainWin.cpp:241 src/SplitterWin.cpp:254
+msgid "Choose a file"
+msgstr "파일 선택"
+
+#: src/MainWin.cpp:242 src/MainWin.cpp:328 src/SplitterWin.cpp:255
+msgid "MP4 Files"
+msgstr "MP4 Files"
+
+#: src/MainWin.cpp:243
+msgid "AVI Files"
+msgstr "AVI Files"
+
+#: src/MainWin.cpp:244 src/MainWin.cpp:329 src/SplitterWin.cpp:257
+msgid "All Files"
+msgstr "모든 파일들"
+
+#: src/MainWin.cpp:327
+msgid "Choose a file to save"
+msgstr "저장할 파일 선택"
+
+#: src/MainWin.cpp:327
+msgid "Output.mp4"
+msgstr "Output.mp4"
+
+#: src/MainWin.cpp:354
+msgid "Joining the files"
+msgstr "파일 합치는 중..."
+
+#: src/MainWin.cpp:366
+#, c-format
+msgid "Reencode video from file %s"
+msgstr "%s 비디오 파일을 다시 인코딩"
+
+#: src/MainWin.cpp:368
+#, c-format
+msgid "Reencode audio from file %s"
+msgstr "%s 오디오 파일을 다시 인코딩"
+
+#: src/MainWin.cpp:370
+#, c-format
+msgid "Cut video from file %s"
+msgstr "%s 파일 자르기"
+
+#: src/MainWin.cpp:532
+msgid "Simple tool to join multiple MP4 files into one."
+msgstr "여러 MP4 파일을 하나로 만들기 위한 툴"
+
+#: src/MainWin.cpp:549 src/SplitterWin.cpp:345
+msgid "&Remove"
+msgstr "제거(&R)"
+
+#: src/MainWin.cpp:550
+msgid "&Cut video..."
+msgstr "비디오 자르기(&C)"
+
+#: src/MainWin.cpp:552
+msgid "&Sort"
+msgstr "정렬(&S)"
+
+#: src/MediaListBox.cpp:85 src/SplitterWin.cpp:187
+msgid "Duration"
+msgstr "시간"
+
+#: src/MediaListBox.cpp:97
+msgid "Size"
+msgstr "크기"
+
+#: src/MediaListBox.cpp:104
+msgid "KB"
+msgstr "KB"
+
+#: src/MediaListBox.cpp:114
+msgid "Video:"
+msgstr "비디오:"
+
+#: src/MediaListBox.cpp:119
+msgid "Audio:"
+msgstr "오디오:"
+
+#: src/MediaListBox.cpp:124
+msgid "Subtitle:"
+msgstr "자막:"
+
+#: src/MediaStream.cpp:58
+msgid "mono"
+msgstr "모노"
+
+#: src/MediaStream.cpp:60
+msgid "stereo"
+msgstr "스테레오"
+
+#: src/MediaStream.cpp:64
+#, c-format
+msgid "%d channels"
+msgstr "%d 채널"
+
+#: src/MediaStream.cpp:67
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: src/MediaStream.cpp:69
+#, c-format
+msgid "%d kbit/s"
+msgstr "%d kbit/s"
+
+#: src/OptionsDlg.cpp:66
+msgid "Language:"
+msgstr "언어:"
+
+#: src/OptionsDlg.cpp:70
+msgid "MP4Box parameters:"
+msgstr "MP4Box 파라미터:"
+
+#: src/OptionsDlg.cpp:74
+msgid "Temp directory:"
+msgstr "임시 디렉토리"
+
+#: src/OptionsDlg.cpp:79 src/OptionsDlg.cpp:87
+msgid "..."
+msgstr "..."
+
+#: src/OptionsDlg.cpp:82
+msgid "Log file:"
+msgstr "로그 파일:"
+
+#: src/OptionsDlg.cpp:91
+msgid "split/cut on key frames only"
+msgstr "Key Frame 에서만 나누고/자르기"
+
+#: src/OptionsDlg.cpp:95
+msgid "force reencode video"
+msgstr "강제로 비디오를 다시 인코딩 합니다."
+
+#: src/OptionsDlg.cpp:101
+msgid "CRF (quality):"
+msgstr "CRF (quality):"
+
+#: src/OptionsDlg.cpp:105
+msgid "Preset:"
+msgstr "프리셋:"
+
+#: src/OptionsDlg.cpp:108
+msgid "veryslow"
+msgstr "veryslow"
+
+#: src/OptionsDlg.cpp:109
+msgid "slower"
+msgstr "slower"
+
+#: src/OptionsDlg.cpp:110
+msgid "slow"
+msgstr "slow"
+
+#: src/OptionsDlg.cpp:111
+msgid "medium"
+msgstr "medium"
+
+#: src/OptionsDlg.cpp:112
+msgid "fast"
+msgstr "fast"
+
+#: src/OptionsDlg.cpp:113
+msgid "faster"
+msgstr "faster"
+
+#: src/OptionsDlg.cpp:114
+msgid "veryfast"
+msgstr "veryfast"
+
+#: src/OptionsDlg.cpp:115
+msgid "superfast"
+msgstr "superfast"
+
+#: src/OptionsDlg.cpp:116
+msgid "ultrafast"
+msgstr "ultrafast"
+
+#: src/OptionsDlg.cpp:120
+msgid "force reencode audio"
+msgstr "강제로 오디로를 다시 인코딩합니다."
+
+#: src/OptionsDlg.cpp:126
+msgid "Sample Rate:"
+msgstr "Sample Rate:"
+
+#: src/OptionsDlg.cpp:129
+msgid "As Source"
+msgstr "소스와 동일"
+
+#: src/OptionsDlg.cpp:130
+msgid "44100"
+msgstr "44100"
+
+#: src/OptionsDlg.cpp:131
+msgid "48000"
+msgstr "48000"
+
+#: src/OptionsDlg.cpp:132
+msgid "96000"
+msgstr "96000"
+
+#: src/OptionsDlg.cpp:133
+msgid "192000"
+msgstr "192000"
+
+#: src/OptionsDlg.cpp:135
+msgid "Bitrate:"
+msgstr "Bitrate:"
+
+#: src/OptionsDlg.cpp:140
+msgid "KBit/s"
+msgstr "KBit/s"
+
+#: src/OptionsDlg.cpp:165
+msgid "best"
+msgstr "best"
+
+#: src/OptionsDlg.cpp:167
+msgid "worst"
+msgstr "worst"
+
+#: src/OptionsDlg.cpp:169
+msgid "default"
+msgstr "default"
+
+#: src/OptionsDlg.cpp:209
+msgid "Language change will not take effect until the application is restarted"
+msgstr "언어 변경은 어플리케이션 재시작 후에 적용됩니다."
+
+#: src/OptionsDlg.cpp:215
+#, c-format
+msgid "Directory %s doesn't exist."
+msgstr "%s 디렉토리가 없습니다."
+
+#: src/OptionsDlg.cpp:230
+msgid "Save a log file"
+msgstr "로그 파일 저장"
+
+#: src/OptionsDlg.cpp:236
+msgid "Choose a directory for temporary files"
+msgstr "임시 파일을 위한 폴더 선택"
+
+#: src/ProgramProcess.cpp:28
+msgid "Failed"
+msgstr "실패"
+
+#: src/ProgramProcess.cpp:73
+#, c-format
+msgid "Execution of '%s' failed."
+msgstr "'%s' 실행에 실패했습니다."
+
+#: src/SplitterWin.cpp:78 src/SplitterWin.cpp:373
+msgid "MP4 Splitter"
+msgstr "MP4 Splitter"
+
+#: src/SplitterWin.cpp:92 src/VideoPropDlg.cpp:74
+msgid "Time:"
+msgstr "시간:"
+
+#: src/SplitterWin.cpp:106
+msgid "Add split point"
+msgstr "나눌 위치 추가"
+
+#: src/SplitterWin.cpp:112
+msgid "Open Video"
+msgstr "비디오 열기"
+
+#: src/SplitterWin.cpp:120
+msgid "Split points:"
+msgstr "나눌 위치들:"
+
+#: src/SplitterWin.cpp:126
+msgid "Start splitting"
+msgstr "나누기 시작"
+
+#: src/SplitterWin.cpp:185
+msgid "Start"
+msgstr "시작"
+
+#: src/SplitterWin.cpp:186
+msgid "End"
+msgstr "끝"
+
+#: src/SplitterWin.cpp:256
+msgid "Video Files"
+msgstr "비디오 파일들"
+
+#: src/SplitterWin.cpp:346
+msgid "Remove &all"
+msgstr "모두 제거(&a)"
+
+#: src/SplitterWin.cpp:352
+msgid "Choose a output directory"
+msgstr "저장할 디렉토리 선택"
+
+#: src/SplitterWin.cpp:373
+msgid "Splitting the file"
+msgstr "파일을 나누고 있습니다..."
+
+#: src/SplitterWin.cpp:393
+#, c-format
+msgid "File '%s' already exist. Do you want to overwrite it?"
+msgstr "'%s' 파일이 이미 존재합니다. 덮어쓸까요?"
+
+#: src/SplitterWin.cpp:394
+msgid "Confirmation"
+msgstr "확인"
+
+#: src/SplitterWin.cpp:403
+#, c-format
+msgid "Writting %s"
+msgstr "%s 저장 중..."
+
+#: src/SplitterWin.cpp:458
+msgid "Simple tool to split a MP4 file."
+msgstr "MP4 파일을 분할하는 간편한 툴"
+
+#: src/VideoPropDlg.cpp:62
+msgid "Cut video"
+msgstr "비디오 자르기"
+
+#: src/VideoPropDlg.cpp:86
+msgid "Start:"
+msgstr "시작:"
+
+#: src/VideoPropDlg.cpp:100
+msgid "Cut beginning"
+msgstr "자르는 시작"
+
+#: src/VideoPropDlg.cpp:102
+msgid "End:"
+msgstr "끝:"
+
+#: src/VideoPropDlg.cpp:116
+msgid "Cut ending"
+msgstr "자르는 끝"
+
+#: src/VideoPropDlg.cpp:279 src/VideoPropDlg.cpp:284
+msgid "Invalid time"
+msgstr "비정상적 시간"
