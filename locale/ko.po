@@ -90,15 +90,15 @@ msgstr "파일 선택"
 
 #: src/MainWin.cpp:242 src/MainWin.cpp:328 src/SplitterWin.cpp:255
 msgid "MP4 Files"
-msgstr "MP4 Files"
+msgstr "MP4 파일"
 
 #: src/MainWin.cpp:243
 msgid "AVI Files"
-msgstr "AVI Files"
+msgstr "AVI 파일"
 
 #: src/MainWin.cpp:244 src/MainWin.cpp:329 src/SplitterWin.cpp:257
 msgid "All Files"
-msgstr "모든 파일들"
+msgstr "모든 파일"
 
 #: src/MainWin.cpp:327
 msgid "Choose a file to save"
