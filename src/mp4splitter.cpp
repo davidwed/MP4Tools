@@ -62,8 +62,8 @@ bool MP4Splitter::OnInit() {
 	if (lang != wxLANGUAGE_ENGLISH) {
 		m_locale.Init(lang);
 		m_locale.AddCatalogLookupPathPrefix(LOCALE_DIR);
-		m_locale.AddCatalog(wxT("mp4tools"));
 		m_locale.AddCatalog(wxT("wxstd"));
+		m_locale.AddCatalog(wxT("mp4tools"));
 	}
 	
 	setlocale(LC_NUMERIC, "C");
