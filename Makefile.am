@@ -55,11 +55,11 @@ libs: MP4Joiner.libs MP4Splitter.libs
 %.libs:
 	dylibbundler -od -b -x ./$*.app/Contents/MacOS/$* -d ./$*.app/Contents/libs/
 	dylibbundler -of -b -x ./$*.app/Contents/MacOS/ffmpeg -d ./$*.app/Contents/libs/
-
+	
 dmg:
 	rm -f MP4Tools.dmg MP4Tools-@VERSION@-MacOSX.dmg
 	hdiutil eject /dev/disk1 || echo
-	hdiutil create -megabytes 150 -layout NONE MP4Tools.dmg
+	hdiutil create -megabytes 300 -layout NONE MP4Tools.dmg
 	hdid -nomount MP4Tools.dmg
 	newfs_hfs -v MP4Tools /dev/disk1
 	hdiutil eject /dev/disk1
@@ -71,4 +71,3 @@ dmg:
 	hdiutil detach /Volumes/MP4Tools/
 	hdiutil convert MP4Tools.dmg -format UDZO -imagekey zlib-level=9 -o MP4Tools-@VERSION@-MacOSX.dmg
 	rm -f MP4Tools.dmg
-	
