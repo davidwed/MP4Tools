@@ -1,13 +1,13 @@
 [Setup]          
 AppName=MP4Tools
-AppVerName=MP4Tools v3.8b4
+AppVerName=MP4Tools v3.8 beta 5
 AppPublisher=Thüring IT-Consulting
 AppPublisherURL=http://www.mp4joiner.org
 AppSupportURL=http://www.mp4joiner.org
 AppUpdatesURL=http://www.mp4joiner.org
 DefaultDirName={pf}\MP4Tools
 DefaultGroupName=MP4Tools
-OutputBaseFilename=MP4Tools-3.8b4-win32
+OutputBaseFilename=MP4Tools-3.8b5-win32
 Compression=lzma2
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\MP4Joiner.exe
@@ -22,6 +22,7 @@ InfoBeforeFile=Info.rtf
 Name: "de"; MessagesFile: "compiler:Languages\German.isl"
 Name: "en"; MessagesFile: "compiler:Default.isl"
 Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
+Name: "es_VE"; MessagesFile: "Languages\SpanishVenezuela.isl"
 Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
 Name: "ko"; MessagesFile: "Languages\Korean.isl"
 Name: "hu"; MessagesFile: "compiler:Languages\Hungarian.isl"
@@ -47,6 +48,7 @@ Source: "..\ChangeLog"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "..\locale\de\*"; DestDir: "{app}\locale\de"; Flags: ignoreversion
 Source: "..\locale\es\*"; DestDir: "{app}\locale\es"; Flags: ignoreversion  
+Source: "..\locale\es_VE\*"; DestDir: "{app}\locale\es_VE"; Flags: ignoreversion  
 Source: "..\locale\fr\*"; DestDir: "{app}\locale\fr"; Flags: ignoreversion 
 Source: "..\locale\it\*"; DestDir: "{app}\locale\it"; Flags: ignoreversion
 Source: "..\locale\ko\*"; DestDir: "{app}\locale\ko"; Flags: ignoreversion

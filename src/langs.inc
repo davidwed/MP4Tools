@@ -13,6 +13,7 @@
 #include "../locale/bitmaps/taiwan.png.h"
 #include "../locale/bitmaps/turkey.png.h"
 #include "../locale/bitmaps/united_kingdom.png.h"
+#include "../locale/bitmaps/venezuela.png.h"
 
 struct Lang {
 	const char* name;
@@ -25,6 +26,7 @@ Lang s_langs[] = {
 	{ "Deutsch", wxLANGUAGE_GERMAN, (const unsigned char *) germany_png, sizeof(germany_png)},
 	{ "English", wxLANGUAGE_ENGLISH, (const unsigned char *) united_kingdom_png, sizeof(united_kingdom_png)},
 	{ "Español", wxLANGUAGE_SPANISH, (const unsigned char *) spain_png, sizeof(spain_png)},
+	{ "Español (Venezuela)", wxLANGUAGE_SPANISH_VENEZUELA, (const unsigned char *) venezuela_png, sizeof(venezuela_png)},
 	{ "Français", wxLANGUAGE_FRENCH, (const unsigned char *) french_png, sizeof(french_png)},
 	{ "Italiano", wxLANGUAGE_ITALIAN, (const unsigned char *) italy_png, sizeof(italy_png)},
 	{ "한국어", wxLANGUAGE_KOREAN, (const unsigned char *) south_korea_png, sizeof(south_korea_png)},
