@@ -40,6 +40,25 @@
 #include <map>
 #include <algorithm>
 #include <utility>
+#include <wx/dnd.h>
+
+class SplitterDnDFile : public wxFileDropTarget {
+public:
+	SplitterDnDFile(SplitterWin* mediaListBox) {
+		m_mediaListBox = mediaListBox;
+	}
+
+	bool OnDropFiles(wxCoord x, wxCoord y, const wxArrayString& filenames) {
+		if (filenames.size() > 0) {
+			return m_mediaListBox->Open(filenames[0]);
+		}
+		return false;
+	}
+	
+private:
+	SplitterWin* m_mediaListBox;
+};
+
 
 //(*IdInit(SplitterWin)
 const long SplitterWin::ID_MEDIA_CTRL = wxNewId();
@@ -191,6 +210,7 @@ SplitterWin::SplitterWin() {
 	UpdateControls();
 
 	pointListCtrl->SetFocus();
+	SetDropTarget(new SplitterDnDFile(this));
 }
 
 SplitterWin::~SplitterWin() {
@@ -259,14 +279,15 @@ void SplitterWin::OnOpenFile(wxCommandEvent& event) {
 	if (fileDlg.ShowModal() != wxID_OK)
 		return;
 	s_config.SetLastAddDir(fileDlg.GetDirectory());
+	Open(fileDlg.GetPath());
+}
 
-	wxString fname = fileDlg.GetPath();
-
-	if (!mediaCtrl->Load(fname) || !mediaFile.Init(fname)) {
+bool SplitterWin::Open(wxString fileName) {
+	if (!mediaCtrl->Load(fileName) || !mediaFile.Init(fileName)) {
 		mediaFile.Init("");
 		mediaCtrl->Load("");
 		UpdateControls();
-		return;
+		return false;
 	}
 	mediaSlider->SetValue(0);
 	mediaSlider->SetMax(mediaCtrl->Length()/1000);
@@ -277,6 +298,7 @@ void SplitterWin::OnOpenFile(wxCommandEvent& event) {
 
 	cutPoints.clear();
 	UpdateControls();
+	return true;
 }
 
 void SplitterWin::OnMediaStop(const wxMediaEvent& evt) {

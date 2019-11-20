@@ -30,6 +30,8 @@ class SplitterWin: public wxFrame {
 public:
 	SplitterWin();
 	virtual ~SplitterWin();
+	
+	bool Open(wxString fileName);
 
 private:
 	//(*Declarations(SplitterWin)
