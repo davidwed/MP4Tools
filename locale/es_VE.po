@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: MP4Tools 3.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-13 13:11+0100\n"
-"PO-Revision-Date: 2019-11-03 12:46-0400\n"
+"PO-Revision-Date: 2019-11-04 20:32-0400\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr "Listo"
 
 #: src/MainWin.cpp:117 src/MainWin.cpp:354
 msgid "MP4 Joiner"
-msgstr "MP4 Joiner"
+msgstr "MP4 Joiner (unir)"
 
 #: src/MainWin.cpp:148
 msgid "Add Video"
@@ -75,11 +75,11 @@ msgstr "Datos del programa"
 
 #: src/MainWin.cpp:225
 msgid "Total duration"
-msgstr "DuraciÃ³n total"
+msgstr "Duración total"
 
 #: src/MainWin.cpp:232
 msgid "total size"
-msgstr "peso total"
+msgstr "tamaño total"
 
 #: src/MainWin.cpp:234 src/MediaListBox.cpp:100
 msgid "GB"
@@ -120,17 +120,17 @@ msgstr "Uniendo archivos"
 #: src/MainWin.cpp:366
 #, c-format
 msgid "Reencode video from file %s"
-msgstr "Procesar video desde archivo %s"
+msgstr "Procesar video de archivo %s"
 
 #: src/MainWin.cpp:368
 #, c-format
 msgid "Reencode audio from file %s"
-msgstr "Procesar audio desde archivo %s"
+msgstr "Procesar audio de archivo %s"
 
 #: src/MainWin.cpp:370
 #, c-format
 msgid "Cut video from file %s"
-msgstr "Cortar video desde archivo %s"
+msgstr "Cortar video de archivo %s"
 
 #: src/MainWin.cpp:532
 msgid "Simple tool to join multiple MP4 files into one."
@@ -150,11 +150,11 @@ msgstr "&Orden"
 
 #: src/MediaListBox.cpp:85 src/SplitterWin.cpp:187
 msgid "Duration"
-msgstr "DuraciÃ³n"
+msgstr "Duración"
 
 #: src/MediaListBox.cpp:97
 msgid "Size"
-msgstr "Peso"
+msgstr "Tamaño"
 
 #: src/MediaListBox.cpp:104
 msgid "KB"
@@ -170,7 +170,7 @@ msgstr "Audio:"
 
 #: src/MediaListBox.cpp:124
 msgid "Subtitle:"
-msgstr "SubtÃítulo:"
+msgstr "Subtítulo:"
 
 #: src/MediaStream.cpp:58
 msgid "mono"
@@ -178,7 +178,7 @@ msgstr "mono"
 
 #: src/MediaStream.cpp:60
 msgid "stereo"
-msgstr "estÃ©reo"
+msgstr "estéreo"
 
 #: src/MediaStream.cpp:64
 #, c-format
@@ -201,7 +201,7 @@ msgstr "Idioma:"
 
 #: src/OptionsDlg.cpp:70
 msgid "MP4Box parameters:"
-msgstr "ParÃ¡metros de MP4Box:"
+msgstr "Parámetros de MP4Box:"
 
 #: src/OptionsDlg.cpp:74
 msgid "Temp directory:"
@@ -229,7 +229,7 @@ msgstr "CRF (calidad):"
 
 #: src/OptionsDlg.cpp:105
 msgid "Preset:"
-msgstr "Preestablecer:"
+msgstr "Establecer:"
 
 #: src/OptionsDlg.cpp:108
 msgid "veryslow"
@@ -237,7 +237,7 @@ msgstr "muy lento"
 
 #: src/OptionsDlg.cpp:109
 msgid "slower"
-msgstr "mÃ¡s lento"
+msgstr "más lento"
 
 #: src/OptionsDlg.cpp:110
 msgid "slow"
@@ -253,7 +253,7 @@ msgstr "veloz"
 
 #: src/OptionsDlg.cpp:113
 msgid "faster"
-msgstr "mÃ¡s veloz"
+msgstr "más veloz"
 
 #: src/OptionsDlg.cpp:114
 msgid "veryfast"
@@ -343,7 +343,7 @@ msgstr "Error de '%s' al procesar."
 
 #: src/SplitterWin.cpp:78 src/SplitterWin.cpp:373
 msgid "MP4 Splitter"
-msgstr "MP4 Splitter"
+msgstr "MP4 Splitter (fraccionar)"
 
 #: src/SplitterWin.cpp:92 src/VideoPropDlg.cpp:74
 msgid "Time:"
@@ -363,7 +363,7 @@ msgstr "Puntos de corte:"
 
 #: src/SplitterWin.cpp:126
 msgid "Start splitting"
-msgstr "Iniciar fraccionar"
+msgstr "Fraccionar"
 
 #: src/SplitterWin.cpp:185
 msgid "Start"
@@ -392,7 +392,7 @@ msgstr "Fraccionando archivo"
 #: src/SplitterWin.cpp:393
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
-msgstr "Archivo '%s' existente. Â¿Sobrescribir?"
+msgstr "Archivo '%s' existente. ¿Sobrescribir?"
 
 #: src/SplitterWin.cpp:394
 msgid "Confirmation"
@@ -401,7 +401,7 @@ msgstr "Confirmar"
 #: src/SplitterWin.cpp:403
 #, c-format
 msgid "Writting %s"
-msgstr "Escribiendo %s"
+msgstr "Generando %s"
 
 #: src/SplitterWin.cpp:458
 msgid "Simple tool to split a MP4 file."
@@ -429,4 +429,4 @@ msgstr "Final de corte"
 
 #: src/VideoPropDlg.cpp:279 src/VideoPropDlg.cpp:284
 msgid "Invalid time"
-msgstr "Tiempo invÃ¡lido"
+msgstr "Tiempo inválido"

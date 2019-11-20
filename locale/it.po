@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MP4Tools 3.6b1\n"
+"Project-Id-Version: MP4Tools 3.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-13 13:11+0100\n"
-"PO-Revision-Date: 2017-11-18 13:54+0100\n"
-"Last-Translator: Luigi Baldoni <aloisio@gmx.com>\n"
+"PO-Revision-Date: 2019-11-20 13:51+0100\n"
+"Last-Translator: Luigi Baldoni <aloisio at gmx.com>\n"
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.8.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Source-Language: C\n"
 "X-Language: it_IT\n"
@@ -219,7 +219,7 @@ msgstr "File registro:"
 
 #: src/OptionsDlg.cpp:91
 msgid "split/cut on key frames only"
-msgstr ""
+msgstr "dividere/tagliare solo sui fotogrammi chiave"
 
 #: src/OptionsDlg.cpp:95
 msgid "force reencode video"
@@ -275,35 +275,35 @@ msgstr "forza ricodifica audio"
 
 #: src/OptionsDlg.cpp:126
 msgid "Sample Rate:"
-msgstr ""
+msgstr "Frequenza di campionamento:"
 
 #: src/OptionsDlg.cpp:129
 msgid "As Source"
-msgstr ""
+msgstr "Come la sorgente"
 
 #: src/OptionsDlg.cpp:130
 msgid "44100"
-msgstr ""
+msgstr "44100"
 
 #: src/OptionsDlg.cpp:131
 msgid "48000"
-msgstr ""
+msgstr "48000"
 
 #: src/OptionsDlg.cpp:132
 msgid "96000"
-msgstr ""
+msgstr "96000"
 
 #: src/OptionsDlg.cpp:133
 msgid "192000"
-msgstr ""
+msgstr "192000"
 
 #: src/OptionsDlg.cpp:135
 msgid "Bitrate:"
-msgstr ""
+msgstr "Bitrate:"
 
 #: src/OptionsDlg.cpp:140
 msgid "KBit/s"
-msgstr ""
+msgstr "KBit/s"
 
 #: src/OptionsDlg.cpp:165
 msgid "best"
@@ -376,9 +376,8 @@ msgid "End"
 msgstr "Fine"
 
 #: src/SplitterWin.cpp:256
-#, fuzzy
 msgid "Video Files"
-msgstr "File AVI"
+msgstr "File video"
 
 #: src/SplitterWin.cpp:346
 msgid "Remove &all"
