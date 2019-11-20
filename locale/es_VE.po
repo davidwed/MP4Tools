@@ -1,19 +1,19 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MP4Tools 3.6\n"
+"Project-Id-Version: MP4Tools 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-13 13:11+0100\n"
+"POT-Creation-Date: 2019-11-20 22:52+0100\n"
 "PO-Revision-Date: 2019-11-04 20:32-0400\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: es_VE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.4\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es_VE\n"
 
-#: src/MainWin.cpp:56 src/SplitterWin.cpp:431
+#: src/MainWin.cpp:56 src/SplitterWin.cpp:453
 msgid "Successful"
 msgstr "Listo"
 
@@ -89,11 +89,11 @@ msgstr "GB"
 msgid "MB"
 msgstr "MB"
 
-#: src/MainWin.cpp:241 src/SplitterWin.cpp:254
+#: src/MainWin.cpp:241 src/SplitterWin.cpp:274
 msgid "Choose a file"
 msgstr "Elegir archivo"
 
-#: src/MainWin.cpp:242 src/MainWin.cpp:328 src/SplitterWin.cpp:255
+#: src/MainWin.cpp:242 src/MainWin.cpp:328 src/SplitterWin.cpp:275
 msgid "MP4 Files"
 msgstr "Archivos MP4"
 
@@ -101,7 +101,7 @@ msgstr "Archivos MP4"
 msgid "AVI Files"
 msgstr "Archivos AVI"
 
-#: src/MainWin.cpp:244 src/MainWin.cpp:329 src/SplitterWin.cpp:257
+#: src/MainWin.cpp:244 src/MainWin.cpp:329 src/SplitterWin.cpp:277
 msgid "All Files"
 msgstr "Todo"
 
@@ -136,7 +136,7 @@ msgstr "Cortar video de archivo %s"
 msgid "Simple tool to join multiple MP4 files into one."
 msgstr "Herramienta sencilla para unir diversos archivos MP4."
 
-#: src/MainWin.cpp:549 src/SplitterWin.cpp:345
+#: src/MainWin.cpp:549 src/SplitterWin.cpp:367
 msgid "&Remove"
 msgstr "&Quitar"
 
@@ -148,7 +148,7 @@ msgstr "&Cortar video..."
 msgid "&Sort"
 msgstr "&Orden"
 
-#: src/MediaListBox.cpp:85 src/SplitterWin.cpp:187
+#: src/MediaListBox.cpp:85 src/SplitterWin.cpp:206
 msgid "Duration"
 msgstr "Duración"
 
@@ -341,69 +341,69 @@ msgstr "Error"
 msgid "Execution of '%s' failed."
 msgstr "Error de '%s' al procesar."
 
-#: src/SplitterWin.cpp:78 src/SplitterWin.cpp:373
+#: src/SplitterWin.cpp:97 src/SplitterWin.cpp:395
 msgid "MP4 Splitter"
 msgstr "MP4 Splitter (fraccionar)"
 
-#: src/SplitterWin.cpp:92 src/VideoPropDlg.cpp:74
+#: src/SplitterWin.cpp:111 src/VideoPropDlg.cpp:74
 msgid "Time:"
 msgstr "Tiempo:"
 
-#: src/SplitterWin.cpp:106
+#: src/SplitterWin.cpp:125
 msgid "Add split point"
 msgstr "Agregar punto de corte"
 
-#: src/SplitterWin.cpp:112
+#: src/SplitterWin.cpp:131
 msgid "Open Video"
 msgstr "Abrir video"
 
-#: src/SplitterWin.cpp:120
+#: src/SplitterWin.cpp:139
 msgid "Split points:"
 msgstr "Puntos de corte:"
 
-#: src/SplitterWin.cpp:126
+#: src/SplitterWin.cpp:145
 msgid "Start splitting"
 msgstr "Fraccionar"
 
-#: src/SplitterWin.cpp:185
+#: src/SplitterWin.cpp:204
 msgid "Start"
 msgstr "Inicio"
 
-#: src/SplitterWin.cpp:186
+#: src/SplitterWin.cpp:205
 msgid "End"
 msgstr "Final"
 
-#: src/SplitterWin.cpp:256
+#: src/SplitterWin.cpp:276
 msgid "Video Files"
 msgstr "Archivos de video"
 
-#: src/SplitterWin.cpp:346
+#: src/SplitterWin.cpp:368
 msgid "Remove &all"
 msgstr "Quitar &todo"
 
-#: src/SplitterWin.cpp:352
+#: src/SplitterWin.cpp:374
 msgid "Choose a output directory"
 msgstr "Elegir directorio de destino"
 
-#: src/SplitterWin.cpp:373
+#: src/SplitterWin.cpp:395
 msgid "Splitting the file"
 msgstr "Fraccionando archivo"
 
-#: src/SplitterWin.cpp:393
+#: src/SplitterWin.cpp:415
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
 msgstr "Archivo '%s' existente. ¿Sobrescribir?"
 
-#: src/SplitterWin.cpp:394
+#: src/SplitterWin.cpp:416
 msgid "Confirmation"
 msgstr "Confirmar"
 
-#: src/SplitterWin.cpp:403
+#: src/SplitterWin.cpp:425
 #, c-format
 msgid "Writting %s"
 msgstr "Generando %s"
 
-#: src/SplitterWin.cpp:458
+#: src/SplitterWin.cpp:480
 msgid "Simple tool to split a MP4 file."
 msgstr "Herramienta sencilla para fraccionar archivo MP4."
 

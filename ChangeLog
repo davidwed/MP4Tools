@@ -1,30 +1,14 @@
-Version 3.8 beta 5 <2019-11-03>
--------------------------------
-
-  * updaed Spain translation (thanks to Alejandro Cremades Bernabeu)
-  * added Spain (Venezuela) (thanks to Ricardo A. Rivas)
-
-Version 3.8 beta 4 <2019-04-23>
--------------------------------
-
-  * added Korean translation (thanks to Hae Moon, Kwon)
-  * updated ffmpeg to version 4.1.1
-
-Version 3.8 beta 3 <2019-01-01>
--------------------------------
-
-  * added Sinhala translation (thanks to Asanka Sovis / අසංක සෝවිස්)
-  * MP4Splitter: split on key frames only is disabled by default
-
-Version 3.8 beta 2 <2018-12-16>
--------------------------------
-
-  * MP4Splitter: split by default on key frames only 
-
-Version 3.8 beta 1 <2018-12-09>
--------------------------------
+Version 3.8 <2019-11-20>
+------------------------
 
   * MP4Joiner: added possibility to specify audio sample rate and bitrate for re-encoding 
+  * MP4Splitter: added possibility to split on key frames only (disabled by default)
+  * MP4Splitter: added support of drag & drop
+  * updaed Spain translation (thanks to Alejandro Cremades Bernabeu)
+  * added Spain (Venezuela) (thanks to Ricardo A. Rivas)
+  * added Korean translation (thanks to Hae Moon, Kwon)
+  * added Sinhala translation (thanks to Asanka Sovis / අසංක සෝවිස්)
+  * updated ffmpeg to version 4.1.1
 
 Version 3.7 <2018-11-24>
 ------------------------
