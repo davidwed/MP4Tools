@@ -26,6 +26,49 @@
 						<option>1</option>
 					</object>
 					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT1" variable="mp4boxParamsLabel" member="yes">
+							<label>MP4Box parameters:</label>
+						</object>
+						<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="mp4boxParamsCtrl" member="yes" />
+						<flag>wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="wxID_ANY" variable="tempDirLabel" member="yes">
+							<label>Temp directory:</label>
+						</object>
+						<flag>wxBOTTOM|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBoxSizer" variable="BoxSizer3" member="no">
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="ID_TMPDIR_TEXTCTRL" variable="tempDirCtrl" member="yes" />
+								<flag>wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>2</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxButton" name="ID_TEMPDIR_BT" variable="tempDirBt" member="no">
+									<label>...</label>
+									<size>20,20</size>
+									<handler function="OnSelectTempDir" entry="EVT_BUTTON" />
+								</object>
+								<flag>wxEXPAND</flag>
+							</object>
+						</object>
+						<flag>wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
 						<object class="wxStaticText" name="wxID_ANY" variable="StaticText1" member="no">
 							<label>Log file:</label>
 						</object>
@@ -60,7 +103,21 @@
 						<size>8,8</size>
 					</object>
 					<object class="sizeritem">
-						<object class="wxCheckBox" name="ID_VIDEO_CHECK" variable="videoReencode" member="yes">
+						<object class="wxCheckBox" name="ID_CHECKBOX1" variable="keyFrameCtrl" member="yes">
+							<label>split/cut on key frames only</label>
+						</object>
+						<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="spacer">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+						<size>8,8</size>
+					</object>
+					<object class="sizeritem">
+						<object class="wxCheckBox" name="ID_VIDEO_CHECK" variable="videoReencodeCtrl" member="yes">
 							<label>force reencode video</label>
 						</object>
 						<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
@@ -127,10 +184,72 @@
 						<size>8,8</size>
 					</object>
 					<object class="sizeritem">
-						<object class="wxCheckBox" name="ID_AUDIO_CHECK" variable="audioReencode" member="yes">
+						<object class="wxCheckBox" name="ID_AUDIO_CHECK" variable="audioReencodeCtrl" member="yes">
 							<label>force reencode audio</label>
 						</object>
 						<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="spacer">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+						<size>8,8</size>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBoxSizer" variable="BoxSizer4" member="no">
+							<object class="spacer">
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<size>8,8</size>
+							</object>
+							<object class="sizeritem">
+								<object class="wxStaticText" name="wxID_ANY" variable="StaticText2" member="no">
+									<label>Sample Rate:</label>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+							<object class="sizeritem">
+								<object class="wxChoice" name="ID_CHOICE3" variable="sampleRateChoice" member="yes">
+									<content>
+										<item>As Source</item>
+										<item>44100</item>
+										<item>48000</item>
+										<item>96000</item>
+										<item>192000</item>
+									</content>
+								</object>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+							<object class="sizeritem">
+								<object class="wxStaticText" name="wxID_ANY" variable="StaticText3" member="no">
+									<label>Bitrate:</label>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+							<object class="sizeritem">
+								<object class="wxSpinCtrl" name="ID_SPINCTRL1" variable="audioBitrateCtrl" member="yes">
+									<value>192</value>
+									<max>999</max>
+									<size>64,-1</size>
+								</object>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+							<object class="sizeritem">
+								<object class="wxStaticText" name="wxID_ANY" variable="StaticText4" member="no">
+									<label>KBit/s</label>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+						<flag>wxRIGHT|wxEXPAND</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>

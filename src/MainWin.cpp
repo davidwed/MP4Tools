@@ -10,9 +10,9 @@
 
 //(*InternalHeaders(MainWin)
 #include <wx/bitmap.h>
-#include <wx/settings.h>
-#include <wx/intl.h>
 #include <wx/image.h>
+#include <wx/intl.h>
+#include <wx/settings.h>
 #include <wx/string.h>
 //*)
 #include <wx/toolbar.h>
@@ -109,23 +109,23 @@ BEGIN_EVENT_TABLE(MainWin,wxFrame)
 	//*)
 END_EVENT_TABLE()
 
-MainWin::MainWin(): forceReencodeAudio(false), forceReencodeVideo(false), crf(DEF_CRF), preset(3) {
+MainWin::MainWin(): forceReencodeAudio(false), forceReencodeVideo(false), crf(DEF_CRF), preset(3), sampleRateIdx(0), audioBitrate(192) {
 	//(*Initialize(MainWin)
-	wxBoxSizer* BoxSizer2;
 	wxBoxSizer* BoxSizer1;
+	wxBoxSizer* BoxSizer2;
 
 	Create(0, wxID_ANY, _("MP4 Joiner"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL, _T("wxID_ANY"));
 	SetFocus();
 	SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNFACE));
 	BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
 	mediaListBox = new MediaListBox(this, ID_MEDIA_LISTBOX, wxPoint(328,48), wxSize(300,400), 0, 0, 0, wxDefaultValidator, _T("ID_MEDIA_LISTBOX"));
-	BoxSizer1->Add(mediaListBox, 1, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
+	BoxSizer1->Add(mediaListBox, 1, wxEXPAND, 4);
 	BoxSizer2 = new wxBoxSizer(wxVERTICAL);
 	upButton = new wxBitmapButton(this, ID_BITMAPBUTTON1, wxBITMAP_FROM_MEMORY(up), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW|wxTAB_TRAVERSAL, wxDefaultValidator, _T("ID_BITMAPBUTTON1"));
 	BoxSizer2->Add(upButton, 0, wxBOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
 	downButton = new wxBitmapButton(this, ID_BITMAPBUTTON2, wxBITMAP_FROM_MEMORY(down), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW|wxSTATIC_BORDER, wxDefaultValidator, _T("ID_BITMAPBUTTON2"));
 	BoxSizer2->Add(downButton, 0, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer1->Add(BoxSizer2, 0, wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+	BoxSizer1->Add(BoxSizer2, 0, wxLEFT|wxRIGHT|wxEXPAND, 2);
 	SetSizer(BoxSizer1);
 	statusBar = new wxStatusBar(this, ID_STATUSBAR, 0, _T("ID_STATUSBAR"));
 	int __wxStatusBarWidths_1[1] = { -10 };
@@ -239,7 +239,7 @@ void MainWin::UpdateToolBar() {
 
 void MainWin::OnAddFileBt(wxCommandEvent& event) {
 	wxFileDialog fileDlg(this, _("Choose a file"), wxT(""), wxT(""),
-			wxString(_("MP4 Files")) + wxT(" (*.mp4;*.ts)|*.mp4;*ts|")
+			wxString(_("MP4 Files")) + wxT(" (*.mp4;*.m4v;*.ts)|*.mp4;*.m4v;*ts|")
 			+ wxString(_("AVI Files")) + wxT(" (*.avi;*.mov)|*.avi;*.mov|")
 			+ wxString(_("All Files")) + wxT(" (*.*)|*.*"), wxFD_OPEN | wxFD_MULTIPLE);
 	fileDlg.SetDirectory(s_config.GetLastAddDir() + wxFILE_SEP_PATH);
@@ -250,10 +250,16 @@ void MainWin::OnAddFileBt(wxCommandEvent& event) {
 	fileDlg.GetPaths(paths);
 	for (unsigned int i = 0; i < paths.GetCount(); i++) {
 		MediaFile* mediaFile = new MediaFile;
-		if (mediaFile->Init(paths[i]))
-			files.push_back(mediaFile);
-		else
+		if (!mediaFile->Init(paths[i])) {
 			delete mediaFile;
+			continue;
+		}
+		if (paths[i].Contains("#")) {
+			wxLogError("Files with # characters in their name are not supported yet.");
+			delete mediaFile;
+			continue;
+		}
+		files.push_back(mediaFile);
 	}
 	mediaListBox->RefreshAll();
 	if (mediaListBox->GetItemCount() > 0 && mediaListBox->GetSelection() == -1)
@@ -319,7 +325,7 @@ void RemoveTempFiles(const map<int, wxString>& tempFiles) {
 void MainWin::OnRunBt(wxCommandEvent& event) {
 	// choose a file to save
 	wxFileDialog fileDlg(this, _("Choose a file to save"), wxT(""), _("Output.mp4"),
-		wxString(_("MP4 Files")) + wxT(" (*.mp4)|*.mp4|")
+		wxString(_("MP4 Files")) + wxT(" (*.mp4;*.m4v)|*.mp4;*.m4v|")
 		+ wxString(_("All Files")) + wxT(" (*.*)|*.*"), wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
 	if (fileDlg.ShowModal() != wxID_OK)
 		return;
@@ -336,14 +342,16 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 		mediaFile->SetReencodeVideo(!mediaFile->HasCompatibleVideoStreams(mediaFile1) || forceReencodeVideo);
 		if (!mediaFile->IsReencodeVideo() && !mediaFile->IsReencodeAudio() && !mediaFile->IsCutVideo())
 			continue;
-		tempFiles[idx] = wxFileName::CreateTempFileName(wxFileName::GetTempDir() + wxFILE_SEP_PATH)
-				+ "." + mediaFile1->GetFormatName();
+		wxString tmpDir = s_config.GetTempDir();
+		if (tmpDir.length() == 0)
+			tmpDir = wxFileName::GetTempDir();
+		tempFiles[idx] = wxFileName::CreateTempFileName(tmpDir + wxFILE_SEP_PATH) + "." + mediaFile1->GetFormatName();
 	}
 
 	// show progress dialog
 	int streamCount = mediaFile1->GetStreams().size();
 	int stepCount = tempFiles.size()*10 + files.size()*(streamCount + 1) + 1;
-	ProgressDlg progDlg(this, _("MP4 Joiner"), _("Joning the files"), stepCount*100, logFileName);
+	ProgressDlg progDlg(this, _("MP4 Joiner"), _("Joining the files"), stepCount*100, logFileName);
 	progDlg.Show();
 	int step = 0;
 
@@ -419,7 +427,18 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 					wxString codec = mediaFile1->GetStreams()[streamIdx1]->GetCodecName();
 					cmd += wxString::Format(" -c:a:%d ", audioIdx) + codec;
 					cmd += wxString::Format(" -ac:a:%d %d", audioIdx, mediaFile1->GetStreams()[streamIdx1]->GetChannelNumber());
-					cmd += wxString::Format(" -ar:a:%d %d", audioIdx, mediaFile1->GetStreams()[streamIdx1]->GetSampleRate());
+					int sampleRate = 48000;
+					if (sampleRateIdx == 0) {
+						sampleRate = mediaFile1->GetStreams()[streamIdx1]->GetSampleRate();
+					} else if (sampleRateIdx == 1) {
+						sampleRate = 44100;
+					} else if (sampleRateIdx == 3 && codec != "ac3") {
+						sampleRate = 96000;
+					} else if (sampleRateIdx == 4 && codec != "ac3") {
+						sampleRate = 192000;
+					}
+					cmd += wxString::Format(" -ar:a:%d %d", audioIdx, sampleRate);
+					cmd += wxString::Format(" -b:a:%d %d", audioIdx, audioBitrate*1000);
 					audioIdx++;
 					streamIdx1++;
 				}
@@ -462,6 +481,10 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 #if defined(__WXMSW__) || defined(__WXMAC__)
 	cmd = '"' + wxGetAppPath() + cmd + '"';
 #endif
+	if (s_config.GetTempDir().length() > 0)
+		cmd += " -tmp \"" + s_config.GetTempDir() + '"';
+	if (s_config.GetMP4BoxParam().length())
+		cmd += " " + s_config.GetMP4BoxParam();
 	for (unsigned int idx = 0; idx < files.size(); idx++) {
 		wxString fileName = tempFiles.find(idx) != tempFiles.end() ? tempFiles[idx] : files[idx]->GetFileName();
 		cmd += " -cat \"" + fileName + '"';
@@ -477,17 +500,21 @@ void MainWin::OnRunBt(wxCommandEvent& event) {
 }
 
 void MainWin::OnSettingsBt(wxCommandEvent& event) {
-	OptionsDlg dlg(this, false);
+	OptionsDlg dlg(this, false, false);
 	dlg.SetForceReencodeAudio(forceReencodeAudio);
 	dlg.SetForceReencodeVideo(forceReencodeVideo);
 	dlg.SetCrf(crf);
 	dlg.SetPreset(preset);
+	dlg.SetSampleRate(sampleRateIdx);
+	dlg.SetAudioBitrate(audioBitrate);
 	dlg.SetLogFile(logFileName);
 	if (dlg.ShowModal() == wxID_OK) {
 		forceReencodeAudio = dlg.IsForceReencodeAudio();
 		forceReencodeVideo = dlg.IsForceReencodeVideo();
 		crf = dlg.IsForceReencodeVideo() ? dlg.GetCrf() : DEF_CRF;
 		preset = dlg.GetPreset();
+		sampleRateIdx = dlg.GetSampleRate();
+		audioBitrate = dlg.GetAudioBitrate();
 		logFileName = dlg.GetLogFile();
 	}
 }

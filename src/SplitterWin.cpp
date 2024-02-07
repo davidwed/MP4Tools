@@ -10,9 +10,9 @@
 //(*InternalHeaders(SplitterWin)
 #include <wx/artprov.h>
 #include <wx/bitmap.h>
-#include <wx/settings.h>
-#include <wx/intl.h>
 #include <wx/image.h>
+#include <wx/intl.h>
+#include <wx/settings.h>
 #include <wx/string.h>
 //*)
 #include <wx/toolbar.h>
@@ -35,13 +35,35 @@
 #include "../resources/info.png.h"
 #include "../resources/up.png.h"
 #include "../resources/down.png.h"
+#include "../resources/play.png.h"
+#include "../resources/pause.png.h"
 #include <map>
 #include <algorithm>
 #include <utility>
+#include <wx/dnd.h>
+
+class SplitterDnDFile : public wxFileDropTarget {
+public:
+	SplitterDnDFile(SplitterWin* mediaListBox) {
+		m_mediaListBox = mediaListBox;
+	}
+
+	bool OnDropFiles(wxCoord x, wxCoord y, const wxArrayString& filenames) {
+		if (filenames.size() > 0) {
+			return m_mediaListBox->Open(filenames[0]);
+		}
+		return false;
+	}
+	
+private:
+	SplitterWin* m_mediaListBox;
+};
+
 
 //(*IdInit(SplitterWin)
-const long SplitterWin::ID_CUSTOM1 = wxNewId();
+const long SplitterWin::ID_MEDIA_CTRL = wxNewId();
 const long SplitterWin::ID_SLIDER = wxNewId();
+const long SplitterWin::ID_PLAY_BT = wxNewId();
 const long SplitterWin::ID_TIME_CTRL = wxNewId();
 const long SplitterWin::ID_TIME_SPIN = wxNewId();
 const long SplitterWin::ID_FRAME_SPIN = wxNewId();
@@ -62,43 +84,48 @@ END_EVENT_TABLE()
 
 SplitterWin::SplitterWin() {
 	//(*Initialize(SplitterWin)
-	wxBoxSizer* BoxSizer4;
-	wxBoxSizer* mediaSizer;
-	wxStaticText* label1;
-	wxBoxSizer* rightSizer;
-	wxBoxSizer* mainHSizer;
-	wxStaticText* staticText1;
 	wxBoxSizer* BoxSizer1;
+	wxBoxSizer* BoxSizer2;
+	wxBoxSizer* BoxSizer4;
+	wxBoxSizer* mainHSizer;
+	wxBoxSizer* mediaSizer;
+	wxBoxSizer* rightSizer;
 	wxBoxSizer* timeSizer;
+	wxStaticText* label1;
+	wxStaticText* staticText1;
 
 	Create(0, wxID_ANY, _("MP4 Splitter"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL, _T("wxID_ANY"));
 	SetFocus();
 	SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNFACE));
 	mainHSizer = new wxBoxSizer(wxHORIZONTAL);
 	mediaSizer = new wxBoxSizer(wxVERTICAL);
-	mediaCtrl = new MediaCtrlFF(this, ID_CUSTOM1, wxT(""), wxDefaultPosition,wxDefaultSize, 0, wxDefaultValidator, _T("ID_CUSTOM1"));
+	mediaCtrl = new MediaCtrlFF(this, ID_MEDIA_CTRL, wxT(""), wxDefaultPosition,wxDefaultSize, 0, wxDefaultValidator, _T("ID_MEDIA_CTRL"));
 	mediaCtrl->SetMinSize(wxSize(300, 200));
 	mediaCtrl->SetWindowStyle(wxBORDER_NONE);
-	mediaSizer->Add(mediaCtrl, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
+	mediaSizer->Add(mediaCtrl, 1, wxALL|wxEXPAND, 4);
 	mediaSlider = new wxSlider(this, ID_SLIDER, 0, 0, 100, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_SLIDER"));
-	mediaSizer->Add(mediaSlider, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+	mediaSizer->Add(mediaSlider, 0, wxEXPAND, 2);
 	timeSizer = new wxBoxSizer(wxHORIZONTAL);
+	playBt = new wxBitmapButton(this, ID_PLAY_BT, wxNullBitmap, wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW, wxDefaultValidator, _T("ID_PLAY_BT"));
+	timeSizer->Add(playBt, 0, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	staticText1 = new wxStaticText(this, wxID_ANY, _("Time:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
 	timeSizer->Add(staticText1, 0, wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
+	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
 	timeCtrl = new wxTextCtrl(this, ID_TIME_CTRL, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TIME_CTRL"));
-	timeSizer->Add(timeCtrl, 0, wxLEFT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
+	BoxSizer2->Add(timeCtrl, 0, wxLEFT|wxALIGN_CENTER_VERTICAL, 2);
 	timeSpinBt = new wxSpinButton(this, ID_TIME_SPIN, wxDefaultPosition, wxDefaultSize, wxSP_VERTICAL|wxSP_ARROW_KEYS, _T("ID_TIME_SPIN"));
 	timeSpinBt->SetRange(0, 100);
 	timeSpinBt->SetMinSize(wxSize(16,12));
-	timeSizer->Add(timeSpinBt, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	BoxSizer2->Add(timeSpinBt, 0, wxEXPAND, 5);
 	frameSpinBt = new wxSpinButton(this, ID_FRAME_SPIN, wxDefaultPosition, wxDefaultSize, wxSP_VERTICAL|wxSP_ARROW_KEYS|wxSP_WRAP, _T("ID_FRAME_SPIN"));
 	frameSpinBt->SetRange(-9999, 9999);
 	frameSpinBt->SetMinSize(wxSize(16,12));
-	timeSizer->Add(frameSpinBt, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	BoxSizer2->Add(frameSpinBt, 0, wxEXPAND, 5);
+	timeSizer->Add(BoxSizer2, 0, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	addSplitPointBt = new wxButton(this, ID_ADD_SPLIT_POINT_BT, _("Add split point"), wxDefaultPosition, wxSize(-1,24), 0, wxDefaultValidator, _T("ID_ADD_SPLIT_POINT_BT"));
 	timeSizer->Add(addSplitPointBt, 0, wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 8);
-	mediaSizer->Add(timeSizer, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	mainHSizer->Add(mediaSizer, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	mediaSizer->Add(timeSizer, 0, wxALL|wxEXPAND, 5);
+	mainHSizer->Add(mediaSizer, 1, wxALL|wxEXPAND, 5);
 	rightSizer = new wxBoxSizer(wxVERTICAL);
 	BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
 	openBt = new wxButton(this, ID_OPEN_BT, _("Open Video"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_OPEN_BT"));
@@ -108,22 +135,23 @@ SplitterWin::SplitterWin() {
 	BoxSizer1->Add(settingsBt, 0, wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
 	aboutBt = new wxBitmapButton(this, ID_ABOUT_BT, wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_INFORMATION")),wxART_TOOLBAR), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW, wxDefaultValidator, _T("ID_ABOUT_BT"));
 	BoxSizer1->Add(aboutBt, 0, wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
-	rightSizer->Add(BoxSizer1, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	rightSizer->Add(BoxSizer1, 0, wxEXPAND, 5);
 	label1 = new wxStaticText(this, wxID_ANY, _("Split points:"), wxDefaultPosition, wxDefaultSize, 0, _T("wxID_ANY"));
-	rightSizer->Add(label1, 0, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	rightSizer->Add(label1, 0, wxALL|wxALIGN_LEFT, 5);
 	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);
 	pointListCtrl = new CheckedListCtrl(this, ID_LISTCTRL1, wxDefaultPosition, wxDefaultSize, wxLC_REPORT|wxLC_SINGLE_SEL, wxDefaultValidator, _T("ID_LISTCTRL1"));
-	BoxSizer4->Add(pointListCtrl, 1, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	rightSizer->Add(BoxSizer4, 1, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	BoxSizer4->Add(pointListCtrl, 1, wxEXPAND, 5);
+	rightSizer->Add(BoxSizer4, 1, wxEXPAND, 5);
 	startBt = new wxButton(this, ID_START_BT, _("Start splitting"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_START_BT"));
-	rightSizer->Add(startBt, 0, wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 5);
-	mainHSizer->Add(rightSizer, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	rightSizer->Add(startBt, 0, wxALL|wxALIGN_RIGHT, 5);
+	mainHSizer->Add(rightSizer, 0, wxEXPAND, 5);
 	SetSizer(mainHSizer);
 	mainHSizer->Fit(this);
 	mainHSizer->SetSizeHints(this);
 	Center();
 
 	Connect(ID_SLIDER,wxEVT_COMMAND_SLIDER_UPDATED,(wxObjectEventFunction)&SplitterWin::OnSliderScroll);
+	Connect(ID_PLAY_BT,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&SplitterWin::OnPlay);
 	Connect(ID_TIME_CTRL,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&SplitterWin::OnChangeTime);
 	Connect(ID_TIME_SPIN,wxEVT_SCROLL_THUMBTRACK,(wxObjectEventFunction)&SplitterWin::OnTimeSpin);
 	Connect(ID_FRAME_SPIN,wxEVT_SCROLL_LINEUP,(wxObjectEventFunction)&SplitterWin::OnFrameSpin);
@@ -135,9 +163,17 @@ SplitterWin::SplitterWin() {
 	Connect(ID_LISTCTRL1,wxEVT_COMMAND_LIST_ITEM_RIGHT_CLICK,(wxObjectEventFunction)&SplitterWin::OnCutPointRClick);
 	Connect(ID_START_BT,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&SplitterWin::OnRunBt);
 	//*)
+	Connect(ID_MEDIA_CTRL, wxEVT_MEDIA_STOP, (wxObjectEventFunction)(wxEventFunction)(wxMediaEventFunction) &SplitterWin::OnMediaStop);
+	Connect(ID_MEDIA_CTRL, EVT_MEDIA_UPDATED, (wxObjectEventFunction)(wxEventFunction)(wxMediaEventFunction) &SplitterWin::OnMediaUpdate);
 	Connect(REMOVE_POINT_ID, wxEVT_COMMAND_TOOL_CLICKED, (wxObjectEventFunction)&SplitterWin::OnRemovePoint);
 	Connect(REMOVE_ALL_ID, wxEVT_COMMAND_TOOL_CLICKED, (wxObjectEventFunction)&SplitterWin::OnRemoveAll);
 	Connect(wxEVT_CLOSE_WINDOW, (wxObjectEventFunction)&SplitterWin::OnClose);
+	
+	wxAcceleratorEntry entries[2];
+	entries[0].Set(wxACCEL_ALT, (int) 'X', wxID_EXIT);
+	entries[1].Set(wxACCEL_CTRL, (int) 'O', ID_OPEN_BT);
+	wxAcceleratorTable accel(2, entries);
+	SetAcceleratorTable(accel);
 
 	addSplitPointBt->SetBitmap(wxArtProvider::GetBitmap(wxART_CUT, wxART_BUTTON));
 	addSplitPointBt->SetLabel(addSplitPointBt->GetLabel() + " >");
@@ -147,7 +183,9 @@ SplitterWin::SplitterWin() {
 	aboutBt->SetBitmap(wxBITMAP_FROM_MEMORY(info));
 	aboutBt->SetMinSize(aboutBt->GetSize());
 	startBt->SetBitmap(wxBITMAP_FROM_MEMORY(run));
-
+	playBt->SetBitmap(wxBITMAP_FROM_MEMORY(play));
+	playBt->Enable(false);
+	
 	// Restore frame size/position
 	if (s_config.IsSplitterWinMaximized()) {
 		Maximize(true);
@@ -166,9 +204,13 @@ SplitterWin::SplitterWin() {
 	pointListCtrl->AppendColumn(_("Start"));
 	pointListCtrl->AppendColumn(_("End"));
 	pointListCtrl->AppendColumn(_("Duration"));
+	
+	splitOnKeyFrame = false;
+	mediaCtrl->SetPositionOnKeyFrame(splitOnKeyFrame);
 	UpdateControls();
 
 	pointListCtrl->SetFocus();
+	SetDropTarget(new SplitterDnDFile(this));
 }
 
 SplitterWin::~SplitterWin() {
@@ -185,7 +227,7 @@ void SplitterWin::UpdateControls() {
 	addSplitPointBt->Enable(mediaFile.GetFileName().length() > 0);
 	pointListCtrl->Enable(mediaFile.GetFileName().length() > 0);
 	startBt->Enable(cutPoints.size() > 0);
-	
+
 	// store checked times
 	vector<long> unchecked;
 	for (int i = 0; i < pointListCtrl->GetItemCount(); i++) {
@@ -193,7 +235,7 @@ void SplitterWin::UpdateControls() {
 			unchecked.push_back(String2Time(pointListCtrl->GetItemText(i, 2)));
 		}
 	}
-	
+
 	pointListCtrl->DeleteAllItems();
 	if (cutPoints.size() == 0)
 		return;
@@ -213,10 +255,12 @@ void SplitterWin::UpdateControls() {
 }
 
 void SplitterWin::SeekVideo(long pos, bool updateTimeCtrl) {
+	mediaCtrl->Seek((wxFileOffset) pos);
+	if (splitOnKeyFrame)
+		pos = mediaCtrl->GetKeyFramePosition() * 1000;
 	videoPos = pos;
 	mediaSlider->SetValue(lround(pos / 1000));
 	timeSpinBt->SetValue(lround(pos / 1000));
-	mediaCtrl->Seek((wxFileOffset) pos);
 	if (updateTimeCtrl)
 		timeCtrl->ChangeValue(Time2String(pos, true));
 }
@@ -226,30 +270,56 @@ void SplitterWin::OnSliderScroll(wxScrollEvent& event) {
 }
 
 void SplitterWin::OnOpenFile(wxCommandEvent& event) {
+	wxString video = "*.avi;*.mkv;*.mov;*.mp4;*.mpeg;*.mpg;*.mts;*.ogg;*.ogm;*.webm;*.wmv;";
 	wxFileDialog fileDlg(this, _("Choose a file"), wxT(""), wxT(""),
-			wxString(_("MP4 Files")) + wxT(" (*.mp4)|*.mp4|")
-			+ wxString(_("All Files")) + wxT(" (*.*)|*.*"), wxFD_OPEN);
+			wxString(_("MP4 Files")) + " (*.mp4)|*.mp4|"
+			+ _("Video Files") + wxString::Format(" (%s)|%s|", video.c_str(), video.c_str())
+			+ wxString(_("All Files")) + " (*.*)|*.*", wxFD_OPEN);
 	fileDlg.SetDirectory(s_config.GetLastAddDir() + wxFILE_SEP_PATH);
 	if (fileDlg.ShowModal() != wxID_OK)
 		return;
 	s_config.SetLastAddDir(fileDlg.GetDirectory());
+	Open(fileDlg.GetPath());
+}
 
-	wxString fname = fileDlg.GetPath();
-
-	if (!mediaCtrl->Load(fname) || !mediaFile.Init(fname)) {
+bool SplitterWin::Open(wxString fileName) {
+	if (!mediaCtrl->Load(fileName) || !mediaFile.Init(fileName)) {
 		mediaFile.Init("");
 		mediaCtrl->Load("");
 		UpdateControls();
-		return;
+		return false;
 	}
 	mediaSlider->SetValue(0);
 	mediaSlider->SetMax(mediaCtrl->Length()/1000);
 	timeSpinBt->SetMax(mediaCtrl->Length()/1000);
 	wxScrollEvent scrlEvt;
 	OnSliderScroll(scrlEvt);
+	playBt->Enable();
 
 	cutPoints.clear();
 	UpdateControls();
+	return true;
+}
+
+void SplitterWin::OnMediaStop(const wxMediaEvent& evt) {
+	playBt->SetBitmap(wxBITMAP_FROM_MEMORY(play));
+}
+
+void SplitterWin::OnMediaUpdate(const wxMediaEvent& evt) {
+	videoPos = mediaCtrl->Tell();
+	mediaSlider->SetValue(lround(videoPos / 1000));
+	timeSpinBt->SetValue(lround(videoPos / 1000));
+	timeCtrl->ChangeValue(Time2String(videoPos, true));
+}
+
+void SplitterWin::OnPlay(wxCommandEvent& event) {
+	if (mediaCtrl->GetState() != wxMEDIASTATE_PLAYING) {
+		mediaCtrl->Play();
+		playBt->SetBitmap(wxBITMAP_FROM_MEMORY(pause));
+	} else {
+		mediaCtrl->Pause();
+		playBt->SetBitmap(wxBITMAP_FROM_MEMORY(play));
+	}
 }
 
 void SplitterWin::OnChangeTime(wxCommandEvent& event) {
@@ -311,7 +381,7 @@ void SplitterWin::OnRunBt(wxCommandEvent& event) {
 	// filename
 	wxString fname;
 	wxFileName::SplitPath(mediaFile.GetFileName(), NULL, &fname, NULL);
-	
+
 	// step count
 	int stepCount = 0;
 	for (int i = 0; i < pointListCtrl->GetItemCount(); i++) {
@@ -332,11 +402,14 @@ void SplitterWin::OnRunBt(wxCommandEvent& event) {
 	for (int i = 0; i < pointListCtrl->GetItemCount(); i++) {
 		if (!pointListCtrl->IsChecked(i))
 			continue;
-		
+
 		long startTime = i == 0 ? 0 : cutPoints[i-1];
 		long endTime = i < (int) cutPoints.size() ? cutPoints[i] : lround(mediaFile.GetDuration() * 1000);
-		
-		wxString resultFile = outputDir + wxFILE_SEP_PATH + fname + wxString::Format("%02d", idx) + ".mp4";
+
+		wxString ext = mediaFile.GetFileName().AfterLast('.').Lower();
+		if (ext.length() > 5)
+			ext = "mp4";
+		wxString resultFile = outputDir + wxFILE_SEP_PATH + fname + wxString::Format("%02d", idx) + "." + ext;
 		if (wxFileExists(resultFile)) {
 			if (!overwrite && wxMessageBox(wxString::Format(
 					_("File '%s' already exist. Do you want to overwrite it?"), resultFile.c_str()),
@@ -348,7 +421,7 @@ void SplitterWin::OnRunBt(wxCommandEvent& event) {
 				return;
 			}
 		}
-		
+
 		progDlg.Update(step * 100, wxString::Format(_("Writting %s"), resultFile.c_str()));
 
 		// build avconv/ffmpeg command
@@ -359,7 +432,7 @@ void SplitterWin::OnRunBt(wxCommandEvent& event) {
 		cmd += " -i \"" + mediaFile.GetFileName() + '"';
 		cmd += " -c:v copy";
 		cmd += " -c:a copy";
-		
+
 		// cut video
 		cmd += wxString::Format(wxT(" -ss %f"), (double) startTime / 1000);
 		cmd += wxString::Format(wxT(" -t %f"), (double) (endTime - startTime) / 1000);
@@ -385,9 +458,12 @@ void SplitterWin::OnRunBt(wxCommandEvent& event) {
 
 void SplitterWin::OnSettingsBt(wxCommandEvent& event) {
 	OptionsDlg dlg(this, true);
+	dlg.SetSplitOnKeyFrame(splitOnKeyFrame);
 	dlg.SetLogFile(logFileName);
 	if (dlg.ShowModal() == wxID_OK) {
 		logFileName = dlg.GetLogFile();
+		splitOnKeyFrame = dlg.IsSplitOnKeyFrame();
+		mediaCtrl->SetPositionOnKeyFrame(splitOnKeyFrame);
 	}
 }
 

@@ -5,7 +5,7 @@
 // Copyright: (c) Alex Thuering
 // Licence:   GPL
 /////////////////////////////////////////////////////////////////////////////
-#include <src/ProgressDlg.h>
+#include "ProgressDlg.h"
 #include <iostream>
 using namespace std;
 

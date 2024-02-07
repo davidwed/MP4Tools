@@ -5,6 +5,8 @@ doc_DATA = AUTHORS COPYING INSTALL README ChangeLog
 run: all
 	$(MAKE) -C src run
 
+apps: MP4Joiner.app MP4Splitter.app
+
 MP4Joiner.app: Info.plist src/mp4joiner
 	-mkdir MP4Joiner.app
 	-mkdir MP4Joiner.app/Contents
@@ -16,7 +18,7 @@ MP4Joiner.app: Info.plist src/mp4joiner
 	cp src/mp4joiner MP4Joiner.app/Contents/MacOS/MP4Joiner
 	cp resources/mp4joiner.icns MP4Joiner.app/Contents/Resources/MP4Joiner.icns
 	-mkdir MP4Joiner.app/Contents/locale
-	(cd locale && cp -r de es fr pt pt_BR ru ../MP4Joiner.app/Contents/locale/)
+	(cd locale && cp -r de es fr hu it pl pt pt_BR ru tr zh_CN zh_TW ../MP4Joiner.app/Contents/locale/)
 	cp /opt/local/bin/ffmpeg MP4Joiner.app/Contents/MacOS/
 	strip MP4Joiner.app/Contents/MacOS/MP4Joiner
 	strip MP4Joiner.app/Contents/MacOS/ffmpeg
@@ -43,7 +45,7 @@ MP4Splitter.app: Info.plist src/mp4splitter
 	cp src/mp4splitter MP4Splitter.app/Contents/MacOS/MP4Splitter
 	cp resources/mp4splitter.icns MP4Splitter.app/Contents/Resources/MP4Splitter.icns
 	-mkdir MP4Splitter.app/Contents/locale
-	(cd locale && cp -r de es fr pt pt_BR ru ../MP4Splitter.app/Contents/locale/)
+	(cd locale && cp -r de es fr hu it pl pt pt_BR ru tr zh_CN zh_TW ../MP4Splitter.app/Contents/locale/)
 	cp /opt/local/bin/ffmpeg MP4Splitter.app/Contents/MacOS/
 	strip MP4Splitter.app/Contents/MacOS/MP4Splitter
 	strip MP4Splitter.app/Contents/MacOS/ffmpeg
@@ -53,20 +55,11 @@ libs: MP4Joiner.libs MP4Splitter.libs
 %.libs:
 	dylibbundler -od -b -x ./$*.app/Contents/MacOS/$* -d ./$*.app/Contents/libs/
 	dylibbundler -of -b -x ./$*.app/Contents/MacOS/ffmpeg -d ./$*.app/Contents/libs/
-	(cd $*.app/Contents/libs/ && rm -f libwx_*.0.2.0.dylib &&\
-		ln -s libwx_baseu-3.0.dylib libwx_baseu-3.0.0.2.0.dylib &&\
-		ln -s libwx_baseu_net-3.0.dylib libwx_baseu_net-3.0.0.2.0.dylib &&\
-		ln -s libwx_baseu_xml-3.0.dylib libwx_baseu_xml-3.0.0.2.0.dylib &&\
-		ln -s libwx_osx_cocoau_adv-3.0.dylib libwx_osx_cocoau_adv-3.0.0.2.0.dylib &&\
-		ln -s libwx_osx_cocoau_core-3.0.dylib libwx_osx_cocoau_core-3.0.0.2.0.dylib &&\
-		ln -s libwx_osx_cocoau_html-3.0.dylib libwx_osx_cocoau_html-3.0.0.2.0.dylib &&\
-		ln -s libwx_osx_cocoau_qa-3.0.dylib libwx_osx_cocoau_qa-3.0.0.2.0.dylib &&\
-		ln -s libwx_osx_cocoau_xrc-3.0.dylib libwx_osx_cocoau_xrc-3.0.0.2.0.dylib)
-
+	
 dmg:
 	rm -f MP4Tools.dmg MP4Tools-@VERSION@-MacOSX.dmg
 	hdiutil eject /dev/disk1 || echo
-	hdiutil create -megabytes 120 -layout NONE MP4Tools.dmg
+	hdiutil create -megabytes 300 -layout NONE MP4Tools.dmg
 	hdid -nomount MP4Tools.dmg
 	newfs_hfs -v MP4Tools /dev/disk1
 	hdiutil eject /dev/disk1
@@ -78,4 +71,3 @@ dmg:
 	hdiutil detach /Volumes/MP4Tools/
 	hdiutil convert MP4Tools.dmg -format UDZO -imagekey zlib-level=9 -o MP4Tools-@VERSION@-MacOSX.dmg
 	rm -f MP4Tools.dmg
-	

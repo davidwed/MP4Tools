@@ -22,9 +22,11 @@ public:
 	}
 
 	bool OnDropFiles(wxCoord x, wxCoord y, const wxArrayString& filenames) {
+		wxArrayString files = filenames;
+		files.Sort();
 		bool res = false;
-		for (int i = 0; i<(int)filenames.Count(); i++) {
-			res = AddFile(x, y, filenames[i]) || res;
+		for (unsigned int i = 0; i < files.size(); i++) {
+			res = AddFile(x, y, files[i]) || res;
 		}
 		m_mediaListBox->RefreshAll();
 		m_mediaListBox->SetFocus();

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MP4Tools 3.3\n"
+"Project-Id-Version: MP4Tools 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-31 09:40+0200\n"
-"PO-Revision-Date: 2016-07-31 09:49+0200\n"
+"POT-Creation-Date: 2019-11-20 22:52+0100\n"
+"PO-Revision-Date: 2019-01-13 13:17+0100\n"
 "Last-Translator: Alex Thüring <alex at thuering.biz>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: iso-8859-15\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.1.1\n"
 
-#: src/MainWin.cpp:56 src/SplitterWin.cpp:380
+#: src/MainWin.cpp:56 src/SplitterWin.cpp:453
 msgid "Successful"
 msgstr "Erfolgreich"
 
-#: src/MainWin.cpp:117 src/MainWin.cpp:346
+#: src/MainWin.cpp:117 src/MainWin.cpp:354
 msgid "MP4 Joiner"
 msgstr "MP4 Joiner"
 
@@ -61,7 +61,7 @@ msgstr "Zusammenfügen"
 msgid "Select output file and start join"
 msgstr "Ausgabe Datei auswählen und Zusammenfügen starten"
 
-#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:47
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:63
 msgid "Options"
 msgstr "Optionen"
 
@@ -81,19 +81,19 @@ msgstr "Gesamtdauer"
 msgid "total size"
 msgstr "Gesamtgröße"
 
-#: src/MainWin.cpp:234 src/MediaListBox.cpp:98
+#: src/MainWin.cpp:234 src/MediaListBox.cpp:100
 msgid "GB"
 msgstr "GB"
 
-#: src/MainWin.cpp:236 src/MediaListBox.cpp:100
+#: src/MainWin.cpp:236 src/MediaListBox.cpp:102
 msgid "MB"
 msgstr "MB"
 
-#: src/MainWin.cpp:241 src/SplitterWin.cpp:229
+#: src/MainWin.cpp:241 src/SplitterWin.cpp:274
 msgid "Choose a file"
 msgstr "Datei auswählen"
 
-#: src/MainWin.cpp:242 src/MainWin.cpp:322 src/SplitterWin.cpp:230
+#: src/MainWin.cpp:242 src/MainWin.cpp:328 src/SplitterWin.cpp:275
 msgid "MP4 Files"
 msgstr "MP4  Dateien"
 
@@ -101,74 +101,74 @@ msgstr "MP4  Dateien"
 msgid "AVI Files"
 msgstr "AVI Dateien"
 
-#: src/MainWin.cpp:244 src/MainWin.cpp:323 src/SplitterWin.cpp:231
+#: src/MainWin.cpp:244 src/MainWin.cpp:329 src/SplitterWin.cpp:277
 msgid "All Files"
 msgstr "Alle Dateien"
 
-#: src/MainWin.cpp:321
+#: src/MainWin.cpp:327
 msgid "Choose a file to save"
 msgstr "Bitte wählen Sie eine Datei zum Speichern"
 
-#: src/MainWin.cpp:321
+#: src/MainWin.cpp:327
 msgid "Output.mp4"
 msgstr "Ausgabe.mp4"
 
-#: src/MainWin.cpp:346
-msgid "Joning the files"
+#: src/MainWin.cpp:354
+msgid "Joining the files"
 msgstr "Zusammenfügen der Dateien"
 
-#: src/MainWin.cpp:358
+#: src/MainWin.cpp:366
 #, c-format
 msgid "Reencode video from file %s"
 msgstr "Umwandeln Video  aus der Datei %s"
 
-#: src/MainWin.cpp:360
+#: src/MainWin.cpp:368
 #, c-format
 msgid "Reencode audio from file %s"
 msgstr "Umwandeln Audio aus der Datei %s"
 
-#: src/MainWin.cpp:362
+#: src/MainWin.cpp:370
 #, c-format
 msgid "Cut video from file %s"
 msgstr "Ausschneiden Video  aus der Datei %s"
 
-#: src/MainWin.cpp:505
+#: src/MainWin.cpp:532
 msgid "Simple tool to join multiple MP4 files into one."
 msgstr "Einfaches Tool zum Zusammenfügen mehrerer MP4 Dateien in eine."
 
-#: src/MainWin.cpp:522 src/SplitterWin.cpp:297
+#: src/MainWin.cpp:549 src/SplitterWin.cpp:367
 msgid "&Remove"
 msgstr "&Entfernen"
 
-#: src/MainWin.cpp:523
+#: src/MainWin.cpp:550
 msgid "&Cut video..."
 msgstr "Video&schnitt..."
 
-#: src/MainWin.cpp:525
+#: src/MainWin.cpp:552
 msgid "&Sort"
 msgstr "&Sortieren"
 
-#: src/MediaListBox.cpp:83 src/SplitterWin.cpp:168
+#: src/MediaListBox.cpp:85 src/SplitterWin.cpp:206
 msgid "Duration"
 msgstr "Dauer"
 
-#: src/MediaListBox.cpp:95
+#: src/MediaListBox.cpp:97
 msgid "Size"
 msgstr "Größe"
 
-#: src/MediaListBox.cpp:102
+#: src/MediaListBox.cpp:104
 msgid "KB"
 msgstr "KB"
 
-#: src/MediaListBox.cpp:112
+#: src/MediaListBox.cpp:114
 msgid "Video:"
 msgstr "Video:"
 
-#: src/MediaListBox.cpp:117
+#: src/MediaListBox.cpp:119
 msgid "Audio:"
 msgstr "Audio:"
 
-#: src/MediaListBox.cpp:122
+#: src/MediaListBox.cpp:124
 msgid "Subtitle:"
 msgstr "Untertitel:"
 
@@ -195,89 +195,142 @@ msgstr "%d Hz"
 msgid "%d kbit/s"
 msgstr "%d kbit/s"
 
-#: src/OptionsDlg.cpp:50
+#: src/OptionsDlg.cpp:66
 msgid "Language:"
 msgstr "Sprache:"
 
-#: src/OptionsDlg.cpp:54
-msgid "Log file:"
-msgstr "Protokolldatei:"
+#: src/OptionsDlg.cpp:70
+msgid "MP4Box parameters:"
+msgstr "MP4Box-Parameter:"
 
-#: src/OptionsDlg.cpp:59
+#: src/OptionsDlg.cpp:74
+msgid "Temp directory:"
+msgstr "Temporärer Ordner:"
+
+#: src/OptionsDlg.cpp:79 src/OptionsDlg.cpp:87
 msgid "..."
 msgstr "..."
 
-#: src/OptionsDlg.cpp:63
+#: src/OptionsDlg.cpp:82
+msgid "Log file:"
+msgstr "Protokolldatei:"
+
+#: src/OptionsDlg.cpp:91
+msgid "split/cut on key frames only"
+msgstr "Aufteilen/Schneiden nur an den Key-Frames"
+
+#: src/OptionsDlg.cpp:95
 msgid "force reencode video"
 msgstr "Umwandeln von Video erzwingen"
 
-#: src/OptionsDlg.cpp:69
+#: src/OptionsDlg.cpp:101
 msgid "CRF (quality):"
 msgstr "CRF (Qualität):"
 
-#: src/OptionsDlg.cpp:73
+#: src/OptionsDlg.cpp:105
 msgid "Preset:"
 msgstr "Voreinstellungen:"
 
-#: src/OptionsDlg.cpp:76
+#: src/OptionsDlg.cpp:108
 msgid "veryslow"
 msgstr "sehr langsam"
 
-#: src/OptionsDlg.cpp:77
+#: src/OptionsDlg.cpp:109
 msgid "slower"
 msgstr "langsamer"
 
-#: src/OptionsDlg.cpp:78
+#: src/OptionsDlg.cpp:110
 msgid "slow"
 msgstr "langsam"
 
-#: src/OptionsDlg.cpp:79
+#: src/OptionsDlg.cpp:111
 msgid "medium"
 msgstr "mittel"
 
-#: src/OptionsDlg.cpp:80
+#: src/OptionsDlg.cpp:112
 msgid "fast"
 msgstr "schnell"
 
-#: src/OptionsDlg.cpp:81
+#: src/OptionsDlg.cpp:113
 msgid "faster"
 msgstr "schneller"
 
-#: src/OptionsDlg.cpp:82
+#: src/OptionsDlg.cpp:114
 msgid "veryfast"
 msgstr "sehr schnell"
 
-#: src/OptionsDlg.cpp:83
+#: src/OptionsDlg.cpp:115
 msgid "superfast"
 msgstr "super schnell"
 
-#: src/OptionsDlg.cpp:84
+#: src/OptionsDlg.cpp:116
 msgid "ultrafast"
 msgstr "ultra schnell"
 
-#: src/OptionsDlg.cpp:88
+#: src/OptionsDlg.cpp:120
 msgid "force reencode audio"
 msgstr "Umwandeln von Audio erzwingen"
 
-#: src/OptionsDlg.cpp:111
+#: src/OptionsDlg.cpp:126
+msgid "Sample Rate:"
+msgstr "Sample Rate:"
+
+#: src/OptionsDlg.cpp:129
+msgid "As Source"
+msgstr "Wie Quelle"
+
+#: src/OptionsDlg.cpp:130
+msgid "44100"
+msgstr "44100"
+
+#: src/OptionsDlg.cpp:131
+msgid "48000"
+msgstr "48000"
+
+#: src/OptionsDlg.cpp:132
+msgid "96000"
+msgstr "96000"
+
+#: src/OptionsDlg.cpp:133
+msgid "192000"
+msgstr "192000"
+
+#: src/OptionsDlg.cpp:135
+msgid "Bitrate:"
+msgstr "Bitrate:"
+
+#: src/OptionsDlg.cpp:140
+msgid "KBit/s"
+msgstr "KBit/s"
+
+#: src/OptionsDlg.cpp:165
 msgid "best"
 msgstr "beste"
 
-#: src/OptionsDlg.cpp:113
+#: src/OptionsDlg.cpp:167
 msgid "worst"
 msgstr "schlechteste"
 
-#: src/OptionsDlg.cpp:115
+#: src/OptionsDlg.cpp:169
 msgid "default"
 msgstr "Standard"
 
-#: src/OptionsDlg.cpp:143
+#: src/OptionsDlg.cpp:209
 msgid "Language change will not take effect until the application is restarted"
 msgstr "Änderung der Sprache wird erst nach dem Neustart des Programms wirksam"
 
-#: src/OptionsDlg.cpp:151
+#: src/OptionsDlg.cpp:215
+#, c-format
+msgid "Directory %s doesn't exist."
+msgstr "Das Verzeichnis%s existiert nicht."
+
+#: src/OptionsDlg.cpp:230
 msgid "Save a log file"
 msgstr "Protokolldatei speichern"
+
+#: src/OptionsDlg.cpp:236
+msgid "Choose a directory for temporary files"
+msgstr "Wählen Sie ein Verzeichnis für temporäre Dateien"
 
 #: src/ProgramProcess.cpp:28
 msgid "Failed"
@@ -288,65 +341,69 @@ msgstr "Fehlgeschlagen"
 msgid "Execution of '%s' failed."
 msgstr "Ausführung von '%s' ist fehlgeschlagen."
 
-#: src/SplitterWin.cpp:74 src/SplitterWin.cpp:325
+#: src/SplitterWin.cpp:97 src/SplitterWin.cpp:395
 msgid "MP4 Splitter"
 msgstr "MP4 Splitter"
 
-#: src/SplitterWin.cpp:86 src/VideoPropDlg.cpp:74
+#: src/SplitterWin.cpp:111 src/VideoPropDlg.cpp:74
 msgid "Time:"
 msgstr "Zeit:"
 
-#: src/SplitterWin.cpp:98
+#: src/SplitterWin.cpp:125
 msgid "Add split point"
 msgstr "Aufteilungspunkt hinzufügen"
 
-#: src/SplitterWin.cpp:104
+#: src/SplitterWin.cpp:131
 msgid "Open Video"
 msgstr "Video öffnen"
 
-#: src/SplitterWin.cpp:112
+#: src/SplitterWin.cpp:139
 msgid "Split points:"
 msgstr "Aufteilungspunkte:"
 
-#: src/SplitterWin.cpp:118
+#: src/SplitterWin.cpp:145
 msgid "Start splitting"
 msgstr "Start der Aufteilung"
 
-#: src/SplitterWin.cpp:166
+#: src/SplitterWin.cpp:204
 msgid "Start"
 msgstr "Beginn"
 
-#: src/SplitterWin.cpp:167
+#: src/SplitterWin.cpp:205
 msgid "End"
 msgstr "Ende"
 
-#: src/SplitterWin.cpp:298
+#: src/SplitterWin.cpp:276
+msgid "Video Files"
+msgstr "Videodateien"
+
+#: src/SplitterWin.cpp:368
 msgid "Remove &all"
 msgstr "&Alle entfernen"
 
-#: src/SplitterWin.cpp:304
+#: src/SplitterWin.cpp:374
 msgid "Choose a output directory"
 msgstr "Ausgabeordner auswählen"
 
-#: src/SplitterWin.cpp:325
+#: src/SplitterWin.cpp:395
 msgid "Splitting the file"
 msgstr "Aufteilen der Datei"
 
-#: src/SplitterWin.cpp:342
+#: src/SplitterWin.cpp:415
 #, c-format
 msgid "File '%s' already exist. Do you want to overwrite it?"
 msgstr "Datei '%s' existiert bereits, möchten Sie sie wirklich überschreiben?"
 
-#: src/SplitterWin.cpp:343
+#: src/SplitterWin.cpp:416
 msgid "Confirmation"
 msgstr "Bestätigung"
 
-#: src/SplitterWin.cpp:352
+#: src/SplitterWin.cpp:425
 #, c-format
 msgid "Writting %s"
 msgstr "Schreiben %s"
 
-#: src/SplitterWin.cpp:404
+#: src/SplitterWin.cpp:480
 msgid "Simple tool to split a MP4 file."
 msgstr "Einfaches Tool zum Aufteilen der MP4-Dateien."
 

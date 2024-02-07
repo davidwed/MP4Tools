@@ -1,14 +1,14 @@
 [Setup]          
 AppName=MP4Tools
-AppVerName=MP4Tools v3.4
+AppVerName=MP4Tools v3.8 beta 5
 AppPublisher=Thüring IT-Consulting
 AppPublisherURL=http://www.mp4joiner.org
 AppSupportURL=http://www.mp4joiner.org
 AppUpdatesURL=http://www.mp4joiner.org
 DefaultDirName={pf}\MP4Tools
 DefaultGroupName=MP4Tools
-OutputBaseFilename=MP4Tools-3.4-win32
-Compression=lzma
+OutputBaseFilename=MP4Tools-3.8b5-win32
+Compression=lzma2
 SolidCompression=yes
 UninstallDisplayIcon={app}\bin\MP4Joiner.exe
 PrivilegesRequired=admin
@@ -21,11 +21,20 @@ InfoBeforeFile=Info.rtf
 [Languages]
 Name: "de"; MessagesFile: "compiler:Languages\German.isl"
 Name: "en"; MessagesFile: "compiler:Default.isl"
-Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"   
+Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
+Name: "es_VE"; MessagesFile: "Languages\SpanishVenezuela.isl"
 Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
+Name: "ko"; MessagesFile: "Languages\Korean.isl"
+Name: "hu"; MessagesFile: "compiler:Languages\Hungarian.isl"
+Name: "it"; MessagesFile: "compiler:Languages\Italian.isl"
+Name: "pl"; MessagesFile: "compiler:Languages\Polish.isl"
 Name: "pt"; MessagesFile: "compiler:Languages\Portuguese.isl"
 Name: "pt_BR"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"
+Name: "si"; MessagesFile: "Languages\Sinhala.islu"
+Name: "tr"; MessagesFile: "compiler:Languages\Turkish.isl"    
+Name: "zh_CN"; MessagesFile: "Languages\ChineseSimp.isl"
+Name: "zh_TW"; MessagesFile: "Languages\ChineseTrad.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
@@ -39,10 +48,19 @@ Source: "..\ChangeLog"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "..\locale\de\*"; DestDir: "{app}\locale\de"; Flags: ignoreversion
 Source: "..\locale\es\*"; DestDir: "{app}\locale\es"; Flags: ignoreversion  
-Source: "..\locale\fr\*"; DestDir: "{app}\locale\es"; Flags: ignoreversion
+Source: "..\locale\es_VE\*"; DestDir: "{app}\locale\es_VE"; Flags: ignoreversion  
+Source: "..\locale\fr\*"; DestDir: "{app}\locale\fr"; Flags: ignoreversion 
+Source: "..\locale\it\*"; DestDir: "{app}\locale\it"; Flags: ignoreversion
+Source: "..\locale\ko\*"; DestDir: "{app}\locale\ko"; Flags: ignoreversion
+Source: "..\locale\hu\*"; DestDir: "{app}\locale\hu"; Flags: ignoreversion
+Source: "..\locale\pl\*"; DestDir: "{app}\locale\pl"; Flags: ignoreversion
 Source: "..\locale\pt\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
-Source: "..\locale\pt_BR\*"; DestDir: "{app}\locale\pt"; Flags: ignoreversion
+Source: "..\locale\pt_BR\*"; DestDir: "{app}\locale\pt_BR"; Flags: ignoreversion 
 Source: "..\locale\ru\*"; DestDir: "{app}\locale\ru"; Flags: ignoreversion
+Source: "..\locale\si\*"; DestDir: "{app}\locale\si"; Flags: ignoreversion
+Source: "..\locale\tr\*"; DestDir: "{app}\locale\tr"; Flags: ignoreversion
+Source: "..\locale\zh_CN\*"; DestDir: "{app}\locale\zh_CN"; Flags: ignoreversion
+Source: "..\locale\zh_TW\*"; DestDir: "{app}\locale\zh_TW"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\MP4Joiner"; Filename: "{app}\bin\MP4Joiner.exe"

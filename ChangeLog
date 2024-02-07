@@ -1,3 +1,48 @@
+Version 3.8 <2019-11-20>
+------------------------
+
+  * MP4Joiner: added possibility to specify audio sample rate and bitrate for re-encoding 
+  * MP4Splitter: added possibility to split on key frames only (disabled by default)
+  * MP4Splitter: added support of drag & drop
+  * updaed Spain translation (thanks to Alejandro Cremades Bernabeu)
+  * added Spain (Venezuela) (thanks to Ricardo A. Rivas)
+  * added Korean translation (thanks to Hae Moon, Kwon)
+  * added Sinhala translation (thanks to Asanka Sovis / අසංක සෝවිස්)
+  * updated ffmpeg to version 4.1.1
+
+Version 3.7 <2018-11-24>
+------------------------
+
+  * MP4Splitter: added support of .mpg files
+  * MP4Splitter: added play/pause button
+  * added Simplified Chinese translation (thanks to Julian Lee)
+  * added Hungarian translation (thanks to Bodrogi József)
+  * updated French translation (thanks Patrice FIEVRE)
+  * updated ffmpeg to version 4.0.2
+
+Version 3.6.1 <2018-04-10>
+--------------------------
+
+  * added Traditional Chinese translation (thanks to Jason WU)
+  * added Turkish translation (thanks to Bilal Harun)
+  * updated ffmpeg to version 3.4.2
+
+Version 3.6 <2018-01-14>
+------------------------
+
+  * MP4Joiner: added possibility to specify temporary directory 
+  * MP4Joiner: added options "-bs-switching merge" and "-force-cat" to MP4Box
+  * updated MP4Box to version 0.7.2-DEV-rev321
+  * added Italian translation (thanks to Luigi Baldoni)
+
+Version 3.5 <2017-05-01>
+------------------------
+
+  * MP4Joiner: fixed some bugs
+  * updated MP4Box to version 0.7.2-DEV-rev5
+  * updated ffmpeg to version 3.2.4
+  * added Polish translation (thanks to Andrzej Rudnik)
+
 Version 3.4 <2016-07-31>
 ------------------------
 
@@ -8,7 +53,7 @@ Version 3.4 <2016-07-31>
 Version 3.3 <2016-03-27>
 ------------------------
 
-  * MP4Joiner: added options to force reencoding
+  * MP4Joiner: added options to force re-encoding
   * updated ffmpeg to version 3.0
   * added French translation (thanks to Cocoa Pod)
 
@@ -29,7 +74,7 @@ Version 3.0 <2015-07-05>
 
   * Initial revision of MP4Splitter
   * MP4Joiner: added possibility to cut video
-  * MP4Joiner: added reencoding of video if video formats are different
+  * MP4Joiner: added re-encoding of video if video formats are different
   * MP4Joiner: added Brazilian Portuguese translation (thanks to Marcel Testa)
 
 Version 2.2 <2015-03-16>
@@ -52,12 +97,12 @@ Version 2.1 <2013-08-06>
 
   * added loading of video images
   * updated ffmpeg to version 2.0
-  * added Portuguese translation (thanks to Jo�o Frade)
+  * added Portuguese translation (thanks to João Frade)
 
 Version 2.0 <2013-03-04>
 ------------------------
 
-  * added reencoding of audio streams if codecs or count of channels are different
+  * added re-encoding of audio streams if codecs or count of channels are different
   * added support of drag & drop
 
 Version 1.0 <2012-07-15>

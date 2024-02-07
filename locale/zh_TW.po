@@ -1,0 +1,429 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MP4Tools 3.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-20 22:52+0100\n"
+"PO-Revision-Date: 2018-03-17 08:59+0100\n"
+"Last-Translator: Jason WU <jason5 at livemail.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWin.cpp:56 src/SplitterWin.cpp:453
+msgid "Successful"
+msgstr "完成"
+
+#: src/MainWin.cpp:117 src/MainWin.cpp:354
+msgid "MP4 Joiner"
+msgstr "MP4 Joiner"
+
+#: src/MainWin.cpp:148
+msgid "Add Video"
+msgstr "新增視頻"
+
+#: src/MainWin.cpp:149
+msgid "Add video file"
+msgstr "新增視頻檔"
+
+#: src/MainWin.cpp:151 src/MainWin.cpp:160
+msgid "Remove"
+msgstr "移除"
+
+#: src/MainWin.cpp:152 src/MainWin.cpp:161
+msgid "Remove selected video"
+msgstr "移除選定之視頻"
+
+#: src/MainWin.cpp:154
+msgid "&Remove selected"
+msgstr "移除選定檔案&R"
+
+#: src/MainWin.cpp:155
+msgid "Remove a&ll"
+msgstr "移除全部&l"
+
+#: src/MainWin.cpp:164
+msgid "Remove all"
+msgstr "移除全部"
+
+#: src/MainWin.cpp:165
+msgid "Remove all videos"
+msgstr "移除全部視頻"
+
+#: src/MainWin.cpp:167
+msgid "Join"
+msgstr "加入"
+
+#: src/MainWin.cpp:168
+msgid "Select output file and start join"
+msgstr "選擇輸出檔案且開始加入"
+
+#: src/MainWin.cpp:172 src/MainWin.cpp:173 src/OptionsDlg.cpp:63
+msgid "Options"
+msgstr "選項"
+
+#: src/MainWin.cpp:174
+msgid "About"
+msgstr "關於"
+
+#: src/MainWin.cpp:175
+msgid "About the program"
+msgstr "關於本程式"
+
+#: src/MainWin.cpp:225
+msgid "Total duration"
+msgstr "總歷時"
+
+#: src/MainWin.cpp:232
+msgid "total size"
+msgstr "總容量"
+
+#: src/MainWin.cpp:234 src/MediaListBox.cpp:100
+msgid "GB"
+msgstr "GB"
+
+#: src/MainWin.cpp:236 src/MediaListBox.cpp:102
+msgid "MB"
+msgstr "MB"
+
+#: src/MainWin.cpp:241 src/SplitterWin.cpp:274
+msgid "Choose a file"
+msgstr "選擇檔案"
+
+#: src/MainWin.cpp:242 src/MainWin.cpp:328 src/SplitterWin.cpp:275
+msgid "MP4 Files"
+msgstr "MP4檔"
+
+#: src/MainWin.cpp:243
+msgid "AVI Files"
+msgstr "AVI檔"
+
+#: src/MainWin.cpp:244 src/MainWin.cpp:329 src/SplitterWin.cpp:277
+msgid "All Files"
+msgstr "所有檔"
+
+#: src/MainWin.cpp:327
+msgid "Choose a file to save"
+msgstr "選擇欲存放檔"
+
+#: src/MainWin.cpp:327
+msgid "Output.mp4"
+msgstr "輸出.mp4"
+
+#: src/MainWin.cpp:354
+msgid "Joining the files"
+msgstr "加入此檔"
+
+#: src/MainWin.cpp:366
+#, c-format
+msgid "Reencode video from file %s"
+msgstr "自%s 視頻檔重新編碼"
+
+#: src/MainWin.cpp:368
+#, c-format
+msgid "Reencode audio from file %s"
+msgstr "自%s 音頻檔重新編碼"
+
+#: src/MainWin.cpp:370
+#, c-format
+msgid "Cut video from file %s"
+msgstr "自%s 檔剪取視頻"
+
+#: src/MainWin.cpp:532
+msgid "Simple tool to join multiple MP4 files into one."
+msgstr "將多個MP4加入成單一檔案之簡易工具"
+
+#: src/MainWin.cpp:549 src/SplitterWin.cpp:367
+msgid "&Remove"
+msgstr "移除&R"
+
+#: src/MainWin.cpp:550
+msgid "&Cut video..."
+msgstr "剪取視頻...&C"
+
+#: src/MainWin.cpp:552
+msgid "&Sort"
+msgstr "排序&S"
+
+#: src/MediaListBox.cpp:85 src/SplitterWin.cpp:206
+msgid "Duration"
+msgstr "歷時"
+
+#: src/MediaListBox.cpp:97
+msgid "Size"
+msgstr "容量"
+
+#: src/MediaListBox.cpp:104
+msgid "KB"
+msgstr "KB"
+
+#: src/MediaListBox.cpp:114
+msgid "Video:"
+msgstr "視頻:"
+
+#: src/MediaListBox.cpp:119
+msgid "Audio:"
+msgstr "音頻:"
+
+#: src/MediaListBox.cpp:124
+msgid "Subtitle:"
+msgstr "字幕:"
+
+#: src/MediaStream.cpp:58
+msgid "mono"
+msgstr "單聲道"
+
+#: src/MediaStream.cpp:60
+msgid "stereo"
+msgstr "立體聲"
+
+#: src/MediaStream.cpp:64
+#, c-format
+msgid "%d channels"
+msgstr "% 通道"
+
+#: src/MediaStream.cpp:67
+#, c-format
+msgid "%d Hz"
+msgstr "%d Hz"
+
+#: src/MediaStream.cpp:69
+#, c-format
+msgid "%d kbit/s"
+msgstr "%d kbit/s"
+
+#: src/OptionsDlg.cpp:66
+msgid "Language:"
+msgstr "語系:"
+
+#: src/OptionsDlg.cpp:70
+msgid "MP4Box parameters:"
+msgstr "MP4Box 參數:"
+
+#: src/OptionsDlg.cpp:74
+msgid "Temp directory:"
+msgstr "暫存目錄:"
+
+#: src/OptionsDlg.cpp:79 src/OptionsDlg.cpp:87
+msgid "..."
+msgstr "..."
+
+#: src/OptionsDlg.cpp:82
+msgid "Log file:"
+msgstr "記錄檔:"
+
+#: src/OptionsDlg.cpp:91
+msgid "split/cut on key frames only"
+msgstr ""
+
+#: src/OptionsDlg.cpp:95
+msgid "force reencode video"
+msgstr "視頻強制重新編碼"
+
+#: src/OptionsDlg.cpp:101
+msgid "CRF (quality):"
+msgstr "恆定速率因子(CRF):"
+
+#: src/OptionsDlg.cpp:105
+msgid "Preset:"
+msgstr "預先設置:"
+
+#: src/OptionsDlg.cpp:108
+msgid "veryslow"
+msgstr "非常慢"
+
+#: src/OptionsDlg.cpp:109
+msgid "slower"
+msgstr "較慢"
+
+#: src/OptionsDlg.cpp:110
+msgid "slow"
+msgstr "慢"
+
+#: src/OptionsDlg.cpp:111
+msgid "medium"
+msgstr "中等"
+
+#: src/OptionsDlg.cpp:112
+msgid "fast"
+msgstr "快"
+
+#: src/OptionsDlg.cpp:113
+msgid "faster"
+msgstr "較快"
+
+#: src/OptionsDlg.cpp:114
+msgid "veryfast"
+msgstr "非常快"
+
+#: src/OptionsDlg.cpp:115
+msgid "superfast"
+msgstr "超級快"
+
+#: src/OptionsDlg.cpp:116
+msgid "ultrafast"
+msgstr "特快"
+
+#: src/OptionsDlg.cpp:120
+msgid "force reencode audio"
+msgstr "音頻強制重新編碼"
+
+#: src/OptionsDlg.cpp:126
+msgid "Sample Rate:"
+msgstr ""
+
+#: src/OptionsDlg.cpp:129
+msgid "As Source"
+msgstr ""
+
+#: src/OptionsDlg.cpp:130
+msgid "44100"
+msgstr ""
+
+#: src/OptionsDlg.cpp:131
+msgid "48000"
+msgstr ""
+
+#: src/OptionsDlg.cpp:132
+msgid "96000"
+msgstr ""
+
+#: src/OptionsDlg.cpp:133
+msgid "192000"
+msgstr ""
+
+#: src/OptionsDlg.cpp:135
+msgid "Bitrate:"
+msgstr ""
+
+#: src/OptionsDlg.cpp:140
+msgid "KBit/s"
+msgstr ""
+
+#: src/OptionsDlg.cpp:165
+msgid "best"
+msgstr "最佳"
+
+#: src/OptionsDlg.cpp:167
+msgid "worst"
+msgstr "最糟"
+
+#: src/OptionsDlg.cpp:169
+msgid "default"
+msgstr "預設"
+
+#: src/OptionsDlg.cpp:209
+msgid "Language change will not take effect until the application is restarted"
+msgstr "需重新啟動程式才會改變顯示語系"
+
+#: src/OptionsDlg.cpp:215
+#, c-format
+msgid "Directory %s doesn't exist."
+msgstr "目錄 %s 不存在"
+
+#: src/OptionsDlg.cpp:230
+msgid "Save a log file"
+msgstr "儲存記錄檔"
+
+#: src/OptionsDlg.cpp:236
+msgid "Choose a directory for temporary files"
+msgstr "選擇暫存檔路徑"
+
+#: src/ProgramProcess.cpp:28
+msgid "Failed"
+msgstr "失敗"
+
+#: src/ProgramProcess.cpp:73
+#, c-format
+msgid "Execution of '%s' failed."
+msgstr "'%s' 執行失敗"
+
+#: src/SplitterWin.cpp:97 src/SplitterWin.cpp:395
+msgid "MP4 Splitter"
+msgstr "MP4 Splitter"
+
+#: src/SplitterWin.cpp:111 src/VideoPropDlg.cpp:74
+msgid "Time:"
+msgstr "歷時:"
+
+#: src/SplitterWin.cpp:125
+msgid "Add split point"
+msgstr "新增分割點"
+
+#: src/SplitterWin.cpp:131
+msgid "Open Video"
+msgstr "開啟視頻"
+
+#: src/SplitterWin.cpp:139
+msgid "Split points:"
+msgstr "分割點"
+
+#: src/SplitterWin.cpp:145
+msgid "Start splitting"
+msgstr "開始分割"
+
+#: src/SplitterWin.cpp:204
+msgid "Start"
+msgstr "開始"
+
+#: src/SplitterWin.cpp:205
+msgid "End"
+msgstr "結束"
+
+#: src/SplitterWin.cpp:276
+#, fuzzy
+msgid "Video Files"
+msgstr "AVI檔"
+
+#: src/SplitterWin.cpp:368
+msgid "Remove &all"
+msgstr "移除所有&a"
+
+#: src/SplitterWin.cpp:374
+msgid "Choose a output directory"
+msgstr "選擇輸出目錄"
+
+#: src/SplitterWin.cpp:395
+msgid "Splitting the file"
+msgstr "分割檔案"
+
+#: src/SplitterWin.cpp:415
+#, c-format
+msgid "File '%s' already exist. Do you want to overwrite it?"
+msgstr "'%s' 已存在, 確定要覆蓋?"
+
+#: src/SplitterWin.cpp:416
+msgid "Confirmation"
+msgstr "確認"
+
+#: src/SplitterWin.cpp:425
+#, c-format
+msgid "Writting %s"
+msgstr "寫入 %s"
+
+#: src/SplitterWin.cpp:480
+msgid "Simple tool to split a MP4 file."
+msgstr "分割Mp4之簡易工具"
+
+#: src/VideoPropDlg.cpp:62
+msgid "Cut video"
+msgstr "剪取視頻"
+
+#: src/VideoPropDlg.cpp:86
+msgid "Start:"
+msgstr "開始:"
+
+#: src/VideoPropDlg.cpp:100
+msgid "Cut beginning"
+msgstr "開始剪取"
+
+#: src/VideoPropDlg.cpp:102
+msgid "End:"
+msgstr "結束:"
+
+#: src/VideoPropDlg.cpp:116
+msgid "Cut ending"
+msgstr "剪取結束"
+
+#: src/VideoPropDlg.cpp:279 src/VideoPropDlg.cpp:284
+msgid "Invalid time"
+msgstr "無效之時間"
